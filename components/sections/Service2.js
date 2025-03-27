@@ -93,8 +93,7 @@ export default function Service2() {
 											<Link href="service-details">ocean Freight</Link>
 										</h3>
 										<p>
-											It is a long established fact xbliuthat a reader will be
-											distracteda the readable content of a page when looking
+										JDM provides cost-effective, reliable freight forwarding worldwide, handling bulk shipments via FCL, LCL, and vessel charters. We also manage documentation, insurance, and Letter of Credit processing for seamless delivery.
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />
@@ -121,8 +120,7 @@ export default function Service2() {
 											<Link href="service-details">Air Freight</Link>
 										</h3>
 										<p>
-											It is a long established fact xbliuthat a reader will be
-											distracteda the readable content of a page when looking
+										We offer a comprehensive range of airfreight services worldwide. Each movement of Air Cargo is diligently planned by our expert team in close coordination with our worldwide agents to utilize the most economic air carriers that provide safe and speedy delivery.
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />
@@ -146,11 +144,10 @@ export default function Service2() {
 									</div>
 									<div className="content">
 										<h3>
-											<Link href="service-details">Land Freight</Link>
+											<Link href="service-details">Road Transportation</Link>
 										</h3>
 										<p>
-											It is a long established fact xbliuthat a reader will be
-											distracteda the readable content of a page when looking
+											JDM Group was conceptualized by Mr. Pahlad Singh in  the year 1978,with an initial start of Transportation in logistics field. Mr. Pahlad Singh who was well known in this industry for his true commitments and adding the value to your logistics mix.
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />
@@ -174,11 +171,64 @@ export default function Service2() {
 									</div>
 									<div className="content">
 										<h3>
-											<Link href="service-details">Railway Freight</Link>
+											<Link href="service-details">Warehousing</Link>
 										</h3>
 										<p>
-											It is a long established fact xbliuthat a reader will be
-											distracteda the readable content of a page when looking
+											JDM Group has its own warehousing facilities. JDM has grown rapidly in various other fields of logistics sphere by providing 3PL solutions in the form of warehousing, distribution and transload operations. It provide (MTO) to their esteemed clients
+										</p>
+										<Link href="service-details" className="link-btn">
+											Explore More <i className="fa-solid fa-arrow-right" />
+										</Link>
+									</div>
+									<div className="items-shape">
+										<img src="assets/img/service/items-shape.png" alt="img" />
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide className="swiper-slide">
+								<div className="service-card-items">
+									<div className="service-image">
+										<img src="assets/img/service/05.jpg" alt="img" />
+									</div>
+									<div className="bar-shape">
+										<img src="assets/img/service/bar.png" alt="img" />
+									</div>
+									<div className="icon">
+										<i className="fa-sharp fa-solid fa-train" />
+									</div>
+									<div className="content">
+										<h3>
+											<Link href="service-details">Packers & Movers</Link>
+										</h3>
+										<p>
+										Our wide expertise in the field allows us to provide efficient and quick packing and moving services of all kinds of goods and cargo to any part of the world as required by our clients. We are adeptable in packaging techniques of different products, depending on their fragility.
+										</p>
+										<Link href="service-details" className="link-btn">
+											Explore More <i className="fa-solid fa-arrow-right" />
+										</Link>
+									</div>
+									<div className="items-shape">
+										<img src="assets/img/service/items-shape.png" alt="img" />
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide className="swiper-slide">
+								<div className="service-card-items">
+									<div className="service-image">
+										<img src="assets/img/service/05.jpg" alt="img" />
+									</div>
+									<div className="bar-shape">
+										<img src="assets/img/service/bar.png" alt="img" />
+									</div>
+									<div className="icon">
+										<i className="fa-sharp fa-solid fa-train" />
+									</div>
+									<div className="content">
+										<h3>
+											<Link href="service-details">Warehousing</Link>
+										</h3>
+										<p>
+											JDM Group has its own warehousing facilities. JDM has grown rapidly in various other fields of logistics sphere by providing 3PL solutions in the form of warehousing, distribution and transload operations. It provide (MTO) to their esteemed clients
 										</p>
 										<Link href="service-details" className="link-btn">
 											Explore More <i className="fa-solid fa-arrow-right" />

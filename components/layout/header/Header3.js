@@ -12,29 +12,27 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu, isOffC
 							<ul className="contact-list">
 								<li>
 									<i className="far fa-envelope" />
-									<Link href="mailto:info@example.com" className="link">
-										info@example.com
-									</Link>
+									<Link href="mailto:info@jdmgroups.com">info@jdmgroups.com</Link>
 								</li>
 								<li>
 									<i className="fa-solid fa-phone-volume" />
-									<Link href="tel:2086660112">+208-666-0112</Link>
+									<Link href="tel:+9149707070">+91-49707070-100 Lines</Link>
 								</li>
 							</ul>
 							<div className="top-right">
 								<div className="social-icon d-flex align-items-center">
 									<span>Follow Us:</span>
-									<Link href="#">
+									<Link href="https://www.facebook.com/profile.php?id=100090951694492">
 										<i className="fab fa-facebook-f" />
 									</Link>
-									<Link href="#">
+									<Link href="https://x.com/home?lang=en">
 										<i className="fab fa-twitter" />
 									</Link>
-									<Link href="#">
-										<i className="fa-brands fa-linkedin-in" />
+									<Link href="https://www.instagram.com/we_jdm/">
+										<i className="fab fa-instagram" />
 									</Link>
-									<Link href="#">
-										<i className="fa-brands fa-youtube" />
+									<Link href="https://www.linkedin.com/company/27983246" target="_blank">
+										<i className="fab fa-linkedin-in" />
 									</Link>
 								</div>
 							</div>

@@ -9,15 +9,15 @@ export default function Footer2() {
       >
         <div className="container">
           <div className="contact-info-area">
-            <Link
+            {/* <Link
               href="/"
               className="logo-img wow fadeInUp"
               data-wow-delay=".2s"
-            >
+            > */}
               {/* <img src="assets/img/logo/black-logo.svg" alt="img" /> */}
-              <img src="assets/img/logo/black-logo.jpg" alt="img" />
-            </Link>
-            <div
+              {/* <img src="assets/img/logo/black-logo.jpg" alt="img" />
+            </Link> */}
+            <div 
               className="contact-info-items wow fadeInUp"
               data-wow-delay=".4s"
             >
@@ -26,7 +26,7 @@ export default function Footer2() {
               </div>
               <div className="content">
                 <p>Office location</p>
-                <h3>4648 Rocky, New York</h3>
+                <h3>A-75, New Delhi - 1100037, India</h3>
               </div>
             </div>
             <div
@@ -39,7 +39,7 @@ export default function Footer2() {
               <div className="content">
                 <p>send email</p>
                 <h3>
-                  <Link href="mailto:example@gmail.com">example@gmail.com</Link>
+                <Link href="mailto:info@jdmgroups.com">info@jdmgroups.com</Link>
                 </h3>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function Footer2() {
               <div className="content">
                 <p>call emergency</p>
                 <h3>
-                  <Link href="tel:+88012365499">+88 0123 654 99</Link>
+                <Link href="tel:+9149707070">+91-49707070-100 Lines</Link>
                 </h3>
               </div>
             </div>
@@ -70,21 +70,19 @@ export default function Footer2() {
                   </div>
                   <div className="footer-content">
                     <p>
-                      Nullam interdum libero vitae pretium aliquam <br />
-                      donec nibh purus laoreet in ullamcorper vel <br />
-                      malesuada sit amet enim.
+                    Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.
                     </p>
                     <div className="social-icon d-flex align-items-center">
-                      <Link href="#">
+                      <Link href="https://www.facebook.com/profile.php?id=100090951694492">
                         <i className="fab fa-facebook-f" />
                       </Link>
-                      <Link href="#">
+                      <Link href="https://x.com/home?lang=en">
                         <i className="fab fa-twitter" />
                       </Link>
-                      <Link href="#">
-                        <i className="fab fa-youtube" />
+                      <Link href="https://www.instagram.com/we_jdm/">
+                        <i className="fab fa-instagram" />
                       </Link>
-                      <Link href="#">
+                      <Link href="https://www.linkedin.com/company/27983246" target="_blank">
                         <i className="fab fa-linkedin-in" />
                       </Link>
                     </div>
@@ -107,6 +105,12 @@ export default function Footer2() {
                       </Link>
                     </li>
                     <li>
+                      <Link href="service">
+                        <i className="fa-solid fa-chevrons-right" />
+                       Services
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="contact">
                         <i className="fa-solid fa-chevrons-right" />
                         Contact Us
@@ -124,12 +128,6 @@ export default function Footer2() {
                         FAQ’S
                       </Link>
                     </li>
-                    <li>
-                      <Link href="contact">
-                        <i className="fa-solid fa-chevrons-right" />
-                        Login / Register
-                      </Link>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -141,7 +139,7 @@ export default function Footer2() {
                   <div className="widget-head">
                     <h5>Our Services</h5>
                   </div>
-                  <ul className="list-area">
+                  {/* <ul className="list-area">
                     <li>
                       <Link href="service-details">
                         <i className="fa-solid fa-chevrons-right" />
@@ -172,10 +170,72 @@ export default function Footer2() {
                         Maritime Transport
                       </Link>
                     </li>
+                  </ul> */}
+                  <ul className="list-area">
+                    <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Air Freight Forwarding
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Ocean Freight Forwarding
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Rail Freight
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Road Transportation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Customs Brokerage
+                      </Link>
+                    </li>
+                    {/* <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Project Management
+                      </Link>
+                    </li> */}
+                    <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Courier Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Warehouse
+                      </Link>
+                    </li>
+                    {/* <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Packers & Movers
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/service-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Other Services
+                      </Link>
+                    </li> */}
                   </ul>
                 </div>
               </div>
-              <div
+              {/* <div
                 className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
                 data-wow-delay=".8s"
               >
@@ -276,13 +336,55 @@ export default function Footer2() {
                     </div>
                   </div>
                 </div>
+              </div> */}
+              <div
+                className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
+                data-wow-delay=".6s"
+              >
+                <div className="single-footer-widget">
+                  <div className="widget-head">
+                    <h5>JDM Group</h5>
+                  </div>
+                  <ul className="list-area">
+                    <li>
+                      <Link href="/company-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        JDM Worldwide Freight Solutions Pvt. Ltd.
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/company-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        JDM Cargo Planners Pvt. Ltd.
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/company-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        JDM Express Pvt. Ltd.
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/company-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        Arrow Transport Service
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/company-details">
+                        <i className="fa-solid fa-chevrons-right" />
+                        AS Transport Service
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
             <p>
               © All Copyright {new Date().getFullYear()} by{" "}
-              <Link href="/">Trastek</Link>
+              <Link href="/">JDM Group</Link>
             </p>
           </div>
         </div>

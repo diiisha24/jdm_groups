@@ -26,41 +26,20 @@ export default function MobileMenu() {
 								<i className="fa-regular fa-plus" />
 							</Link>
 							<ul className="submenu has-homemenu" style={{ display: `${isAccordion == 1 ? "block" : "none"}` }}>
-								<li>
+								<li className="flex justify-content-center">
 									<div className="homemenu-items">
-										<div className="homemenu">
-											<div className="homemenu-thumb">
-												<img src="assets/img/header/home-1.jpg" alt="img" />
-												<div className="demo-button">
-													<Link href="/" className="theme-btn">
-														Multi Page
-													</Link>
-													<Link href="/index-one-page" className="theme-btn">
-														One Page
-													</Link>
-												</div>
-											</div>
-											<div className="homemenu-content text-center">
-												<h4 className="homemenu-title">
-													Home 01
-												</h4>
-											</div>
-										</div>
 										<div className="homemenu">
 											<div className="homemenu-thumb mb-15">
 												<img src="assets/img/header/home-2.jpg" alt="img" />
 												<div className="demo-button">
-													<Link href="/index-2" className="theme-btn">
+													<Link href="/" className="theme-btn">
 														Multi Page
-													</Link>
-													<Link href="/index-two" className="theme-btn">
-														One Page
 													</Link>
 												</div>
 											</div>
 											<div className="homemenu-content text-center">
 												<h4 className="homemenu-title">
-													Home 02
+													Home
 												</h4>
 											</div>
 										</div>
@@ -76,8 +55,7 @@ export default function MobileMenu() {
 								<i className="fa-regular fa-plus" />
 							</Link>
 							<ul className="submenu" style={{ display: `${isAccordion == 2 ? "block" : "none"}` }}>
-								<li><Link href="/">Home 01</Link></li>
-								<li><Link href="/index-2">Home 02</Link></li>
+								<li><Link href="/">Home</Link></li>
 							</ul>
 							<a className="mean-expand" onClick={() => handleAccordion(2)} style={{ fontSize: 18 }}>
 								<i className="far fa-plus" /></a>
@@ -85,7 +63,7 @@ export default function MobileMenu() {
 						<li>
 							<Link href="/about">About Us</Link>
 						</li>
-						<li className="has-dropdown">
+						{/* <li className="has-dropdown">
 							<Link href="/news">
 								Pages
 								<i className="fa-regular fa-plus" />
@@ -99,20 +77,29 @@ export default function MobileMenu() {
 							</ul>
 							<a className="mean-expand" onClick={() => handleAccordion(3)} style={{ fontSize: 18 }}>
 								<i className="far fa-plus" /></a>
-						</li>
+						</li> */}
 						<li>
 							<Link href="/service-details">
 								Services
 								<i className="fa-regular fa-plus" />
 							</Link>
 							<ul className="submenu" style={{ display: `${isAccordion == 4 ? "block" : "none"}` }}>
-								<li><Link href="/service">Services</Link></li>
-								<li><Link href="/service-details">Service Details</Link></li>
+								<li><Link href="/service">All Services</Link></li>
+								<li><a href="/service-details">Air Freight Forwarding</a></li>
+								<li><a href="/service-details">Ocean Freight Forwarding</a></li>
+								<li><a href="/service-details">Rail Freight</a></li>
+								<li><a href="/service-details">Road Transportation</a></li>
+								<li><a href="/service-details">Customs Brokerage</a></li>
+								<li><a href="/service-details">Project Management</a></li>
+								<li><a href="/service-details">Courier Services</a></li>
+								<li><a href="/service-details">Warehouse</a></li>
+								<li><a href="/service-details">Packers & Movers</a></li>
+								<li><a href="/service-details">Other Services</a></li>
 							</ul>
 							<a className="mean-expand" onClick={() => handleAccordion(4)} style={{ fontSize: 18 }}>
 								<i className="far fa-plus" /></a>
 						</li>
-						<li>
+						{/* <li>
 							<Link href="/project">
 								Projects
 								<i className="fa-regular fa-plus" />
@@ -123,16 +110,16 @@ export default function MobileMenu() {
 							</ul>
 							<a className="mean-expand" onClick={() => handleAccordion(5)} style={{ fontSize: 18 }}>
 								<i className="far fa-plus" /></a>
-						</li>
+						</li> */}
 						<li>
 							<Link href="/news">
 								Blog
 								<i className="fa-regular fa-plus" />
 							</Link>
 							<ul className="submenu" style={{ display: `${isAccordion == 6 ? "block" : "none"}` }}>
-								<li><Link href="/news-grid">Blog Grid</Link></li>
-								<li><Link href="/news">Blog Standard</Link></li>
-								<li><Link href="/news-details">Blog Details</Link></li>
+								<li><Link href="/news-grid">Blogs</Link></li>
+								{/* <li><Link href="/news">Blog Standard</Link></li> */}
+								{/* <li><Link href="/news-details">Blog Details</Link></li> */}
 							</ul>
 							<a className="mean-expand" onClick={() => handleAccordion(6)} style={{ fontSize: 18 }}>
 								<i className="far fa-plus" /></a>

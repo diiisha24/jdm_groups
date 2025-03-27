@@ -23,7 +23,7 @@ export default function CtaBanner2() {
               </Link>
             </div>
             <div className="cta-image wow fadeInUp" data-wow-delay=".3s">
-              <img src="assets/img/engineer-holding.png" alt="img" />
+              <img src="https://trastek-nextjs.vercel.app/assets/img/engineer-holding.png" alt="img" />
             </div>
           </div>
         </div>
