@@ -1,16 +1,74 @@
 "use client"
 import Link from "next/link"
 
+// const services = [
+//   {
+//     title: "Air Freight",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/flight2.jpg",
+//     link: "/services/logistics/air-freight",
+//   },
+//   {
+//     title: "Sea Freight",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/ship2.jpg",
+//     link: "/services/logistics/sea-freight",
+//   },
+//   {
+//     title: "Road Transportation",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/truck1.jpg",
+//     link: "/services/logistics/road-transport",
+//   },
+//   {
+//     title: "Warehousing",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/where.jpg",
+//     link: "/warehousing",
+//   },
+//   {
+//     title: "Project Management",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/project.jpg",
+//     link: "/services/project-management",
+//   },
+//   {
+//     title: "Custom Clearance",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/custom1.jpg",
+//     link: "/custom-brokerage",
+//   },
+//   {
+//     title: "Packaging",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/packing.jpg",
+//     link: "/packers-movers",
+//   },
+//   {
+//     title: "Exhibitions",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/exhibition.jpg",
+//     link: "/exhibition",
+//   },
+//   {
+//     title: "Courier Services",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/courier.jpg",
+//     link: "/courier-services",
+//   },
+//   {
+//     title: "Perishable Cargo",
+//     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/peri.jpg",
+//     link: "/perishable-cargo",
+//   },
+//   // ... rest of your services array remains the same
+// ]
 const services = [
   {
     title: "Air Freight",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/flight2.jpg",
+    image: "assets/img/service/Air_Freight.jpeg",
     link: "/services/logistics/air-freight",
   },
   {
-    title: "Sea Freight",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/ship2.jpg",
+    title: "Ocean Freight",
+    image: "assets/img/service/Ocean.jpg",
     link: "/services/logistics/sea-freight",
+  },
+  {
+    title: "Train Freight",
+    image: "assets/img/service/Rail.jpg", // Placeholder image, update if needed
+    link: "/services/logistics/train-freight",
   },
   {
     title: "Road Transportation",
@@ -18,44 +76,36 @@ const services = [
     link: "/services/logistics/road-transport",
   },
   {
-    title: "Warehousing",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/where.jpg",
-    link: "/warehousing",
-  },
-  {
-    title: "Project Management",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/project.jpg",
-    link: "/services/project-management",
-  },
-  {
     title: "Custom Clearance",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/custom1.jpg",
+    image: "assets/img/service/Customs_Brokrage.jpg",
     link: "/custom-brokerage",
   },
   {
-    title: "Packaging",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/packing.jpg",
-    link: "/packers-movers",
-  },
-  {
-    title: "Exhibitions",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/exhibition.jpg",
-    link: "/exhibition",
-  },
-  {
     title: "Courier Services",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/courier.jpg",
+    image: "assets/img/service/Courier.jpg",
     link: "/courier-services",
   },
   {
-    title: "Perishable Cargo",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/peri.jpg",
-    link: "/perishable-cargo",
+    title: "Project Cargo",
+    image: "assets/img/service/Project_Cargo.jpg",
+    link: "/services/project-cargo",
   },
-  // ... rest of your services array remains the same
-]
+  {
+    title: "Warehousing",
+    image: "assets/img/service/Warehouse.jpg",
+    link: "/warehousing",
+  },
+];
 
 export default function GlobalServices() {
+    const totalSlides = services.length;
+    let columnsPerRow;
+    
+    if (totalSlides <= 8) {
+      columnsPerRow = totalSlides/2; // Up to 8 slides, show 4 per row
+    } else {
+      columnsPerRow = 5; // 11 or more slides, show 5 per row
+    }
     return (
       <section className="global-services-section service-section fix section-padding" id="services">
         <div className="bg-shape">
@@ -115,7 +165,7 @@ export default function GlobalServices() {
   
           .services-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(${columnsPerRow}, 1fr);
             gap: 0;
           }
   
