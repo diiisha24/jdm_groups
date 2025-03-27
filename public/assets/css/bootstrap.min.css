@@ -8645,7 +8645,9 @@ fieldset:disabled .btn {
 .mb-4 {
     margin-bottom: 1.5rem !important
 }
-
+.flex{
+    display: flex !important;
+}
 .mb-5 {
     margin-bottom: 3rem !important
 }

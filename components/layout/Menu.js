@@ -9,7 +9,7 @@ export default function Menu() {
 			<nav id="mobile-menu" className="d-none d-xl-block">
 				<ul>
 					<li className="has-dropdown active menu-thumb">
-						<Link href="/index-2">
+						<Link href="/">
 							Home
 							{/* <i className="fa-regular fa-plus" /> */}
 						</Link>

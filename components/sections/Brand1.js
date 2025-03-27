@@ -7,10 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react"
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
 	spaceBetween: 30,
-	speed: 2500,
+	speed: 500,
 	loop: true,
 	autoplay: {
-		delay: 2500,
+		delay: 500,
 		disableOnInteraction: false,
 	},
 	breakpoints: {
@@ -35,8 +35,8 @@ const swiperOptions = {
 export default function Brand1({ alt }) {
 	return (
 		<>
-			<div className={`brand-section fix section-padding ${alt ? "pt-0 section-bg-2" : ""}`}>
-				<div className="container">
+			<section className={`brand-section fix section-padding ${alt ? "pt-0 section-bg-2" : ""}`}>
+				<div className="p-4">
 					<div className="swiper brand-slider">
 						<Swiper {...swiperOptions} className="swiper-wrapper">
 							{/* <SwiperSlide className="swiper-slide">
@@ -132,7 +132,21 @@ export default function Brand1({ alt }) {
 						</Swiper>
 					</div>
 				</div>
-			</div>
+			</section>
+			<style jsx>{`
+				.brand-image {
+					padding: 15px;
+					border: 3px solid var(--theme);
+					min-height: 152px;
+					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+					transition: box-shadow 0.3s ease;
+					border-radius: 2px;
+				}
+
+				.brand-image:hover {
+					box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+				}
+			`}</style>
 		</>
 	)
 }

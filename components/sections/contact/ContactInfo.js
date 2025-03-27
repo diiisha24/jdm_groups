@@ -27,8 +27,7 @@ export default function ContactInfo() {
               <div className="content">
                 <h3>Our Address</h3>
                 <p>
-                  2715 Ash Dr. San Jose,
-                  <br /> South Dakota 83475
+                  A-75, New Delhi - 1100037, India
                 </p>
               </div>
             </div>
@@ -44,10 +43,11 @@ export default function ContactInfo() {
               <div className="content">
                 <h3>Email Address</h3>
                 <p>
-                  Mobile :<Link href="tel:984756123695">9847 5612 3695</Link>{" "}
+                  Mobile :<Link href="tel:+9149707070">+91-49707070-100 Lines
+                  </Link>{" "}
                   <br />
                   Email :
-                  <Link href="mailto:example@gmail.com">example@gmail.com</Link>
+                  <Link href="mailto:info@jdmgroups.com">info@jdmgroups.com</Link>
                 </p>
               </div>
             </div>

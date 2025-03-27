@@ -10,14 +10,14 @@ export default function Footer1() {
 			>
 				<div className="container">
 					<div className="contact-info-area">
-						<Link
+						{/* <Link
 							href="/"
 							className="logo-img wow fadeInUp"
 							data-wow-delay=".2s"
 						>
 							{/* <img src="assets/img/logo/black-logo.svg" alt="img" /> */}
-							<img src="assets/img/logo/black-logo.jpg" alt="img" />
-						</Link>
+							{/* <img src="assets/img/logo/black-logo.jpg" alt="img" />
+						</Link> */} 
 						<div
 							className="contact-info-items wow fadeInUp"
 							data-wow-delay=".4s"
@@ -27,7 +27,7 @@ export default function Footer1() {
 							</div>
 							<div className="content">
 								<p>Office location</p>
-								<h3>4648 Rocky, New York</h3>
+								<h3>A-75, New Delhi - 1100037, India</h3>
 							</div>
 						</div>
 						<div
@@ -40,7 +40,7 @@ export default function Footer1() {
 							<div className="content">
 								<p>send email</p>
 								<h3>
-									<Link href="mailto:example@gmail.com">example@gmail.com</Link>
+									<Link href="mailto:info@jdmgroups.com">info@jdmgroups.com</Link>
 								</h3>
 							</div>
 						</div>
@@ -54,7 +54,7 @@ export default function Footer1() {
 							<div className="content">
 								<p>call emergency</p>
 								<h3>
-									<Link href="tel:+88012365499">+88 0123 654 99</Link>
+								<Link href="tel:+9149707070">+91-49707070-100 Lines</Link>
 								</h3>
 							</div>
 						</div>
@@ -71,21 +71,19 @@ export default function Footer1() {
 									</div>
 									<div className="footer-content">
 										<p>
-											Nullam interdum libero vitae pretium aliquam <br /> donec
-											nibh purus laoreet in ullamcorper vel <br /> malesuada sit
-											amet enim.
+										Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.
 										</p>
 										<div className="social-icon d-flex align-items-center">
-											<Link href="#">
+											<Link href="https://www.facebook.com/profile.php?id=100090951694492">
 												<i className="fab fa-facebook-f" />
 											</Link>
-											<Link href="#">
+											<Link href="https://x.com/home?lang=en">
 												<i className="fab fa-twitter" />
 											</Link>
-											<Link href="#">
-												<i className="fab fa-youtube" />
+											<Link href="https://www.instagram.com/we_jdm/">
+												<i className="fab fa-instagram" />
 											</Link>
-											<Link href="#">
+											<Link href="https://www.linkedin.com/company/27983246" target="_blank">
 												<i className="fab fa-linkedin-in" />
 											</Link>
 										</div>
@@ -108,6 +106,12 @@ export default function Footer1() {
 											</Link>
 										</li>
 										<li>
+											<Link href="service">
+												<i className="fa-solid fa-chevrons-right" />
+												Services
+											</Link>
+										</li>
+										<li>
 											<Link href="contact">
 												<i className="fa-solid fa-chevrons-right" />
 												Contact Us
@@ -123,12 +127,6 @@ export default function Footer1() {
 											<Link href="faq">
 												<i className="fa-solid fa-chevrons-right" />
 												FAQ’S
-											</Link>
-										</li>
-										<li>
-											<Link href="contact">
-												<i className="fa-solid fa-chevrons-right" />
-												Login / Register
 											</Link>
 										</li>
 									</ul>

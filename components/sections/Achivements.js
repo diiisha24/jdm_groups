@@ -21,7 +21,7 @@ export default function Achivements() {
 											<i className="fa-regular fa-arrow-right-long" />
 										</h6>
 										<h2 className="wow fadeInUp" data-wow-delay=".2s">
-											Let's Get Started We are <br /> now Transport a dream.
+											Let's Get Started We are now Transport a dream.
 										</h2>
 									</div>
 									<p className="mt-3 mt-md-0 wow fadeInUp">
@@ -38,9 +38,9 @@ export default function Achivements() {
 								data-wow-delay=".2s"
 							>
 								<div className="achivements-image">
-									<img src="assets/img/achivements-image.jpg" alt="img" />
+									<img src="https://trastek-nextjs.vercel.app/assets/img/achivements-image.jpg" alt="img" />
 									<div className="achivements-image-2 float-bob-y">
-										<img src="assets/img/achivements-image-2.jpg" alt="img" />
+										<img src="https://trastek-nextjs.vercel.app/assets/img/achivements-image-2.jpg" alt="img" />
 									</div>
 								</div>
 							</div>

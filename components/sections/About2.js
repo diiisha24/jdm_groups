@@ -59,14 +59,11 @@ export default function About2() {
 											<i className="fa-regular fa-arrow-right-long" />
 										</h6>
 										<h2 className="wow fadeInUp" data-wow-delay=".2s">
-											Dedicated To Providing <br /> Top-Notch Transport
+											Customer Delight <br /> Is Our Passion
 										</h2>
 									</div>
 									<p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">
-										It is a long established fact that a reader will be
-										distracted the readable content of a page when looking at
-										layout the point of using lorem the is Ipsum Trastek less
-										normal distribution best company in world of letters.
+									Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.
 									</p>
 									<div className="row g-4 mt-3">
 										<div className="col-lg-6 wow fadeInUp" data-wow-delay=".2s">
@@ -117,7 +114,7 @@ export default function About2() {
 										>
 											<img src="assets/img/about/author.png" alt="author-img" />
 											<div className="content">
-												<p>Trastek, CEO</p>
+												<p>JDM - Group, CEO</p>
 												<h4>Brooklyn Simmons</h4>
 											</div>
 										</div>

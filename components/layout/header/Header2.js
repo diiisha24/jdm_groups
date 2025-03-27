@@ -6,7 +6,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 		<>
 			<header className="header-section-2">
 				<div className="container-fluid">
-					<div className="header-top-wrapper-2">
+					{/* <div className="header-top-wrapper-2">
 						<ul className="contact-list">
 							<li>
 								<i className="far fa-envelope" />
@@ -15,11 +15,11 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 							<li>
 								<i className="fa-sharp fa-solid fa-location-dot" />
 								{/* 4648 Rocky, New York */}
-								A-75, New Delhi - 1100037, India
+								{/* A-75, New Delhi - 1100037, India
 							</li>
 							<li>
 								<i className="fa-regular fa-phone" />
-								<Link href="tel:+9149707070100">+91-49707070-100 Lines</Link>
+								<Link href="tel:+9149707070">+91-49707070-100 Lines</Link>
 							</li>
 						</ul>
 						<div className="top-right">
@@ -32,22 +32,22 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 								</li>
 							</ul>
 							<div className="social-icon d-flex align-items-center">
-								<Link href="#">
-									<i className="fab fa-facebook-f" />
-								</Link>
-								<Link href="#">
-									<i className="fab fa-twitter" />
-								</Link>
-								<Link href="#">
-									<i className="fab fa-youtube" />
-								</Link>
-								<Link href="#">
-									<i className="fab fa-linkedin-in" />
-								</Link>
+							<Link href="https://www.facebook.com/profile.php?id=100090951694492">
+								<i className="fab fa-facebook-f" />
+							</Link>
+							<Link href="https://x.com/home?lang=en">
+								<i className="fab fa-twitter" />
+							</Link>
+							<Link href="https://www.instagram.com/we_jdm/">
+								<i className="fab fa-instagram" />
+							</Link>
+							<Link href="https://www.linkedin.com/company/27983246" target="_blank">
+								<i className="fab fa-linkedin-in" />
+							</Link>
 							</div>
 						</div>
-					</div>
-					<div id="header-sticky" className={`header-2 ${scroll ? "sticky" : ""}`}>
+					</div> */} 
+					<div id="header-sticky" className={`header-2 sticky`}>
 						<div className="mega-menu-wrapper">
 							<div className="header-main">
 								<div className="header-left">

@@ -55,7 +55,7 @@ export default function Layout({
 			<Offcanvas isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} />
 
 			{!headerStyle && (
-				<Header1
+				<Header2
 					scroll={scroll}
 					isMobileMenu={isMobileMenu}
 					handleMobileMenu={handleMobileMenu}

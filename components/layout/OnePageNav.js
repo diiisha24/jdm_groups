@@ -10,7 +10,7 @@ export default function OnePageNav() {
 							Home
 							<i className="fa-regular fa-plus" />
 						</Link>
-						<ul className="submenu has-homemenu">
+						{/* <ul className="submenu has-homemenu">
 							<li>
 								<div className="homemenu-items">
 									<div className="homemenu">
@@ -51,9 +51,9 @@ export default function OnePageNav() {
 									</div>
 								</div>
 							</li>
-						</ul>
+						</ul> */}
 					</li>
-					<li className="has-dropdown active d-xl-none">
+					{/* <li className="has-dropdown active d-xl-none">
 						<Link href="/team" className="border-none">
 							Home
 							<i className="fa-regular fa-plus" />
@@ -62,7 +62,7 @@ export default function OnePageNav() {
 							<li><Link href="/">Home 01</Link></li>
 							<li><Link href="/index-2">Home 02</Link></li>
 						</ul>
-					</li>
+					</li> */}
 					<li>
 						<Link href="#about">About Us</Link>
 					</li>
