@@ -118,7 +118,7 @@ export default function GlobalServices() {
                     quality Services
                     <i className="fa-regular fa-arrow-right-long" />
                 </h6>
-                <h2 className="text-black wow fadeInUp" data-wow-delay=".2s">
+                <h2 className="wow fadeInUp" data-wow-delay=".2s">
                     Our Services
                 </h2>
             </div>
@@ -152,7 +152,7 @@ export default function GlobalServices() {
   
         <style jsx>{`
           .global-services-section {
-            padding: 50px 0 0;
+            padding: 50px 0 120px;
           }
   
           .section-title {

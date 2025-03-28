@@ -7,10 +7,10 @@ export default function About1() {
 		<>
 			<section className="about-section fix section-padding" id="about">
 				<div className="about-shape-1 float-bob-x">
-					<img src="assets/img/about/about-shape-1.png" alt="img" />
+					<img src="assets/img/about/about-shape-4.png" alt="img" />
 				</div>
 				<div className="about-shape-2 float-bob-x">
-					<img src="assets/img/about/about-shape-2.png" alt="img" />
+					<img src="assets/img/about/about-shape-5.png" alt="img" />
 				</div>
 				<div className="container">
 					<div className="about-wrapper">
@@ -18,7 +18,7 @@ export default function About1() {
 							<div className="col-lg-6">
 								<div className="about-image">
 									<img
-										src="assets/img/about/01.jpg"
+										src="assets/img/about/03.jpg"
 										alt="img"
 										className="wow fadeInLeft"
 										data-wow-delay=".2s"
@@ -27,7 +27,7 @@ export default function About1() {
 										className="about-image-2 wow fadeInUp"
 										data-wow-delay=".4s"
 									>
-										<img src="assets/img/about/02.jpg" alt="img" />
+										<img src="assets/img/about/04.jpg" alt="img" />
 										<div className="video-box">
 											<a
 												onClick={() => setOpen(true)}
@@ -55,29 +55,31 @@ export default function About1() {
 										</h2>
 									</div>
 									<p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">
-										It is a long established fact that a reader will be
-										distracted the readable content of a page when looking at
-										layout the point of using lorem the is Ipsum less normal
-										distribution of letters.
+									Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.
 									</p>
 									<ul className="list-items wow fadeInUp" data-wow-delay=".2s">
-										<li>
-											{" "}
+										{/* <li>
 											<i className="fa-solid fa-circle-check" />
-											We will never compromise the safety of our people
+											Strong Worldwide Agency Network
+										</li> */}
+										<li>
+											<i className="fa-solid fa-circle-check" />
+											Recognized 24*7 Customs Brokerage
 										</li>
 										<li>
-											{" "}
 											<i className="fa-solid fa-circle-check" />
-											With over four decades of experience providing solutions
+											10+ offices at prominent locations in India
 										</li>
 										<li>
-											{" "}
 											<i className="fa-solid fa-circle-check" />
-											We see projects through and proactively develop solutions
+											Dedicated customer support for personalized services
+										</li>
+										<li>
+											<i className="fa-solid fa-circle-check" />
+											Comprehensive compliance &amp; regulatory expertise ensuring smooth Logistics Solutions
 										</li>
 									</ul>
-									<div className="about-author">
+									{/* <div className="about-author">
 										<div
 											className="author-image wow fadeInUp"
 											data-wow-delay=".2s"
@@ -94,7 +96,7 @@ export default function About1() {
 											className="wow fadeInUp"
 											data-wow-delay=".4s"
 										/>
-									</div>
+									</div> */}
 								</div>
 							</div>
 						</div>

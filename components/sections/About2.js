@@ -83,28 +83,7 @@ export default function About2() {
 											</div>
 										</div>
 									</div>
-									{/* <ul className="list-items wow fadeInUp" data-wow-delay=".2s">
-										<li>
-											{" "}
-											<i className="fa-solid fa-circle-check" />
-											Proactively pontificate client-centered relationships
-										</li>
-										<li>
-											{" "}
-											<i className="fa-solid fa-circle-check" />
-											Is there a waiting list for desired work to be started
-										</li>
-										<li>
-											{" "}
-											<i className="fa-solid fa-circle-check" />
-											Release of Letraset sheets containing Lorem Ipsum
-										</li>
-									</ul> */}
 									<ul className="list-items wow fadeInUp" data-wow-delay=".2s">
-										{/* <li>
-											<i className="fa-solid fa-circle-check" />
-											Strong Worldwide Agency Network
-										</li> */}
 										<li>
 											<i className="fa-solid fa-circle-check" />
 											Recognized 24*7 Customs Brokerage
@@ -131,16 +110,6 @@ export default function About2() {
 										>
 											Explore more <i className="fa-regular fa-arrow-right" />
 										</Link>
-										{/* <div
-											className="author-image wow fadeInUp"
-											data-wow-delay=".4s"
-										>
-											<img src="assets/img/about/author.png" alt="author-img" />
-											<div className="content">
-												<p>JDM - Group, CEO</p>
-												<h4>Brooklyn Simmons</h4>
-											</div>
-										</div> */}
 									</div>
 								</div>
 							</div>

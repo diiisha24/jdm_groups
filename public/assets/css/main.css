@@ -14,12 +14,13 @@ Version: 1.0.0
   /* --theme: #df1119; */
   --theme: #b5271f;
   --theme2: #fcca11;
-  --header: #121315;
+  --header: #28344d;
   --text: #666666;
   --border:#D4DCED;
   --border-2: #D4DCED;
   --bg: #1E2023;
   --box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.13);
+  --footer-gray: #ebc383;
   /* --gray: #ebc283; */
 }
 section{
@@ -316,7 +317,8 @@ span {
     bottom: 0;
   }
 }
-.about-wrapper .about-image .about-image-2 img {
+.about-wrapper .about-image .about-image-2 img,
+.w-full {
   width: 100%;
   height: 100%;
 }
@@ -881,6 +883,126 @@ span {
     width: 0;
   }
 }
+/* Clientele Section */
+/* .clientele-section { */
+  /* position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  overflow: hidden;
+  .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%); /* Dark gradient background */
+    /* z-index: -1;
+  } */
+  
+  /* .content-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+  } */ 
+  
+  /* Tabs */
+  /* .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .tab:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .tab.active {
+    background: #f5c518; /* Yellow to match the theme */
+    /* color: #1a1a1a;
+  } */ 
+  
+  /* Logo Grid */
+  /* .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05); /* Slight background for contrast */
+    /* border-radius: 10px;
+  } */
+  /* .logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  } */
+  
+  /* .logo-item:hover {
+    transform: scale(1.1); Slight zoom on hover */
+  /* } */
+  
+  /* .logo-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+  } */
+  
+  /* Responsive Adjustments */
+  /* @media (max-width: 768px) {
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .tab {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  
+    .logo-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+  
+    .logo-image {
+      width: 100px;
+      height: 100px;
+    }
+  }
+} */
+
+/* Journey Section */
+.journey{
+  width: 100%;
+  padding: 0px 120px;
+}
+/* Contact Section */
+
 .contact-section {
   position: relative;
   z-index: 9;
@@ -1571,6 +1693,7 @@ span {
 }
 
 .footer-section {
+  background-color: var(--theme);
   position: relative;
   z-index: 9;
 }
@@ -1584,7 +1707,6 @@ span {
   height: 100%;
   content: "";
   z-index: -1;
-  background-color: var(--header);
   opacity: 0.95;
 }
 

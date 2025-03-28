@@ -1,152 +1,94 @@
 "use client"
+import Link from "next/link"
 // import "swiper/css"
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 const swiperOptions = {
-	modules: [Autoplay, Pagination, Navigation],
-	spaceBetween: 30,
-	speed: 500,
-	loop: true,
-	autoplay: {
-		delay: 500,
-		disableOnInteraction: false,
-	},
-	breakpoints: {
-		1199: {
-			slidesPerView: 5,
-		},
-		991: {
-			slidesPerView: 4,
-		},
-		767: {
-			slidesPerView: 3,
-		},
-		575: {
-			slidesPerView: 2,
-		},
-		0: {
-			slidesPerView: 1,
-		},
-	},
+  modules: [Autoplay, Pagination, Navigation],
+  spaceBetween: 30,
+  speed: 500,
+  loop: true,
+  autoplay: {
+    delay: 500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    1199: { slidesPerView: 5 },
+    991: { slidesPerView: 4 },
+    767: { slidesPerView: 3 },
+    575: { slidesPerView: 2 },
+    0: { slidesPerView: 1 },
+  },
 }
 
-export default function Brand1({ alt }) {
-	return (
-		<>
-			<section className={`brand-section fix section-padding ${alt ? "pt-0 section-bg-2" : ""}`}>
-				<div className="p-4">
-					<div className="swiper brand-slider">
-						<Swiper {...swiperOptions} className="swiper-wrapper">
-							{/* <SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo-2.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo-3.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo-4.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo-5.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo-5.png" alt="img" />
-								</div>
-							</SwiperSlide> */}
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-1.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-2.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-3.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-4.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-5.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-6.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-7.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-8.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-9.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-10.png" alt="img" />
-								</div>
-							</SwiperSlide>
-						</Swiper>
-					</div>
-				</div>
-			</section>
-			<style jsx>{`
-				.brand-image {
-					padding: 15px;
-					border: 3px solid var(--theme);
-					min-height: 152px;
-					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-					transition: box-shadow 0.3s ease;
-					border-radius: 2px;
-				}
+// Example image data (you can pass this as a prop)
+const defaultImages = [
+  "assets/img/brand/JDM-png-1.png",
+  "assets/img/brand/JDM-png-2.png",
+  "assets/img/brand/JDM-png-3.png",
+  "assets/img/brand/JDM-png-4.png",
+  "assets/img/brand/JDM-png-5.png",
+  "assets/img/brand/JDM-png-6.png",
+  "assets/img/brand/JDM-png-7.png",
+  "assets/img/brand/JDM-png-8.png",
+  "assets/img/brand/JDM-png-9.png",
+  "assets/img/brand/JDM-png-10.png",
+]
 
-				.brand-image:hover {
-					box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-				}
-			`}</style>
-		</>
-	)
+export default function Brand1({ alt,heading , images = defaultImages, know_more }) {
+  return (
+    <>
+      <div className={`brand-section fix ${alt ? "pt-0 section-bg-2" : ""}`}>
+        <div className="p-4">
+			<div className="section-title text-center">
+				{/* <h6 className="wow fadeInUp">
+					<i className="fa-regular fa-arrow-left-long" />
+					quality Services
+					<i className="fa-regular fa-arrow-right-long" />
+				</h6> */}
+				<h2 className="wow fadeInUp" data-wow-delay=".2s">
+					{heading}
+				</h2>
+			</div>
+          <div className="swiper brand-slider">
+            <Swiper {...swiperOptions} className="swiper-wrapper">
+              {images.map((image, index) => (
+                <SwiperSlide key={index} className="swiper-slide">
+                  <div className="brand-image center">
+                    <img src={image} alt={`brand-${index + 1}`} />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+          {know_more && (
+            <div className="know-more-button p-4 flex justify-content-center">
+              <Link href="about" className="theme-btn wow fadeInUp" data-wow-delay=".2s">
+                {know_more} <i className="fa-regular fa-arrow-right" />
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>
+      <style jsx>{`
+        .brand-section {
+          padding-bottom: 50px;
+        }
+        .brand-image {
+          padding: 15px;
+          border: 3px solid var(--theme);
+          min-height: 152px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: box-shadow 0.3s ease;
+          border-radius: 2px;
+        }
+
+        .brand-image:hover {
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+      `}</style>
+    </>
+  )
 }

@@ -45,7 +45,7 @@ export default function News2() {
 						>
 							<div
 								className={
-									activeIndex === 1 ? "news-box-items active" : "news-box-items"
+									activeIndex === 1 ? "news-box-items" : "news-box-items"
 								}
 							>
 								<div className="news-image">
@@ -84,7 +84,7 @@ export default function News2() {
 						>
 							<div
 								className={
-									activeIndex === 2 ? "news-box-items active" : "news-box-items"
+									activeIndex === 2 ? "news-box-items" : "news-box-items"
 								}
 							>
 								<div className="news-image">
@@ -123,7 +123,7 @@ export default function News2() {
 						>
 							<div
 								className={
-									activeIndex === 3 ? "news-box-items active" : "news-box-items"
+									activeIndex === 3 ? "news-box-items" : "news-box-items"
 								}
 							>
 								<div className="news-image">

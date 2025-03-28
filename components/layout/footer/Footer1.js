@@ -6,7 +6,7 @@ export default function Footer1() {
 		<>
 			<footer
 				className="footer-section bg-cover bg-cover"
-				style={{ backgroundImage: 'url("assets/img/footer/bg.jpg")' }}
+				style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}
 			>
 				<div className="container">
 					<div className="contact-info-area">

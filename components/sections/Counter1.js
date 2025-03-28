@@ -16,7 +16,7 @@ export default function Counter1() {
               </span>
               k+
             </h2>
-            <p>project Complete</p>
+            <p>No of Consignment</p>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@ export default function Counter1() {
               </span>
               k+
             </h2>
-            <p>Active On Clients</p>
+            <p>No of Team Members</p>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@ export default function Counter1() {
               </span>
               +
             </h2>
-            <p>Experience Team</p>
+            <p>BOE Entries</p>
           </div>
         </div>
       </div>
@@ -64,7 +64,8 @@ export default function Counter1() {
               </span>
               k+
             </h2>
-            <p>Winning Awards</p>
+            <p>Customers Served
+            </p>
           </div>
         </div>
       </div>
