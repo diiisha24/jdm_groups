@@ -30,43 +30,40 @@ const Clientele = () => {
   }, []);
 
   return (
-    <section className="clientele-section container mx-auto py-16">
-      <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 uppercase">
+    <section className="container py-5">
+      <h2 className="wow fadeInUp text-center py-4">
         Our Clientele
       </h2>
 
       {/* Tabs */}
-      <div className="flex justify-center mb-8 border-b border-gray-300">
-        <button
-          className={`px-6 py-3 text-lg font-medium transition-colors duration-300 focus:outline-none ${
-            activeTab === "sector"
-              ? "border-b-2 border-primary text-primary"
-              : "text-gray-600 hover:text-primary"
-          }`}
-          onClick={() => setActiveTab("sector")}
-        >
-          Sector Wise
-        </button>
-        <button
-          className={`px-6 py-3 text-lg font-medium transition-colors duration-300 focus:outline-none ${
-            activeTab === "country" 
-              ? "border-b-2 border-primary text-primary"
-              : "text-gray-600 hover:text-primary"
-          }`}
-          onClick={() => setActiveTab("country")}
-        >
-          Country Wise
-        </button>
-      </div>
+      <ul className="nav nav-tabs justify-content-center mb-4">
+        <li className="nav-item">
+          <button
+            className={`nav-link ${activeTab === "sector" ? "active" : ""}`}
+            onClick={() => setActiveTab("sector")}
+          >
+            Sector Wise
+          </button>
+        </li>
+        <li className="nav-item">
+          <button
+            className={`nav-link ${activeTab === "country" ? "active" : ""}`}
+            onClick={() => setActiveTab("country")}
+          >
+            Country Wise
+          </button>
+        </li>
+      </ul>
 
       {/* Logo Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6 bg-white shadow-lg rounded-lg">
+      <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 bg-white shadow rounded p-4">
         {(activeTab === "sector" ? sectorLogos : countryLogos).map((logo) => (
-          <div key={logo.id} className="flex items-center justify-center p-4">
+          <div key={logo.id} className="col d-flex justify-content-center align-items-center">
             <img
               src={logo.src}
               alt={logo.alt}
-              className="w-25 object-contain border border-gray-200 shadow-sm rounded-lg"
+              className="img-fluid border border-light shadow-sm rounded"
+              style={{ maxWidth: "150px" }}
               loading="lazy"
               onError={(e) => {
                 e.target.src = "/fallback-image.png";
