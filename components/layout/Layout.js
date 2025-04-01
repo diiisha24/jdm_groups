@@ -7,7 +7,6 @@ import Footer2 from "./footer/Footer2"
 import Header1 from "./header/Header1"
 import Header2 from "./header/Header2"
 import Offcanvas from "./Offcanvas"
-import Search from "./Search"
 
 export default function Layout({
 	headerStyle,
@@ -25,8 +24,8 @@ export default function Layout({
 	const handleOffCanvas = () => setOffCanvas(!isOffCanvas)
 
 	// Search
-	const [isSearch, setSearch] = useState(false)
-	const handleSearch = () => setSearch(!isSearch)
+	// const [isSearch, setSearch] = useState(false)
+	// const handleSearch = () => setSearch(!isSearch)
 
 	useEffect(() => {
 		const WOW = require("wowjs")
@@ -58,8 +57,8 @@ export default function Layout({
 					handleMobileMenu={handleMobileMenu}
 					isOffCanvas={isOffCanvas}
 					handleOffCanvas={handleOffCanvas}
-					isSearch={isSearch}
-					handleSearch={handleSearch}
+					// isSearch={isSearch}
+					// handleSearch={handleSearch}
 				/>
 			)}
 			{headerStyle == 1 ? (
@@ -69,8 +68,8 @@ export default function Layout({
 					handleMobileMenu={handleMobileMenu}
 					isOffCanvas={isOffCanvas}
 					handleOffCanvas={handleOffCanvas}
-					isSearch={isSearch}
-					handleSearch={handleSearch}
+					// isSearch={isSearch}
+					// handleSearch={handleSearch}
 				/>
 			) : null}
 			{headerStyle == 2 ? (
@@ -80,8 +79,8 @@ export default function Layout({
 					handleMobileMenu={handleMobileMenu}
 					isOffCanvas={isOffCanvas}
 					handleOffCanvas={handleOffCanvas}
-					isSearch={isSearch}
-					handleSearch={handleSearch}
+					// isSearch={isSearch}
+					// handleSearch={handleSearch}
 				/>
 			) : null}
 			{headerStyle == 3 ? (
@@ -91,8 +90,8 @@ export default function Layout({
 					handleMobileMenu={handleMobileMenu}
 					isOffCanvas={isOffCanvas}
 					handleOffCanvas={handleOffCanvas}
-					isSearch={isSearch}
-					handleSearch={handleSearch}
+					// isSearch={isSearch}
+					// handleSearch={handleSearch}
 				/>
 			) : null}
 			{headerStyle == 4 ? (
@@ -102,13 +101,13 @@ export default function Layout({
 					handleMobileMenu={handleMobileMenu}
 					isOffCanvas={isOffCanvas}
 					handleOffCanvas={handleOffCanvas}
-					isSearch={isSearch}
-					handleSearch={handleSearch}
+					// isSearch={isSearch}
+					// handleSearch={handleSearch}
 				/>
 			) : null}
-			<Search
-				isSearch={isSearch}
-				handleSearch={handleSearch} />
+			{/* <Search
+				// isSearch={isSearch}
+				handleSearch={handleSearch} /> */}
 
 			<main className="main">
 				{breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}

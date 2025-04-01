@@ -44,6 +44,66 @@ const swiperOptions = {
 	},
 }
 
+// Define all services based on defaultServices
+const services = [
+	{
+		id: "air-freight",
+		title: "Air Freight",
+		image: "/assets/img/service/Air_Freight.jpeg",
+		description: "Fast and reliable air freight services for global shipping.",
+		icon: "fa-regular fa-plane",
+	},
+	{
+		id: "ocean-freight",
+		title: "Ocean Freight",
+		image: "/assets/img/service/Ocean.jpg",
+		description: "Cost-effective ocean freight solutions for bulk shipments.",
+		icon: "fa-regular fa-ship",
+	},
+	{
+		id: "train-freight",
+		title: "Train Freight",
+		image: "/assets/img/service/Rail.jpg",
+		description: "Efficient train freight services for regional transport.",
+		icon: "fa-regular fa-train",
+	},
+	{
+		id: "road-transportation",
+		title: "Road Transportation",
+		image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/truck1.jpg",
+		description: "Flexible road transportation for local and regional deliveries.",
+		icon: "fa-regular fa-truck-fast",
+	},
+	{
+		id: "custom-clearance",
+		title: "Custom Clearance",
+		image: "/assets/img/service/Customs_Brokrage.jpg",
+		description: "Seamless custom clearance services for international shipments.",
+		icon: "fa-regular fa-file-signature",
+	},
+	{
+		id: "courier-services",
+		title: "Courier Services",
+		image: "/assets/img/service/Courier.jpg",
+		description: "Express courier services for urgent deliveries.",
+		icon: "fa-regular fa-truck-front",
+	},
+	{
+		id: "project-cargo",
+		title: "Project Cargo",
+		image: "/assets/img/service/Project_Cargo.jpg",
+		description: "Specialized handling for oversized and complex cargo.",
+		icon: "fa-regular fa-box-open",
+	},
+	{
+		id: "warehousing",
+		title: "Warehousing",
+		image: "/assets/img/service/Warehouse.jpg",
+		description: "Secure and scalable warehousing solutions.",
+		icon: "fa-regular fa-warehouse",
+	},
+]
+
 export default function Service1() {
 	return (
 		<>
@@ -59,7 +119,7 @@ export default function Service1() {
 							<i className="fa-regular fa-arrow-right-long" />
 						</h6>
 						<h2 className="wow fadeInUp text-white" data-wow-delay=".2s">
-							We Offers Cost Effecient
+							We Offers Cost Efficient
 							<br />
 							Transport Shipping
 						</h2>
@@ -72,143 +132,44 @@ export default function Service1() {
 							<i className="fa-regular fa-arrow-right-long" />
 						</button>
 					</div>
+					{/* Download Link */}
+					<div className="text-center mt-4">
+						<a
+							href="/assets/doc/JDM Profile_2025.pdf"
+							download="JDM Profile_2025.pdf"
+							className="download-btn"
+						>
+							<i className="fa-light fa-download" /> Download Our Profile (PDF)
+						</a>
+					</div>
 				</div>
 				<div className="container-fluid">
 					<div className="swiper service-slider">
 						<Swiper {...swiperOptions} className="swiper-wrapper">
-							<SwiperSlide className="swiper-slide">
-								<div className="service-box-items">
-									<div className="service-thumb">
-										<img src="assets/img/service/01.jpg" alt="img" />
-										<div className="icon">
-											<i className="fa-regular fa-truck-fast" />
+							{services.map((service, index) => (
+								<SwiperSlide key={service.id} className="swiper-slide">
+									<div className="service-box-items">
+										<div className="service-thumb">
+											<img src={service.image} alt={service.title} />
+											<div className="icon">
+												<i className={service.icon} />
+											</div>
+										</div>
+										<div className="service-content">
+											<h2 className="number">{String(index + 1).padStart(2, '0')}</h2>
+											<h3>
+												<Link href={`/service-details/${service.id}`}>
+													{service.title}
+												</Link>
+											</h3>
+											<p>{service.description}</p>
+											<Link href={`/service-details/${service.id}`} className="link-btn">
+												Explore More <i className="fa-solid fa-arrow-right" />
+											</Link>
 										</div>
 									</div>
-									<div className="service-content">
-										<h2 className="number">01</h2>
-										<h3>
-											<Link href="service-details">Road Fright</Link>
-										</h3>
-										<p>
-											Consectetur Phasellus a odio vel sapien pharetra placerat.
-										</p>
-										<Link href="service-details" className="link-btn">
-											Explore More <i className="fa-solid fa-arrow-right" />
-										</Link>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="service-box-items">
-									<div className="service-thumb">
-										<img src="assets/img/service/02.jpg" alt="img" />
-										<div className="icon">
-											<i className="fa-regular fa-truck-front" />
-										</div>
-									</div>
-									<div className="service-content">
-										<h2 className="number">02</h2>
-										<h3>
-											<Link href="service-details">Airplane Fright</Link>
-										</h3>
-										<p>
-											Consectetur Phasellus a odio vel sapien pharetra placerat.
-										</p>
-										<Link href="service-details" className="link-btn">
-											Explore More <i className="fa-solid fa-arrow-right" />
-										</Link>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="service-box-items">
-									<div className="service-thumb">
-										<img src="assets/img/service/03.jpg" alt="img" />
-										<div className="icon">
-											<i className="fas fa-pallet" />
-										</div>
-									</div>
-									<div className="service-content">
-										<h2 className="number">03</h2>
-										<h3>
-											<Link href="service-details">Ship Fright</Link>
-										</h3>
-										<p>
-											Consectetur Phasellus a odio vel sapien pharetra placerat.
-										</p>
-										<Link href="service-details" className="link-btn">
-											Explore More <i className="fa-solid fa-arrow-right" />
-										</Link>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="service-box-items">
-									<div className="service-thumb">
-										<img src="assets/img/service/04.jpg" alt="img" />
-										<div className="icon">
-											<i className="fas fa-shipping-fast" />
-										</div>
-									</div>
-									<div className="service-content">
-										<h2 className="number">04</h2>
-										<h3>
-											<Link href="service-details">Airplane Fright</Link>
-										</h3>
-										<p>
-											Consectetur Phasellus a odio vel sapien pharetra placerat.
-										</p>
-										<Link href="service-details" className="link-btn">
-											Explore More <i className="fa-solid fa-arrow-right" />
-										</Link>
-									</div>
-								</div>
-							</SwiperSlide>
-
-							<SwiperSlide className="swiper-slide">
-								<div className="service-box-items">
-									<div className="service-thumb">
-										<img src="assets/img/service/01.jpg" alt="img" />
-										<div className="icon">
-											<i className="fa-regular fa-truck-fast" />
-										</div>
-									</div>
-									<div className="service-content">
-										<h2 className="number">01</h2>
-										<h3>
-											<Link href="service-details">Road Fright</Link>
-										</h3>
-										<p>
-											Consectetur Phasellus a odio vel sapien pharetra placerat.
-										</p>
-										<Link href="service-details" className="link-btn">
-											Explore More <i className="fa-solid fa-arrow-right" />
-										</Link>
-									</div>
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="service-box-items">
-									<div className="service-thumb">
-										<img src="assets/img/service/02.jpg" alt="img" />
-										<div className="icon">
-											<i className="fa-regular fa-truck-front" />
-										</div>
-									</div>
-									<div className="service-content">
-										<h2 className="number">02</h2>
-										<h3>
-											<Link href="service-details">Airplane Fright</Link>
-										</h3>
-										<p>
-											Consectetur Phasellus a odio vel sapien pharetra placerat.
-										</p>
-										<Link href="service-details" className="link-btn">
-											Explore More <i className="fa-solid fa-arrow-right" />
-										</Link>
-									</div>
-								</div>
-							</SwiperSlide>
+								</SwiperSlide>
+							))}
 						</Swiper>
 					</div>
 				</div>

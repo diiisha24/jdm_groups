@@ -86,12 +86,13 @@ export default function ServiceDetails1({ service }) {
                           <p>Download Profile</p>
                         </div>
                       </div>
-                      <Link
-                        href={`/service-details/${service.id}`}
+                      <a
+                        href="/assets/doc/JDM Profile_2025.pdf"
+                        download="JDM Profile_2025.pdf"
                         className="download-btn active"
                       >
                         <i className="fa-light fa-download" />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                   <div className="single-sidebar-widget">

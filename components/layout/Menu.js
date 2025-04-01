@@ -23,7 +23,7 @@ const defaultMenuItems = [
     "title": "Services",
     "href": "service-details",
     "submenu": [
-      { "title": "All Services", "href": "/service-details/all-services" },
+      { "title": "All Services", "href": "/service" },
       { "title": "Air Freight", "href": "/service-details/air-freight" },
       { "title": "Ocean Freight", "href": "/service-details/ocean-freight" },
       { "title": "Train Freight", "href": "/service-details/train-freight" },

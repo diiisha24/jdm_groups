@@ -6,33 +6,33 @@ import { useState, useEffect } from "react"
 const defaultTeamMembers = [
   { 
     id: 1, 
-    name: "Sahil Sehrawat", 
+    name: "Pal Raj", 
     position: "Managing Director", 
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQGHZ-PmavljGQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516948614237?e=1748476800&v=beta&t=4nBwiHmVYpTmeyWWyla9VP9hcmbEQLe_Z0SM97K5N3k", 
+    image: "assets/img/team/01.jpg", 
     delay: "", 
     linkedIn: "https://www.linkedin.com/in/sahil-sehrawat-a1bab084/" 
   },
   { 
     id: 2, 
-    name: "Kusum Bisht", 
-    position: "BD & HR Manager", 
-    image: "https://media.licdn.com/dms/image/v2/D5603AQFrx1eMxps6Sw/profile-displayphoto-shrink_800_800/B56ZWyveqPHEAg-/0/1742460546147?e=1748476800&v=beta&t=pNCZgI4aYRlMolfig4GrOwlGS_qXcuVZGqXXH6qeCIE", 
+    name: "Rohit Raj", 
+    position: "Branch Manager", 
+    image: "assets/img/team/02.jpg", 
     delay: "0.2s",
     linkedIn: "https://www.linkedin.com/in/kusum-bisht/" 
   },
   { 
     id: 3, 
-    name: "Sushank Jain", 
-    position: "Schedule Management", 
-    image: "https://media.licdn.com/dms/image/v2/D5603AQGJ02_89wICeg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1707456525210?e=1748476800&v=beta&t=YU2QHi4a2HU3SO1060Q0Cri_NVL07OQe0RfGBIhWu5s", 
+    name: "Abhilash", 
+    position: "Assistant General Manager", 
+    image: "assets/img/team/03.jpg", 
     delay: "0.4s",
     linkedIn: "https://www.linkedin.com/in/sushank-jain-34878b93/" 
   },
   { 
     id: 4, 
-    name: "Ronald Richards", 
-    position: "Sr. Engineer", 
-    image: "assets/img/team/08.jpg", 
+    name: "Anuj Arora", 
+    position: "General Manager", 
+    image: "assets/img/team/04.jpg", 
     delay: "0.6s",
     linkedIn: "" 
   },
@@ -170,6 +170,7 @@ export default function Team2() {
         }
 
         .team-image img {
+          min-width:250px;
           width: 100%;
           height: 300px;
           object-fit: cover;

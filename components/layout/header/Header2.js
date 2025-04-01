@@ -72,7 +72,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 											GAT A QUOTE <i className="fa-regular fa-arrow-right" />
 										</Link>
 									</div>
-									<div className="search-item social-links">
+									<div className="search-item social-links d-none d-xl-flex">
 										{/* <a className="search-trigger search-icon" onClick={handleSearch}>
 											<i className="fal fa-search" />
 										</a> */}
@@ -89,12 +89,12 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 											<i className="fab fa-linkedin-in" />
 										</Link>
 										{/* <div className="social-icon d-flex align-items-center">
-										</div>
-										<div className="header__hamburger d-xl-block my-auto">
-											<div className="sidebar__toggle" onClick={handleOffCanvas}>
-												<i className="fas fa-bars" />
-											</div>
 										</div> */}
+									</div>
+									<div className="header__hamburger d-xl-none my-auto">
+										<div className="sidebar__toggle" onClick={handleOffCanvas}>
+											<i className="fas fa-bars" />
+										</div>
 									</div>
 								</div>
 							</div>

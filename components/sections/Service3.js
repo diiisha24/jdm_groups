@@ -16,7 +16,7 @@ const defaultServices = [
   },
   {
     title: "Train Freight",
-    image: "assets/img/service/Rail.jpg",
+    image: "/assets/img/service/Rail.jpg",
     link: "/services/logistics/train-freight",
   },
   {
