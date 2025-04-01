@@ -3,12 +3,11 @@ import About2 from "@/components/sections/About2";
 import Achivements from "@/components/sections/Achivements";
 import Brand1 from "@/components/sections/Brand1";
 import CtaBanner2 from "@/components/sections/CtaBanner2";
-import GroupofCompanies from "@/components/sections/GroupofCompanies";
 import Hero2 from "@/components/sections/Hero2";
 import Journey from "@/components/sections/Journey";
 import Network from "@/components/sections/network";
 import News2 from "@/components/sections/News2";
-import Project2 from "@/components/sections/Project2";
+// import Project2 from "@/components/sections/Project2";
 import Service3 from "@/components/sections/Service3";
 import Team2 from "@/components/sections/Team2";
 import Testimonial2 from "@/components/sections/Testimonial2";
@@ -82,8 +81,9 @@ export default async function Home2() {
   return (
     <Layout headerStyle={2} footerStyle={2}>
       <Hero2 />
+      {/* Add Group Of companies */}
       <About2 />
-      <GroupofCompanies />
+      {/* <GroupofCompanies /> */}
       <Service3 />
       <Brand1 images={customersImages} know_more="Meet Our Clients" />
       <Journey />
@@ -91,7 +91,7 @@ export default async function Home2() {
       <Network />
       <Brand1 heading="Our Affiliations & Accreditations" />
       <Brand1 images={careerPartnerLogos} heading="Our Carrier Partner" />
-      <Project2 />
+      {/* <Project2 /> */}
       <Achivements />
       <CtaBanner2 />
       <Testimonial2 />

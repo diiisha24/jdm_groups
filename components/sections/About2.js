@@ -25,15 +25,16 @@ export default function About2() {
   }, []);
 
   // Default data if backend fetch fails or hasn’t completed
-  const defaultHeading = "Customer Delight <br /> Is Our Passion";
+  const defaultHeading = "JDM Group Of Companies";
   const defaultParagraph =
     "Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.";
-  const defaultPoints = [
-    "Recognized 24*7 Customs Brokerage",
-    "10+ offices at prominent locations in India",
-    "Dedicated customer support for personalized services",
-    "Comprehensive compliance & regulatory expertise ensuring smooth Logistics Solutions",
-  ];
+    const defaultPoints = [
+      "JDM Worldwide Freight Solutions Pvt. Ltd.",
+      "JDM Cargo Planners Pvt. Ltd.",
+      "JDM Express Pvt. Ltd.",
+      "Arrow Transport Service",
+      "AS Transport Service"
+  ];  
   const defaultVideoId = "JXMWOmuR1hU";
 
   return (
@@ -102,7 +103,12 @@ export default function About2() {
                   {aboutData?.CEO_Photo && aboutData?.CEO_Name && (
                     <div className="about-author">
                       <div className="author-image wow fadeInUp" data-wow-delay=".2s">
-                        <img src={aboutData.CEO_Photo} alt="ceo-img" />
+					  <img
+						src={`https://jdm-backend.onrender.com${aboutData.CEO_Photo}`}
+						alt="ceo-img"
+						className="img-fluid rounded"
+						style={{ height: '100px', width: '100px', objectFit: 'cover' }}
+						/>
                         <h6>{aboutData.CEO_Name}</h6>
                       </div>
                     </div>

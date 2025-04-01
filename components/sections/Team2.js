@@ -84,7 +84,7 @@ export default function Team2() {
 
   return (
     <>
-      <section className="team-section section-padding pt-0" id="team">
+      <section className="team-section section-padding" id="team">
         <div className="shape-1 float-bob-y">
           {/* <img src="assets/img/team/shape-1.png" alt="Decorative Shape" /> */}
         </div>

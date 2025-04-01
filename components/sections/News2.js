@@ -130,7 +130,7 @@ export default function News2() {
                       <li>{item.date}</li>
                     </ul>
                     <h4>
-                      <Link href={`/news-details/${item.id}`}>{item.title}</Link>
+                      <Link href={`/blog-details/${item.id}`}>{item.title}</Link>
                     </h4>
                     <div className="author-items">
                       <div className="author-info">

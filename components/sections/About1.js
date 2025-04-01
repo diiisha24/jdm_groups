@@ -4,16 +4,17 @@ import ModalVideo from 'react-modal-video'
 
 // Default data as fallback
 const defaultData = {
-  title: "Leading Global Logistic And Transport Agency",
+  title: "JDM Group Of Companies",
   description: "Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.",
   image1: "assets/img/about/03.jpg",
   image2: "assets/img/about/04.jpg",
   videoId: "JXMWOmuR1hU",
   features: [
-    "Recognized 24*7 Customs Brokerage",
-    "10+ offices at prominent locations in India",
-    "Dedicated customer support for personalized services",
-    "Comprehensive compliance & regulatory expertise ensuring smooth Logistics Solutions",
+    "JDM Worldwide Freight Solutions Pvt. Ltd.",
+      "JDM Cargo Planners Pvt. Ltd.",
+      "JDM Express Pvt. Ltd.",
+      "Arrow Transport Service",
+      "AS Transport Service"
   ],
 };
 

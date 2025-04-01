@@ -3,12 +3,9 @@ import { useEffect, useState } from "react"
 // import AddClassBody from "../elements/AddClassBody"
 import BackToTop from "../elements/BackToTop"
 import Breadcrumb from "./Breadcrumb"
-import Footer1 from "./footer/Footer1"
 import Footer2 from "./footer/Footer2"
 import Header1 from "./header/Header1"
 import Header2 from "./header/Header2"
-import Header3 from "./header/Header3"
-import Header4 from "./header/Header4"
 import Offcanvas from "./Offcanvas"
 import Search from "./Search"
 
@@ -88,7 +85,7 @@ export default function Layout({
 				/>
 			) : null}
 			{headerStyle == 3 ? (
-				<Header3
+				<Header2
 					scroll={scroll}
 					isMobileMenu={isMobileMenu}
 					handleMobileMenu={handleMobileMenu}
@@ -99,7 +96,7 @@ export default function Layout({
 				/>
 			) : null}
 			{headerStyle == 4 ? (
-				<Header4
+				<Header2
 					scroll={scroll}
 					isMobileMenu={isMobileMenu}
 					handleMobileMenu={handleMobileMenu}
@@ -119,8 +116,8 @@ export default function Layout({
 				{children}
 			</main>
 
-			{!footerStyle && <Footer1 />}
-			{footerStyle == 1 ? <Footer1 /> : null}
+			{!footerStyle && <Footer2 />}
+			{footerStyle == 1 ? <Footer2 /> : null}
 			{footerStyle == 2 ? <Footer2 /> : null}
 
 			<BackToTop target="#top" />

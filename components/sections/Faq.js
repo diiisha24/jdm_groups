@@ -91,7 +91,7 @@ export default function Faq() {
                       <i className="fa-regular fa-arrow-right-long" />
                     </h6>
                     <h2 className="wow fadeInUp" data-wow-delay=".2s">
-                      your frequently ask & <br /> questions
+                      your frequently ask & questions
                     </h2>
                   </div>
                   <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">

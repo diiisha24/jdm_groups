@@ -6,7 +6,7 @@ export default function NewsDetailsSection({ blogData }) {
   const defaultData = {
     image: "assets/img/news/post-4.jpg",
     author: "Admin",
-    date: "18 Dec, 2024",
+    date: "18 Mar, 2025",
     category: "Technology",
     title: "Guidelines for Construction Site Security",
     description: [
@@ -97,12 +97,12 @@ export default function NewsDetailsSection({ blogData }) {
                         />
                       </div>
                     </div>
-                    <div className="col-lg-6">
+                    {/* <div className="col-lg-6">
                       <div className="details-image">
                         <img src={defaultData.images[1]} alt="img" />{" "}
                         {/* No third image in API */}
-                      </div>
-                    </div>
+                      {/* </div>
+                    </div> */} 
                   </div>
                   <p className="pt-5">
                     {blogData?.description || defaultData.description[1]}{" "}
@@ -140,7 +140,7 @@ export default function NewsDetailsSection({ blogData }) {
                 </div>
               </div>
               {/* Comments and form remain static for now */}
-              <div className="comments-area">
+              {/* <div className="comments-area">
                 <div className="comments-heading">
                   <h3>{blogData?.comments?.length || "02"} Comments</h3>
                 </div>
@@ -242,8 +242,8 @@ export default function NewsDetailsSection({ blogData }) {
                     </div>
                   </>
                 )}
-              </div>
-              <div className="comment-form-wrap pt-5">
+              </div> */}
+              {/* <div className="comment-form-wrap pt-5">
                 <h3>Leave a comment</h3>
                 <form action="#" id="contact-form" method="POST">
                   <div className="row g-4">
@@ -288,13 +288,13 @@ export default function NewsDetailsSection({ blogData }) {
                     </div>
                   </div>
                 </form>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* Sidebar remains static */}
           <div className="col-12 col-lg-4">
             <div className="main-sidebar">
-              <div className="single-sidebar-widget">
+              {/* <div className="single-sidebar-widget">
                 <div className="wid-title">
                   <h3>Search</h3>
                 </div>
@@ -306,32 +306,48 @@ export default function NewsDetailsSection({ blogData }) {
                     </button>
                   </form>
                 </div>
+              </div> */}
+              <div className="single-sidebar-widget">
+                <div className="wid-title">
+                  <h3>Popular Tag</h3>
+                </div>
+                <div className="news-widget-categories">
+                  <div className="tagcloud">
+                    {(blogData?.tags || ["transport", "cargo", "engineering"]).map(
+                      (tag, index) => (
+                        <Link key={index} href="/news-details">
+                          {tag}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                </div>
               </div>
               <div className="single-sidebar-widget">
                 <div className="wid-title">
-                  <h3>Categories</h3>
+                  <h3>Our Services</h3>
                 </div>
                 <div className="news-widget-categories">
                   <ul>
                     <li>
-                      <Link href="/news-details">Cargo Insurance </Link>{" "}
-                      <span>5</span>
+                      <Link href="/news-details">Air Freight </Link>{" "}
+                      {/* <span>5</span> */}
                     </li>
                     <li>
-                      <Link href="/news-details">Logistic Strategy</Link>{" "}
-                      <span>3</span>
+                      <Link href="/news-details">Ocean Freight</Link>{" "}
+                      {/* <span>3</span> */}
                     </li>
                     <li className="active">
-                      <Link href="/news-details">Our Delivery </Link>
-                      <span>4</span>
+                      <Link href="/news-details">Warehousing </Link>
+                      {/* <span>4</span> */}
                     </li>
                     <li>
                       <Link href="/news-details">Shipment Solutions </Link>{" "}
-                      <span>2</span>
+                      {/* <span>2</span> */}
                     </li>
                     <li>
                       <Link href="/news-details">Security System</Link>{" "}
-                      <span>3</span>
+                      {/* <span>3</span> */}
                     </li>
                   </ul>
                 </div>
@@ -394,22 +410,6 @@ export default function NewsDetailsSection({ blogData }) {
                         </Link>
                       </h6>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="single-sidebar-widget">
-                <div className="wid-title">
-                  <h3>Popular Tag</h3>
-                </div>
-                <div className="news-widget-categories">
-                  <div className="tagcloud">
-                    {(blogData?.tags || ["transport", "cargo", "engineering"]).map(
-                      (tag, index) => (
-                        <Link key={index} href="/news-details">
-                          {tag}
-                        </Link>
-                      )
-                    )}
                   </div>
                 </div>
               </div>
