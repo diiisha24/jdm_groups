@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 export default function ServiceDetails1({ service }) {
-  // Sample categories (you can make this dynamic if needed)
+  // Sample categories
   const categories = [
     { title: "Air Freight", id: "air-freight" },
     { title: "Ocean Freight", id: "ocean-freight" },
@@ -13,6 +13,18 @@ export default function ServiceDetails1({ service }) {
     { title: "Project Cargo", id: "project-cargo" },
     { title: "Warehousing", id: "warehousing" },
   ];
+
+  // If service is undefined, render a fallback
+  if (!service || !service.image || !service.title || !service.description || !service.benefits) {
+    return (
+      <section className="service-details-section section-padding">
+        <div className="container">
+          <h2>Service Not Available</h2>
+          <p>Please select a valid service.</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <>
@@ -37,15 +49,13 @@ export default function ServiceDetails1({ service }) {
                   <div className="row g-4">
                     <div className="col-lg-7">
                       <div className="service-details-image">
-                        <img src="assets/img/service/details-2.jpg" alt="img" />
+                        <img src="/assets/img/service/details-2.jpg" alt="img" />
                       </div>
                     </div>
                     <div className="col-lg-5">
                       <div className="content">
                         <h3>Services Benefits:</h3>
-                        <p className="mt-2 mb-2">
-                          {service.benefits[0]}
-                        </p>
+                        <p className="mt-2 mb-2">{service.benefits[0]}</p>
                         <p>{service.benefits[1]}</p>
                       </div>
                       <ul className="details-list">
@@ -58,74 +68,11 @@ export default function ServiceDetails1({ service }) {
                       </ul>
                     </div>
                   </div>
-                  {/* <h4>3 Simple Steps to Process</h4>
-                  <p className="mt-3">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour, or randomised words which don't
-                    look even slightly believable. If you are going to use a
-                    passage of Lorem Ipsum,
-                  </p>
-                  <div className="row g-4 mt-2">
-                    <div className="col-xl-4 col-lg-6 col-md-6">
-                      <div className="service-details-box">
-                        <div className="icon">
-                          <img src="assets/img/icon/15.svg" alt="img" />
-                          <h5>Planning</h5>
-                        </div>
-                        <p>
-                          There are many Trastek a variations of passages of
-                          Lorem Ipsum
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-xl-4 col-lg-6 col-md-6">
-                      <div className="service-details-box">
-                        <div className="icon">
-                          <img src="assets/img/icon/16.svg" alt="img" />
-                          <h5>Design</h5>
-                        </div>
-                        <p>
-                          There are many Trastek a variations of passages of
-                          Lorem Ipsum
-                        </p>
-                      </div>
-                    </div>
-                    <div className="col-xl-4 col-lg-6 col-md-6">
-                      <div className="service-details-box">
-                        <div className="icon">
-                          <img src="assets/img/icon/17.svg" alt="img" />
-                          <h5>Get Paid</h5>
-                        </div>
-                        <p>
-                          There are many Trastek a variations of passages of
-                          Lorem Ipsum
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="mt-1 pt-4">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour, or randomised words which don't
-                    look even slightly believable. If you are going to use a
-                    passage of Lorem Ipsum,
-                  </p> */}
                 </div>
               </div>
               <div className="col-12 col-lg-4">
                 <div className="main-sidebar">
-                  {/* <div className="single-sidebar-widget">
-                    <div className="search-widget">
-                      <form action="#">
-                        <input type="text" placeholder="Search" />
-                        <button type="submit">
-                          <i className="fa-solid fa-magnifying-glass" />
-                        </button>
-                      </form>
-                    </div>
-                  </div> */}
-				  <div className="single-sidebar-widget">
+                  <div className="single-sidebar-widget">
                     <div className="wid-title">
                       <h3>Download</h3>
                     </div>
@@ -176,11 +123,11 @@ export default function ServiceDetails1({ service }) {
                       className="contact-bg text-center bg-cover"
                       style={{
                         backgroundImage:
-                          'url("assets/img/service/contact-bg.jpg")',
+                          'url("/assets/img/contact-bg.jpg")',
                       }}
                     >
                       <p>Do You Need Help? We're Here to Support You</p>
-                      <Link href="contact" className="theme-btn w-100">
+                      <Link href="/contact" className="theme-btn w-100">
                         Contact us now
                         <i className="fa-regular fa-arrow-right" />
                       </Link>

@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import Brand1 from "@/components/sections/Brand1";
-// import ServiceDetails1 from "@/components/sections/ServiceDetails1";
+import ServiceDetails1 from "@/components/sections/ServiceDetails1";
 export default function ServicesDetails() {
   return (
     <>

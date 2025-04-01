@@ -26,12 +26,12 @@ const defaultMenuItems = [
       { "title": "All Services", "href": "/service-details/all-services" },
       { "title": "Air Freight", "href": "/service-details/air-freight" },
       { "title": "Ocean Freight", "href": "/service-details/ocean-freight" },
-      { "title": "Train Freight", "href": "/service-detail/train-freight" },
-      { "title": "Road Transportation", "href": "/service-detail/road-transportation" },
-      { "title": "Custom Clearance", "href": "/service-detail/custom-clearance" },
-      { "title": "Courier Services", "href": "/service-detail/courier-services" },
-      { "title": "Project Cargo", "href": "/service-detail/project-cargo" },
-      { "title": "Warehousing", "href": "/service-detail/warehousing" }
+      { "title": "Train Freight", "href": "/service-details/train-freight" },
+      { "title": "Road Transportation", "href": "/service-details/road-transportation" },
+      { "title": "Custom Clearance", "href": "/service-details/custom-clearance" },
+      { "title": "Courier Services", "href": "/service-details/courier-services" },
+      { "title": "Project Cargo", "href": "/service-details/project-cargo" },
+      { "title": "Warehousing", "href": "/service-details/warehousing" }
     ]
   },
   {
