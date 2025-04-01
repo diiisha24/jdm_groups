@@ -1,17 +1,16 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Clientele = () => {
-  const [activeTab, setActiveTab] = useState('sector');
+  const [activeTab, setActiveTab] = useState("sector");
   const [sectorLogos, setSectorLogos] = useState([]);
   const [countryLogos, setCountryLogos] = useState([]);
 
-  // Simulate fetching logos (replace with real data source as needed)
   useEffect(() => {
     const fetchSectorLogos = () => {
       const logos = Array.from({ length: 200 }, (_, index) => ({
         id: index,
-        src: `assets/img/customer_logo/CSL-${index + 1}.png`,
+        src: `/assets/img/customer_logo/CSL-${index + 1}.png`,
         alt: `Sector Logo ${index + 1}`,
       }));
       setSectorLogos(logos);
@@ -31,144 +30,51 @@ const Clientele = () => {
   }, []);
 
   return (
-    <section className="clientele-section">
-      <h2 className="section-title">Our Clientele</h2>
+    <section className="clientele-section container mx-auto py-16">
+      <h2 className="text-4xl font-bold text-center text-gray-800 mb-10 uppercase">
+        Our Clientele
+      </h2>
 
       {/* Tabs */}
-      <div className="tabs">
+      <div className="flex justify-center mb-8 border-b border-gray-300">
         <button
-          className={`tab ${activeTab === 'sector' ? 'active' : ''}`}
-          onClick={() => setActiveTab('sector')}
+          className={`px-6 py-3 text-lg font-medium transition-colors duration-300 focus:outline-none ${
+            activeTab === "sector"
+              ? "border-b-2 border-primary text-primary"
+              : "text-gray-600 hover:text-primary"
+          }`}
+          onClick={() => setActiveTab("sector")}
         >
           Sector Wise
         </button>
         <button
-          className={`tab ${activeTab === 'country' ? 'active' : ''}`}
-          onClick={() => setActiveTab('country')}
+          className={`px-6 py-3 text-lg font-medium transition-colors duration-300 focus:outline-none ${
+            activeTab === "country" 
+              ? "border-b-2 border-primary text-primary"
+              : "text-gray-600 hover:text-primary"
+          }`}
+          onClick={() => setActiveTab("country")}
         >
           Country Wise
         </button>
       </div>
 
       {/* Logo Grid */}
-      <div className="logo-grid">
-        {(activeTab === 'sector' ? sectorLogos : countryLogos).map((logo) => (
-          <div key={logo.id} className="logo-item">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-6 bg-white shadow-lg rounded-lg">
+        {(activeTab === "sector" ? sectorLogos : countryLogos).map((logo) => (
+          <div key={logo.id} className="flex items-center justify-center p-4">
             <img
               src={logo.src}
               alt={logo.alt}
-              className="logo-image"
+              className="w-25 object-contain border border-gray-200 shadow-sm rounded-lg"
               loading="lazy"
               onError={(e) => {
-                e.target.src = '/fallback-image.png';
+                e.target.src = "/fallback-image.png";
               }}
             />
           </div>
         ))}
       </div>
-
-      {/* Styles */}
-      <style jsx>{`
-        .clientele-section {
-          min-height: 100vh;
-          padding: 40px 20px;
-          background: #ffffff;
-          text-align: center;
-          font-family: 'Roboto', sans-serif;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-
-        .section-title {
-          font-size: 36px;
-          color: #1a1a1a;
-          margin-bottom: 30px;
-          font-weight: 700;
-          text-transform: uppercase;
-        }
-
-        .tabs {
-          display: flex;
-          justify-content: flex-start;
-          border-bottom: 2px solid #808080;
-          margin-bottom: 20px;
-        }
-
-        .tab {
-          padding: 10px 20px;
-          font-size: 18px;
-          color: #333;
-          background: none;
-          border: none;
-          cursor: pointer;
-          position: relative;
-          bottom: -2px;
-        }
-
-        .tab:hover {
-          color: #d32f2f;
-        }
-
-        .tab.active {
-          border-bottom: 2px solid #d32f2f;
-          color: #d32f2f;
-        }
-
-        .logo-grid {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 20px;
-          padding: 20px;
-          border: 2px solid #808080;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo-item {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .logo-image {
-          width: 120px;
-          height: 120px;
-          object-fit: contain;
-        }
-
-        @media (max-width: 1200px) {
-          .logo-grid {
-            grid-template-columns: repeat(4, 1fr);
-          }
-        }
-
-        @media (max-width: 900px) {
-          .logo-grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
-        }
-
-        @media (max-width: 600px) {
-          .logo-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-
-        @media (max-width: 768px) {
-          .section-title {
-            font-size: 28px;
-          }
-
-          .tab {
-            font-size: 16px;
-            padding: 8px 12px;
-          }
-
-          .logo-image {
-            width: 100px;
-            height: 100px;
-          }
-        }
-      `}</style>
     </section>
   );
 };

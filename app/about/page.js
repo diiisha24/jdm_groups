@@ -12,8 +12,8 @@ export default function About() {
     <>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="About">
         <About1 />
-        <Clientele/>
         <Achivements />
+        {/* <Clientele/> */}
         {/* <Testimonial1 /> */}
         {/* <Team1 /> */}
         <Team2 />

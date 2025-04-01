@@ -67,11 +67,11 @@ export default function Project2() {
 						<Swiper {...swiperOptions} className="swiper-wrapper">
 							<SwiperSlide className="swiper-slide">
 								<div className="project-thumb">
-									<img src="assets/img/project/06.jpg" alt="img" />
+									<img src="assets/img/our_network/JDM Network.png" alt="img" />
 									<div className="project-content">
 										<div className="content">
 											<h3>
-												<Link href="project-details">General Transport</Link>
+												<Link href="project-details">Our Network</Link>
 											</h3>
 											<span>
 												<i className="fa-sharp fa-solid fa-location-dot" /> 4648
@@ -82,7 +82,7 @@ export default function Project2() {
 									</div>
 								</div>
 							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
+							{/* <SwiperSlide className="swiper-slide">
 								<div className="project-thumb">
 									<img src="assets/img/project/07.jpg" alt="img" />
 									<div className="project-content">
@@ -132,7 +132,7 @@ export default function Project2() {
 										<h2 className="number">02</h2>
 									</div>
 								</div>
-							</SwiperSlide>
+							</SwiperSlide> */}
 						</Swiper>
 						<div className="project-dot" />
 					</div>

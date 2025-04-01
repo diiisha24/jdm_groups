@@ -3,7 +3,7 @@ import NewsList from "@/components/sections/NewsList";
 export default function News() {
   return (
     <>
-      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="News">
+      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Blogs">
         <NewsList />
       </Layout>
     </>

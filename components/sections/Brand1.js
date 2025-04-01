@@ -1,9 +1,7 @@
-"use client"
-import Link from "next/link"
-// import "swiper/css"
-
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
+"use client";
+import Link from "next/link";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -21,9 +19,8 @@ const swiperOptions = {
     575: { slidesPerView: 2 },
     0: { slidesPerView: 1 },
   },
-}
+};
 
-// Example image data (you can pass this as a prop)
 const defaultImages = [
   "assets/img/brand/JDM-png-1.png",
   "assets/img/brand/JDM-png-2.png",
@@ -35,23 +32,18 @@ const defaultImages = [
   "assets/img/brand/JDM-png-8.png",
   "assets/img/brand/JDM-png-9.png",
   "assets/img/brand/JDM-png-10.png",
-]
+];
 
-export default function Brand1({ alt,heading , images = defaultImages, know_more }) {
+export default function Brand1({ alt, heading, images = defaultImages, know_more }) {
   return (
     <>
       <div className={`brand-section fix ${alt ? "pt-0 section-bg-2" : ""}`}>
         <div className="p-4">
-			<div className="section-title text-center">
-				{/* <h6 className="wow fadeInUp">
-					<i className="fa-regular fa-arrow-left-long" />
-					quality Services
-					<i className="fa-regular fa-arrow-right-long" />
-				</h6> */}
-				<h2 className="wow fadeInUp" data-wow-delay=".2s">
-					{heading}
-				</h2>
-			</div>
+          <div className="section-title text-center">
+            <h2 className="wow fadeInUp" data-wow-delay=".2s">
+              {heading}
+            </h2>
+          </div>
           <div className="swiper brand-slider">
             <Swiper {...swiperOptions} className="swiper-wrapper">
               {images.map((image, index) => (
@@ -84,11 +76,10 @@ export default function Brand1({ alt,heading , images = defaultImages, know_more
           transition: box-shadow 0.3s ease;
           border-radius: 2px;
         }
-
         .brand-image:hover {
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
       `}</style>
     </>
-  )
+  );
 }
