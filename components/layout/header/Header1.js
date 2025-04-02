@@ -6,7 +6,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
 		<>
 
 			<header className="header-section-22">
-				<div className="header-top-sectionss top-style-2 fix">
+				{/* <div className="header-top-sectionss top-style-2 fix">
 					<div className="container-fluid">
 						<div className="header-top-wrappers style-2">
 							<ul className="contact-list">
@@ -38,7 +38,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> */}
 				<div id="header-sticky" className={`header-1 ${scroll ? "sticky" : ""}`}>
 					<div className="main-logo">
 						<Link href="/">

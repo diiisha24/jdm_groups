@@ -26,6 +26,9 @@ Version: 1.0.0
 section{
   background-color: var(--bs-gray-200);
 }
+*{
+  font-style: italic;
+}
 
 .theme-btn {
   background-color: var(--theme);
