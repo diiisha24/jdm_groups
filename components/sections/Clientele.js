@@ -8,7 +8,7 @@ const Clientele = () => {
 
   useEffect(() => {
     const fetchSectorLogos = () => {
-      const logos = Array.from({ length: 200 }, (_, index) => ({
+      const logos = Array.from({ length: 20 }, (_, index) => ({
         id: index,
         src: `/assets/img/customer_logo/CSL-${index + 1}.png`,
         alt: `Sector Logo ${index + 1}`,
@@ -17,7 +17,7 @@ const Clientele = () => {
     };
 
     const fetchCountryLogos = () => {
-      const logos = Array.from({ length: 200 }, (_, index) => ({
+      const logos = Array.from({ length: 20 }, (_, index) => ({
         id: index,
         src: `https://via.placeholder.com/150?text=Country+Logo+${index + 1}`,
         alt: `Country Logo ${index + 1}`,
