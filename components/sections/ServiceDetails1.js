@@ -15,7 +15,7 @@ export default function ServiceDetails1({ service }) {
   ];
 
   // If service is undefined, render a fallback
-  if (!service || !service.image || !service.title || !service.description || !service.benefits) {
+  if (!service || !service.image || !service.title || !service.description1 || !service.benefits) {
     return (
       <section className="service-details-section section-padding">
         <div className="container">
@@ -39,6 +39,9 @@ export default function ServiceDetails1({ service }) {
                 <div className="service-details-content">
                   <h2>{service.title}</h2>
                   <p>{service.description1}</p>
+                  {(service.heading) &&
+                    <h5 className="pt-3">{service.heading}</h5>
+                  }
                   <p className="mt-4 mb-4">
                     {service.description2}
                   </p>
@@ -48,11 +51,11 @@ export default function ServiceDetails1({ service }) {
                         <img src="/assets/img/service/details-2.jpg" alt="img" />
                       </div>
                     </div> */}
-                    <div className="col-lg-5">
+                    <div className="col-lg-7">
                       <div className="content">
                         <h3>Services Benefits:</h3>
-                        <p className="mt-2 mb-2">{service.benefits[0]}</p>
-                        <p>{service.benefits[1]}</p>
+                        {/* <p className="mt-2 mb-2">{service.benefits[0]}</p>
+                        <p>{service.benefits[1]}</p> */}
                       </div>
                       <ul className="details-list">
                         {service.benefits.map((benefit, index) => (
