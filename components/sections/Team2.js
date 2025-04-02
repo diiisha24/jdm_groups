@@ -5,34 +5,58 @@ import { useState, useEffect } from "react"
 // Default team members array as fallback
 const defaultTeamMembers = [
   { 
-    id: 1, 
-    name: "Pal Raj", 
-    position: "Managing Director", 
+    id: 1,
+    name: "Sahil Sehrawat", 
+    position: "Managing Director",
     image: "assets/img/team/01.jpg", 
     delay: "", 
     linkedIn: "https://www.linkedin.com/in/sahil-sehrawat-a1bab084/" 
   },
   { 
     id: 2, 
-    name: "Rohit Raj", 
-    position: "Branch Manager", 
+    name: "Pal Raj", 
+    position: "REGIONAL HEAD, SOUTH", 
     image: "assets/img/team/02.jpg", 
     delay: "0.2s",
     linkedIn: "https://www.linkedin.com/in/kusum-bisht/" 
   },
   { 
     id: 3, 
-    name: "Abhilash", 
-    position: "Assistant General Manager", 
+    name: "Rohit Raj", 
+    position: "Branch Manager", 
     image: "assets/img/team/03.jpg", 
     delay: "0.4s",
     linkedIn: "https://www.linkedin.com/in/sushank-jain-34878b93/" 
   },
   { 
     id: 4, 
+    name: "Abhilash", 
+    position: "Assistant General Manager,Customs Operations", 
+    image: "assets/img/team/04.jpg", 
+    delay: "0.6s",
+    linkedIn: "" 
+  },
+  { 
+    id: 5, 
     name: "Anuj Arora", 
     position: "General Manager", 
-    image: "assets/img/team/04.jpg", 
+    image: "assets/img/team/05.jpg", 
+    delay: "0.6s",
+    linkedIn: "" 
+  },
+  { 
+    id: 6, 
+    name: "Anju Dubey", 
+    position: "Corporate Sales Manager", 
+    image: "assets/img/team/09.jpg", 
+    delay: "0.6s",
+    linkedIn: "" 
+  },
+  { 
+    id: 7,
+    name: "Name", 
+    position: "Designation", 
+    image: "assets/img/team/09.jpg", 
     delay: "0.6s",
     linkedIn: "" 
   },
@@ -151,6 +175,7 @@ export default function Team2() {
         .row {
           display: flex;
           flex-wrap: wrap;
+          justify-content: center;
         }
 
         .col-xl-3 {

@@ -51,7 +51,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isOffC
 								<div className="logo d-none">
 									<Link href="/" className="header-logo">
 										{/* <img src="assets/img/logo/black-logo.svg" alt="logo-img" /> */}
-										<img src="assets/img/logo/black-logo.jpg" alt="logo-img" />
+										<img src="/assets/img/logo/black-logo.jpg" alt="logo-img" />
 									</Link>
 								</div>
 								<div className="header-left">

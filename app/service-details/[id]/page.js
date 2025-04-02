@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import Brand1 from "@/components/sections/ServiceDetails1";
+import ServiceDetail from "@/components/sections/ServiceDetails1";
 import Link from "next/link";
 
 // Sample data
@@ -154,7 +154,7 @@ export default function ServiceDetails({ params }) {
       footerStyle={1}
       breadcrumbTitle="Services details"
     >
-      <Brand1 service={service} />
+      <ServiceDetail service={service} />
     </Layout>
   );
 }

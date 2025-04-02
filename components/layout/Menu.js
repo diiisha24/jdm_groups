@@ -11,17 +11,17 @@ const defaultMenuItems = [
   },
   {
     title: "About Us",
-    href: "about",
+    href: "/about",
     submenu: null,
   },
   {
     title: "Careers",
-    href: "careers",
+    href: "/careers",
     submenu: null,
   },
   {
     "title": "Services",
-    "href": "service-details",
+    "href": "service",
     "submenu": [
       { "title": "All Services", "href": "/service" },
       { "title": "Air Freight", "href": "/service-details/air-freight" },
@@ -36,14 +36,14 @@ const defaultMenuItems = [
   },
   {
     title: "Blogs",
-    href: "news",
+    href: "/news",
     submenu: [
       { title: "All Blogs", href: "news-grid" },
     ],
   },
   {
     title: "Contact Us",
-    href: "contact",
+    href: "/contact",
     submenu: null,
   },
 ];
