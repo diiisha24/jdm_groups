@@ -1062,7 +1062,6 @@ span {
 .job-card {
   background: white;
   padding: 20px;
-  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -6423,6 +6422,7 @@ input.main-search-input::placeholder {
   position: relative;
   margin-top: -30px;
   transition: all 0.4s ease-in-out;
+  max-width: 265px;
 }
 .team-box-items .team-content::before {
   position: absolute;

@@ -8,7 +8,7 @@ const defaultServices = [
     id: "air-freight",
     title: "Air Freight",
     image: "/assets/img/service/Air_Freight.jpeg", // Updated path
-    description: "Fast and reliable air freight services for global shipping.",
+    description1: "Fast and reliable air freight services for global shipping.",
     benefits: [
       "Quick delivery times",
       "Global reach",
@@ -19,7 +19,7 @@ const defaultServices = [
     id: "ocean-freight",
     title: "Ocean Freight",
     image: "/assets/img/service/Ocean.jpg", // Updated path
-    description: "Cost-effective ocean freight solutions for bulk shipments.",
+    description1: "Cost-effective ocean freight solutions for bulk shipments.",
     benefits: [
       "Economical for large shipments",
       "Environmentally friendly",
@@ -30,7 +30,7 @@ const defaultServices = [
     id: "train-freight",
     title: "Train Freight",
     image: "/assets/img/service/Rail.jpg", // Updated path
-    description: "Efficient train freight services for regional transport.",
+    description1: "Efficient train freight services for regional transport.",
     benefits: [
       "Cost-effective for regional routes",
       "Reliable schedules",
@@ -41,7 +41,7 @@ const defaultServices = [
     id: "road-transportation",
     title: "Road Transportation",
     image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/truck1.jpg",
-    description: "Flexible road transportation for local and regional deliveries.",
+    description1: "Flexible road transportation for local and regional deliveries.",
     benefits: [
       "Door-to-door service",
       "Flexible routes",
@@ -52,7 +52,7 @@ const defaultServices = [
     id: "custom-clearance",
     title: "Custom Clearance",
     image: "/assets/img/service/Customs_Brokrage.jpg", // Updated path
-    description: "Seamless custom clearance services for international shipments.",
+    description1: "Seamless custom clearance services for international shipments.",
     benefits: [
       "Expert handling of regulations",
       "Fast processing",
@@ -63,7 +63,7 @@ const defaultServices = [
     id: "courier-services",
     title: "Courier Services",
     image: "/assets/img/service/Courier.jpg", // Updated path
-    description: "Express courier services for urgent deliveries.",
+    description1: "Express courier services for urgent deliveries.",
     benefits: [
       "Same-day delivery options",
       "Secure handling",
@@ -74,7 +74,7 @@ const defaultServices = [
     id: "project-cargo",
     title: "Project Cargo",
     image: "/assets/img/service/Project_Cargo.jpg", // Updated path
-    description: "Specialized handling for oversized and complex cargo.",
+    description1: "Specialized handling for oversized and complex cargo.",
     benefits: [
       "Customized solutions",
       "Expert logistics planning",
@@ -85,7 +85,7 @@ const defaultServices = [
     id: "warehousing",
     title: "Warehousing",
     image: "/assets/img/service/Warehouse.jpg", // Updated path
-    description: "Secure and scalable warehousing solutions.",
+    description1: "Secure and scalable warehousing solutions.",
     benefits: [
       "Inventory management",
       "Scalable storage",

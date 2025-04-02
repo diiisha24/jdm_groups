@@ -38,20 +38,16 @@ export default function ServiceDetails1({ service }) {
                 </div>
                 <div className="service-details-content">
                   <h2>{service.title}</h2>
-                  <p>{service.description}</p>
+                  <p>{service.description1}</p>
                   <p className="mt-4 mb-4">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour, or randomised words which don't
-                    look even slightly believable. If you are going to use a
-                    passage of Lorem Ipsum,
+                    {service.description2}
                   </p>
                   <div className="row g-4">
-                    <div className="col-lg-7">
+                    {/* <div className="col-lg-7">
                       <div className="service-details-image">
                         <img src="/assets/img/service/details-2.jpg" alt="img" />
                       </div>
-                    </div>
+                    </div> */}
                     <div className="col-lg-5">
                       <div className="content">
                         <h3>Services Benefits:</h3>

@@ -15,7 +15,7 @@ const defaultTeamMembers = [
   { 
     id: 2, 
     name: "Pal Raj", 
-    position: "REGIONAL HEAD, SOUTH", 
+    position: "Regional Head, South", 
     image: "assets/img/team/02.jpg", 
     delay: "0.2s",
     linkedIn: "https://www.linkedin.com/in/kusum-bisht/" 

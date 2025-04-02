@@ -1,4 +1,3 @@
-// app/careers/page.jsx
 import Head from "next/head";
 import Layout from "../../components/layout/Layout";
 import CareerSection from "../../components/sections/Career";
@@ -16,7 +15,7 @@ export default async function Careers() {
     },
     {
       title: "Fleet Manager",
-      location: "[City Name]",
+      location: "New York",
       type: "Full-Time",
       description: "Oversee our fleet operations and optimize performance.",
       applyLink: "/careers/apply?job=fleet-manager",
@@ -28,6 +27,7 @@ export default async function Careers() {
     const response = await fetch(`${apiUrl}/careers/api/jobs/`, {
       cache: "no-store",
     });
+    if (!response.ok) throw new Error("API fetch failed");
     const data = await response.json();
     if (data && Array.isArray(data) && data.length > 0) {
       jobs = data.map((job) => ({
