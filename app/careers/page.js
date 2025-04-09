@@ -20,6 +20,20 @@ export default async function Careers() {
       description: "Oversee our fleet operations and optimize performance.",
       applyLink: "/careers/apply?job=fleet-manager",
     },
+    {
+      title: "Fleet Manager",
+      location: "New York",
+      type: "Full-Time",
+      description: "Oversee our fleet operations and optimize performance.",
+      applyLink: "/careers/apply?job=fleet-manager",
+    },
+    {
+      title: "Fleet Manager",
+      location: "New York",
+      type: "Full-Time",
+      description: "Oversee our fleet operations and optimize performance.",
+      applyLink: "/careers/apply?job=fleet-manager",
+    },
   ];
 
   let jobs = defaultJobs;
@@ -43,7 +57,7 @@ export default async function Careers() {
   }
 
   return (
-    <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Careers">
+    <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Careers" backgroundImage={"/assets/img/banner/career.webp"}>
       <Head>
         <title>Careers | JDM Logistics</title>
         <meta

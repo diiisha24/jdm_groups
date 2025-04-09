@@ -3,19 +3,37 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 
+const defaultData = {
+  title: "Our Story",
+  description:
+    `JDM Group was conceptualized by <b>Late Mr. Pahlad Singh</b> in 1978, starting with transportation in the logistics field. Renowned for his steadfast commitments, he built a legacy that JDM proudly continues under the leadership of Group Chairman & Managing Director Mr. Sahil Sehrawat and our dedicated team. JDM has evolved into one of the fastest-growing integrated supply chain logistics enterprises with the following verticals:`,
+  image1: "assets/img/about/03.jpg",
+  image2: "assets/img/about/04.jpg",
+  videoId: "JXMWOmuR1hU",
+  features: [
+    "JDM Worldwide Freight Solutions Pvt. Ltd. – International Freight Forwarding",
+    "JDM Cargo Planners Pvt. Ltd. – Customs Brokerage, Warehousing, Consultancy",
+    "JDM Express Pvt. Ltd. – Courier Service",
+    "JDM Transport Service – Transportation",
+  ],
+};
+
 const CareerSection = ({ jobs }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
+  const [isGeneralForm, setIsGeneralForm] = useState(false); // New state to track general form
+  const [aboutData] = useState(defaultData);
   const searchParams = useSearchParams();
   const router = useRouter();
 
   useEffect(() => {
     const jobParam = searchParams.get("job");
     if (jobParam) {
-      const job = jobs.find((j) => j.applyLink.includes(jobParam));
+      const job = jobs.find((j) => j.applyLink?.includes(jobParam));
       if (job) {
         setSelectedJob(job);
         setIsModalOpen(true);
+        setIsGeneralForm(false);
       }
     }
   }, [searchParams, jobs]);
@@ -23,11 +41,19 @@ const CareerSection = ({ jobs }) => {
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedJob(null);
-    router.push("/careers"); // Reset URL
+    setIsGeneralForm(false);
+    router.push("/careers");
   };
 
   const handleApplyClick = (job) => {
     setSelectedJob(job);
+    setIsGeneralForm(false); // Specific job form
+    setIsModalOpen(true);
+  };
+
+  const handleGeneralApplyClick = () => {
+    setSelectedJob(null); // No specific job
+    setIsGeneralForm(true); // General form
     setIsModalOpen(true);
   };
 
@@ -37,87 +63,126 @@ const CareerSection = ({ jobs }) => {
     }
   };
 
-  // Autofetch department based on job title (example mapping)
   const getDepartmentFromJob = (jobTitle) => {
     if (!jobTitle) return "General";
     if (jobTitle.toLowerCase().includes("logistics")) return "Logistics";
     if (jobTitle.toLowerCase().includes("fleet")) return "Fleet Management";
-    return "General"; // Default fallback
+    return "General";
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here (e.g., API call)
     console.log("Form submitted:", e.target);
-    closeModal(); // Close modal after submission
+    closeModal();
   };
 
   return (
     <>
       {/* Hero Section */}
       <section className="hero" id="career">
-        <div className="section-title text-center">
-          <h6 className="wow fadeInUp">
-            <i className="fa-regular fa-arrow-left-long" />
-            Find Your Career With Us
-            <i className="fa-regular fa-arrow-right-long" />
-          </h6>
-          <h2 className="wow fadeInUp" data-wow-delay=".2s">
-            Join Our Logistics Family
-          </h2>
-        </div>
-      </section>
-
-      {/* Job Listings Section */}
-      <section id="job-listings" className="job-listings">
-        <div className="jobs-grid">
-          {jobs.map((job, index) => (
-            <div
-              key={index}
-              className="job-card wow fadeInUp"
-              data-wow-delay={`.${2 + index * 2}s`}
-            >
-              <h3>{job.title}</h3>
-              <p>
-                Location: {job.location} | Type: {job.type}
-              </p>
-              <p>{job.description}</p>
-              <button
-                onClick={() => handleApplyClick(job)}
-                className="theme-btn apply-btn wow fadeInUp"
-                data-wow-delay=".4s"
-              >
-                Apply Now
-                <i className="fa-regular fa-arrow-right" />
-              </button>
+        <div className="container">
+          <div className="section-title-area">
+            <div className="section-title flex flex-column text-left">
+              <h6 className="wow fadeInUp">
+                <i className="fa-regular fa-arrow-left-long" />
+                Find Your Career With Us
+                <i className="fa-regular fa-arrow-right-long" />
+              </h6>
+              <h2 className="wow fadeInUp" data-wow-delay=".3s">
+                Join Our Logistics Family
+              </h2>
             </div>
-          ))}
+            <button
+              on  className="theme-btn wow fadeInUp"
+              data-wow-delay=".5s"
+              onClick={handleGeneralApplyClick}
+            >
+              Apply Now<i className="fa-regular fa-arrow-right" />
+            </button>
+          </div>
+        </div>
+        <div id="job-listings" className="job-listings">
+          <div className="container">
+            <div className="row pt-1 justify-content-center align-items-center">
+              <div className="col-lg-7 col-md-12">
+                <div className="jobs-grid p-3">
+                  {jobs.map((job, index) => (
+                    <div
+                      key={index}
+                      className="job-card wow fadeInUp text-left"
+                      data-wow-delay={`.${2 + index * 2}s`}
+                    >
+                      <h3>{job.title}</h3>
+                      <p>
+                        Location: {job.location} | Type: {job.type}
+                      </p>
+                      <p>{job.description}</p>
+                      <button
+                        onClick={() => handleApplyClick(job)}
+                        className="theme-btn apply-btn wow fadeInUp"
+                        data-wow-delay=".4s"
+                      >
+                        Apply Now
+                        <i className="fa-regular fa-arrow-right" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="col-lg-5 col-md-12">
+                <div className="about-image">
+                  <img
+                    src={aboutData.image1}
+                    alt="About Image"
+                    className="wow fadeInLeft"
+                    data-wow-delay=".2s"
+                  />
+                  <div className="about-image-2 wow fadeInUp" data-wow-delay=".4s">
+                    <img src={aboutData.image2} alt="About Image 2" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* Application Info Section */}
-      <section className="application-info">
-        <h2>How to Apply</h2>
-        <p>
-          Interested in joining us? Click "Apply Now" on any job listing or send
-          your resume and cover letter to{" "}
-          <a href="mailto:careers@jdmlogistics.com">
-            careers@jdmlogistics.com
-          </a>.
-        </p>
+      <section className="application-info py-5 bg-light">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center">
+              <h2>How to Apply</h2>
+              <p>
+                Interested in joining us? Click "Apply Now" on any job listing or send
+                your resume and cover letter to{" "}
+                <a href="mailto:careers@jdmlogistics.com">
+                  careers@jdmlogistics.com
+                </a>.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Modal */}
-      {isModalOpen && selectedJob && (
+      {isModalOpen && (
         <div className="modal-overlay" onClick={handleOutsideClick}>
           <div className="modal-content wow fadeInUp">
             <button className="close-btn" onClick={closeModal}>
               ×
             </button>
-            <h3>Apply for {selectedJob.title}</h3>
-            <p>
-              Location: {selectedJob.location} | Type: {selectedJob.type}
-            </p>
+            {isGeneralForm ? (
+              <>
+                <h3>General Application</h3>
+                <p>Fill out the form below to apply for a position.</p>
+              </>
+            ) : (
+              <>
+                <h3>Apply for {selectedJob.title}</h3>
+                <p>
+                  Location: {selectedJob.location} | Type: {selectedJob.type}
+                </p>
+              </>
+            )}
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Full Name</label>
@@ -140,12 +205,22 @@ const CareerSection = ({ jobs }) => {
                 <input type="text" id="state" name="state" required />
               </div>
               <div className="form-group">
+                <label htmlFor="jobTitle">Job Title</label>
+                <input
+                  type="text"
+                  id="jobTitle"
+                  name="jobTitle"
+                  defaultValue={isGeneralForm ? "" : selectedJob?.title}
+                  required
+                />
+              </div>
+              <div className="form-group">
                 <label htmlFor="department">Department</label>
                 <input
                   type="text"
                   id="department"
                   name="department"
-                  value={getDepartmentFromJob(selectedJob.title)}
+                  value={getDepartmentFromJob(isGeneralForm ? "" : selectedJob?.title)}
                   readOnly
                 />
               </div>
@@ -172,13 +247,8 @@ const CareerSection = ({ jobs }) => {
 
       {/* Inline Styles */}
       <style jsx>{`
-        .jobs-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 20px;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 15px;
+        .text-left {
+          text-align: left !important;
         }
         .job-card {
           background: #fff;
@@ -193,11 +263,6 @@ const CareerSection = ({ jobs }) => {
           padding: 10px 20px;
           font-size: 16px;
           cursor: pointer;
-        }
-        .application-info {
-          padding: 60px 0;
-          text-align: center;
-          background: #f9fafb;
         }
         .modal-overlay {
           position: fixed;
@@ -221,10 +286,6 @@ const CareerSection = ({ jobs }) => {
           max-height: 80vh;
           overflow-y: auto;
         }
-        .modal-content h3 {
-          font-size: 1.5rem;
-          margin-bottom: 15px;
-        }
         .close-btn {
           position: sticky;
           top: 10px;
@@ -234,19 +295,11 @@ const CareerSection = ({ jobs }) => {
           background: none;
           border: 1px solid #666;
           color: #666;
-          cursor: pointer;
           width: fit-content;
-        }
-        .close-btn:hover {
-          color: #333;
+          cursor: pointer;
         }
         .form-group {
           margin-bottom: 20px;
-        }
-        .form-group label {
-          display: block;
-          margin-bottom: 5px;
-          color: #333;
         }
         .form-group input {
           width: 100%;
@@ -256,15 +309,6 @@ const CareerSection = ({ jobs }) => {
         .form-group input[readonly] {
           background: #f5f5f5;
           cursor: not-allowed;
-        }
-        .form-actions {
-          display: flex;
-          justify-content: flex-end;
-        }
-        .submit-btn {
-          padding: 20px;
-          font-size: 16px;
-          cursor: pointer;
         }
       `}</style>
     </>

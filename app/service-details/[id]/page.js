@@ -83,7 +83,7 @@ export default function ServiceDetails({ params }) {
   // Handle "all-services" case
   if (params.id.toLowerCase() === "all-services") {
     return (
-      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="All Services">
+      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="All Services" backgroundImage="/assets/img/banner/services.jpg">
         <div className="container">
           <h2>All Services</h2>
           <ul>
@@ -105,7 +105,7 @@ export default function ServiceDetails({ params }) {
   if (!service) {
     console.log("Service not found for ID:", params.id);
     return (
-      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Service Not Found">
+      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Service Not Found"  backgroundImage="/assets/img/banner/services.jpg">
         <div className="container">
           <h2>Service Not Found</h2>
           <p>The service you are looking for does not exist.</p>
@@ -115,7 +115,7 @@ export default function ServiceDetails({ params }) {
   }
 
   return (
-    <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Service Details">
+    <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Service Details"  backgroundImage="/assets/img/banner/services.jpg">
       <ServiceDetail service={service} />
     </Layout>
   );

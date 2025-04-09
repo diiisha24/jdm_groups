@@ -15,13 +15,8 @@ const defaultMenuItems = [
     submenu: null,
   },
   {
-    title: "Careers",
-    href: "/careers",
-    submenu: null,
-  },
-  {
     "title": "Services",
-    "href": "service",
+    "href": "/service",
     "submenu": [
       { "title": "All Services", "href": "/service" },
       { "title": "Air Freight", "href": "/service-details/air-freight" },
@@ -33,6 +28,15 @@ const defaultMenuItems = [
       { "title": "Project Cargo", "href": "/service-details/project-cargo" },
       { "title": "Warehousing", "href": "/service-details/warehousing" }
     ]
+  },{
+    title: "Gallery",
+    href: "/gallery",
+    submenu: null,
+  },
+  {
+    title: "Careers",
+    href: "/careers",
+    submenu: null,
   },
   {
     title: "Blogs",

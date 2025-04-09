@@ -29,11 +29,11 @@ export default function About2() {
   const defaultParagraph =
     "Our mission is to provide operational excellence, competitive cost control and visibility to our customers who are globally sourcing and distributing in an integrated supply chain environment.";
     const defaultPoints = [
-      "JDM Worldwide Freight Solutions Pvt. Ltd.",
-      "JDM Cargo Planners Pvt. Ltd.",
-      "JDM Express Pvt. Ltd.",
-      "Arrow Transport Service",
-      "AS Transport Service"
+      "JDM Worldwide Freight Solutions Pvt. Ltd. - International Freight Forwarding",
+      "JDM Cargo Planners Pvt. Ltd. - Customs Brokerage, Warehousing, Consultancy",
+      "JDM Express Pvt. Ltd. - Courier Service",
+      "Arrow Transport Service - Transportation",
+      "AS Transport Service - Transportation",
   ];  
   const defaultVideoId = "JXMWOmuR1hU";
 
@@ -49,7 +49,7 @@ export default function About2() {
         <div className="container">
           <div className="about-wrapper-2">
             <div className="row g-4">
-              <div className="col-lg-6">
+              <div className="col-lg-5">
                 <div className="about-image">
                   <img
                     src="assets/img/about/03.jpg"
@@ -60,29 +60,24 @@ export default function About2() {
                   <div className="about-image-2 wow fadeInUp" data-wow-delay=".2s">
                     <img src="assets/img/about/04.jpg" alt="img" />
                   </div>
-                  <div className="video-items wow fadeInUp">
+                  {/* <div className="video-items wow fadeInUp">
                     <a onClick={() => setOpen(true)} className="video-btn video-popup">
                       <i className="fas fa-play" />
                     </a>
                     <a onClick={() => setOpen(true)} className="video-text video-popup">
                       play now
                     </a>
-                  </div>
+                  </div> */}
                   <div className="bar-shape">
                     <img src="assets/img/about/bar 2.png" alt="img" />
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-7">
                 <div className="about-content">
                   <div className="section-title">
-                    <h6 className="wow fadeInUp">
-                      <i className="fa-regular fa-arrow-left-long" />
-                      About Our Company
-                      <i className="fa-regular fa-arrow-right-long" />
-                    </h6>
                     <h2
-                      className="wow fadeInUp"
+                      className="wow fadeInUp fst-italic"
                       data-wow-delay=".2s"
                       dangerouslySetInnerHTML={{
                         __html: aboutData?.Heading || defaultHeading,
@@ -92,7 +87,7 @@ export default function About2() {
                   <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">
                     {aboutData?.Paragraph || defaultParagraph}
                   </p>
-                  <ul className="list-items wow fadeInUp" data-wow-delay=".2s">
+                  <ul className="list-items wow fadeInUp fst-italic" data-wow-delay=".2s">
                     {(aboutData?.array_of_Points || defaultPoints).map((point, index) => (
                       <li key={index}>
                         <i className="fa-solid fa-circle-check" />

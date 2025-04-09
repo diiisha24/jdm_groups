@@ -13,7 +13,7 @@ const swiperOptions = {
     disableOnInteraction: false,
   },
   breakpoints: {
-    1199: { slidesPerView: 5 },
+    1199: { slidesPerView: 6 },
     991: { slidesPerView: 4 },
     767: { slidesPerView: 3 },
     575: { slidesPerView: 2 },
@@ -34,7 +34,7 @@ const defaultImages = [
   "assets/img/brand/JDM-png-10.png",
 ];
 
-export default function Brand1({ alt, heading, images = defaultImages, know_more }) {
+export default function Brand1({ alt, heading, images = defaultImages, know_more, to }) {
   return (
     <>
       <div className={`brand-section fix ${alt ? "pt-0 section-bg-2" : ""}`}>
@@ -57,7 +57,7 @@ export default function Brand1({ alt, heading, images = defaultImages, know_more
           </div>
           {know_more && (
             <div className="know-more-button p-4 flex justify-content-center">
-              <Link href="about" className="theme-btn wow fadeInUp" data-wow-delay=".2s">
+              <Link href={`about#${to}`} className="theme-btn wow fadeInUp" data-wow-delay=".2s">
                 {know_more} <i className="fa-regular fa-arrow-right" />
               </Link>
             </div>
@@ -70,14 +70,6 @@ export default function Brand1({ alt, heading, images = defaultImages, know_more
         }
         .brand-image {
           padding: 15px;
-          border: 3px solid var(--theme);
-          min-height: 152px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          transition: box-shadow 0.3s ease;
-          border-radius: 2px;
-        }
-        .brand-image:hover {
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
       `}</style>
     </>

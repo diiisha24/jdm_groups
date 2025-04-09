@@ -1,11 +1,15 @@
 import Link from "next/link";
 
-export default function Breadcrumb({ breadcrumbTitle, backgroundImage }) {
+export default function Breadcrumb({ 
+  breadcrumbTitle, 
+  backgroundImage = "/assets/img/Breadcrumb-bg.png" 
+  // backgroundImage
+}) {
   return (
     <>
       <div
         className="breadcrumb-wrapper bg-cover"
-        style={{ backgroundImage: 'url("/assets/img/Breadcrumb-bg.png")' }}
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="shape-image float-bob-y">
           <img src="assets/img/vector.png" alt="img" />

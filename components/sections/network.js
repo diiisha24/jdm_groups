@@ -50,29 +50,31 @@ const Network = () => {
   }, []); // Runs once on mount
 
   return (
-    <div className="network-section fix section-padding pt-0" id="network">
+    <section className="network-section fix" id="network">
       <div>
-        <div className="bg-amber-500 flex flex-col md:flex-row items-center justify-content-center align-items-start max-h-[700px] h-[700px] rounded-lg overflow-hidden">
-          {/* Left Side: World Map Image */}
-          <div className="md:w-1/2 w-full h-full">
-            <img
-              src="assets/img/our_network/JDM Network.png"
-              alt="World Map"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          {/* Right Side: Branch Information */}
-          <div className="md:w-1/2 w-full p-5 px-10 md:px-20 flex flex-column justify-center h-full text-black gap-1">
-            <h2 className="text-4xl font-bold mb-4 wow fadeInUp" data-wow-delay=".3s">
-              Our Global Network
-            </h2>
-            <p className="text-white/80 mb-6 wow fadeInUp" data-wow-delay=".5s">
+        <div className="flex flex-column items-center justify-content-center align-items-center max-h-[700px] h-[700px] rounded-lg overflow-hidden">
+        <div className="section-title text-center">
+          <h6 className="wow fadeInUp">
+            <i className="fa-regular fa-arrow-left-long" />
+            Milestones & Achievements
+            <i className="fa-regular fa-arrow-right-long" />
+          </h6>
+          <h2 className="wow fadeInUp" data-wow-delay=".2s">
+          Our Global Network
+          </h2>
+          <div className='flex flex-column items-center justify-content-center align-items-center py-2'>
+            <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
               JDM operates a vast network of branches worldwide, delivering exceptional services tailored to local needs while maintaining global standards.
             </p>
+          </div>
+        </div>
+        {/* <div className="w-full network-section-header px-10 md:px-20 flex flex-column align-items-center h-full text-black gap-1">
+            <h2 className="text-4xl font-bold mb-4 wow fadeInUp" data-wow-delay=".3s">
+              Our Global Network
+            </h2> */}
 
             {/* Branch List */}
-            <div className="space-y-6 wow fadeInUp" data-wow-delay=".7s">
+            {/* <div className="space-y-6 wow fadeInUp" data-wow-delay=".7s">
               {networkData.map((branch, index) => (
                 <div key={index} className="branch-item">
                   <h3 className="text-xl font-semibold">{branch.region}</h3>
@@ -82,7 +84,14 @@ const Network = () => {
                   </p>
                 </div>
               ))}
-            </div>
+            </div> */}
+          {/* </div> */}
+          <div className="world-image-wrapper w-full h-full wow fadeInUp" data-wow-delay=".9s">
+            <img
+              src="assets/img/our_network/JDM Network.png"
+              alt="World Map"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -91,8 +100,14 @@ const Network = () => {
       <style jsx>{`
         .network-section {
           position: relative;
+          .network-section-header p{
+              max-width: 38%;
+              text-align: center;
+          }
         }
-
+        .world-image-wrapper{
+          padding: 20px 140px 50px;
+        }
         .branch-item {
           border-bottom: 1px solid rgba(255, 255, 255, 0.2);
           padding-bottom: 1rem;
@@ -125,7 +140,7 @@ const Network = () => {
           }
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 

@@ -1,3 +1,4 @@
+// import Gallery from "@/components/elements/Gallery";
 import Layout from "@/components/layout/Layout";
 import About2 from "@/components/sections/About2";
 import Achivements from "@/components/sections/Achivements";
@@ -9,7 +10,7 @@ import Network from "@/components/sections/network";
 import News2 from "@/components/sections/News2";
 // import Project2 from "@/components/sections/Project2";
 import Service3 from "@/components/sections/Service3";
-import Team2 from "@/components/sections/Team2";
+// import Team2 from "@/components/sections/Team2";
 import Testimonial2 from "@/components/sections/Testimonial2";
 
 // Default data as fallback
@@ -24,19 +25,19 @@ const customers_image_data = [
 ];
 
 const career_partner_logo_data = [
-  "assets/img/career_partner_logos/Logo-1.png",
-  "assets/img/career_partner_logos/Logo-2.png",
-  "assets/img/career_partner_logos/Logo-3.png",
-  "assets/img/career_partner_logos/Logo-4.png",
-  "assets/img/career_partner_logos/Logo-5.png",
-  "assets/img/career_partner_logos/Logo-6.png",
-  "assets/img/career_partner_logos/Logo-7.png",
-  "assets/img/career_partner_logos/Logo-8.png",
-  "assets/img/career_partner_logos/Logo-9.png",
-  "assets/img/career_partner_logos/Logo-10.png",
-  "assets/img/career_partner_logos/Logo-11.png",
-  "assets/img/career_partner_logos/Logo-12.png",
-  "assets/img/career_partner_logos/Logo-13.png",
+  "assets/img/career_partner_logos/1.png",
+  "assets/img/career_partner_logos/2.png",
+  "assets/img/career_partner_logos/3.png",
+  "assets/img/career_partner_logos/4.png",
+  "assets/img/career_partner_logos/5.png",
+  "assets/img/career_partner_logos/6.png",
+  "assets/img/career_partner_logos/7.png",
+  "assets/img/career_partner_logos/8.png",
+  "assets/img/career_partner_logos/9.png",
+  "assets/img/career_partner_logos/10.png",
+  "assets/img/career_partner_logos/11.png",
+  "assets/img/career_partner_logos/12.png",
+  "assets/img/career_partner_logos/13.png",
 ];
 
 export default async function Home2() {
@@ -85,17 +86,18 @@ export default async function Home2() {
       <About2 />
       {/* <GroupofCompanies /> */}
       <Service3 />
-      <Brand1 images={customersImages} know_more="Meet Our Clients" />
+      <Brand1 images={customersImages} know_more="Meet Our Clients" to="clientele" />
       <Journey />
-      <Team2 />
-      <Network />
+      {/* <Team2 /> */}
       <Brand1 heading="Our Affiliations & Accreditations" />
       <Brand1 images={careerPartnerLogos} heading="Our Carrier Partner" />
+      <Network />
       {/* <Project2 /> */}
       <Achivements />
       <CtaBanner2 />
       <Testimonial2 />
       <News2 />
+      {/* <Gallery/> */}
     </Layout>
   );
 }

@@ -13,6 +13,7 @@ export default function Layout({
 	footerStyle,
 	breadcrumbTitle,
 	children,
+	backgroundImage
 }) {
 	const [scroll, setScroll] = useState(0)
 	// MobileMenu
@@ -110,7 +111,7 @@ export default function Layout({
 				handleSearch={handleSearch} /> */}
 
 			<main className="main">
-				{breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
+				{breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} backgroundImage={backgroundImage} />}
 
 				{children}
 			</main>

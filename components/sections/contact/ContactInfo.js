@@ -17,7 +17,7 @@ export default function ContactInfo() {
         </div>
         <div className="row">
           <div
-            className="col-xxl-4 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
+            className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
             data-wow-delay=".2s"
           >
             <div className="contact-box-items">
@@ -33,7 +33,7 @@ export default function ContactInfo() {
             </div>
           </div>
           <div
-            className="col-xxl-4 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
+            className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
             data-wow-delay=".4s"
           >
             <div className="contact-box-items">
@@ -52,7 +52,7 @@ export default function ContactInfo() {
               </div>
             </div>
           </div>
-          <div
+          {/* <div
             className="col-xxl-4 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
             data-wow-delay=".6s"
           >
@@ -67,7 +67,7 @@ export default function ContactInfo() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

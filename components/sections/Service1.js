@@ -109,7 +109,7 @@ export default function Service1() {
 		<>
 			<section
 				className="service-section fix section-padding bg-cover"
-				style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")' }}
+				// style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")' }}
 			>
 				<div className="container">
 					<div className="section-title text-center">
@@ -118,7 +118,7 @@ export default function Service1() {
 							WHAT WE Do
 							<i className="fa-regular fa-arrow-right-long" />
 						</h6>
-						<h2 className="wow fadeInUp text-white" data-wow-delay=".2s">
+						<h2 className="wow fadeInUp" data-wow-delay=".2s">
 							We Offers Cost Efficient
 							<br />
 							Transport Shipping
@@ -133,7 +133,7 @@ export default function Service1() {
 						</button>
 					</div>
 					{/* Download Link */}
-					<div className="text-center mt-4">
+					{/* <div className="text-center mt-4">
 						<a
 							href="/assets/doc/JDM Profile_2025.pdf"
 							download="JDM Profile_2025.pdf"
@@ -141,7 +141,7 @@ export default function Service1() {
 						>
 							<i className="fa-light fa-download" /> Download Our Profile (PDF)
 						</a>
-					</div>
+					</div> */}
 				</div>
 				<div className="container-fluid">
 					<div className="swiper service-slider">

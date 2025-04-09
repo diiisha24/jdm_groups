@@ -192,6 +192,11 @@ export default function GlobalServices() {
           font-size: 24px;
           margin-top: 5px;
         }
+        .overlay-content p:hover ,
+        .overlay-content span:hover{
+          color: var(--theme2);
+        }
+
 
         .service-item:hover .overlay {
           opacity: 85%;
@@ -199,7 +204,7 @@ export default function GlobalServices() {
         }
 
         .service-item:hover .service-image {
-          transform: scale(1.1) rotate(5deg);
+          transform: scale(1.1);
         }
       `}</style>
     </section>

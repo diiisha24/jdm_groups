@@ -10,7 +10,7 @@ export default function Footer2() {
           <div className="footer-widgets-wrapper">
             <div className="row">
               <div
-                className="col-xl-2 col-lg-4 col-md-6 wow fadeInUp"
+                className="col-xl-2 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay=".4s"
               >
                 <div className="single-footer-widget">
@@ -48,11 +48,15 @@ export default function Footer2() {
                         FAQ’S
                       </Link>
                     </li>
+                    {/* <li> */}
+                    {/* <div class="brochures-download-items theme-btn"><div class="brochures-items"><div class="icon"><i class="fal fa-file-pdf"></i></div><div class="content"><p>Download Profile</p></div></div><a href="/assets/doc/JDM Profile_2025.pdf" download="JDM Profile_2025.pdf" class="download-btn active"><i class="fa-light fa-download"></i></a></div> */}
+                    <a class="theme-btn w-100" href="/contact">Download Profile<i class="fa-regular fa-arrow-right"></i></a>
+                    {/* </li> */}
                   </ul>
                 </div>
               </div>
               <div
-                className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
+                className="col-xl-3 col-lg-6 col-md-6 ps-lg-5 wow fadeInUp"
                 data-wow-delay=".6s"
               >
                 <div className="single-footer-widget">
@@ -106,7 +110,7 @@ export default function Footer2() {
                 </div>
               </div>
               <div
-                className="col-xl-4 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
+                className="col-xl-4 col-lg-6 col-md-7 wow fadeInUp fst-italic"
                 data-wow-delay=".8s"
               >
                 <div className="single-footer-widget">
@@ -148,7 +152,7 @@ export default function Footer2() {
                 </div>
               </div>
               <div
-                className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
+                className="col-xl-3 col-lg-4 col-md-4 ps-lg-5 wow fadeInUp"
                 data-wow-delay="1s"
               >
                 <div className="single-footer-widget">
@@ -164,7 +168,7 @@ export default function Footer2() {
                     </li>
                     <li>
                       <Link href="mailto:info@jdmgroups.com">
-                        <i className="fa-solid fa-envelope" />
+                        <i className="fa-solid fa-envelope fst-italic" />
                         info@jdmgroups.com
                       </Link>
                     </li>
@@ -196,7 +200,7 @@ export default function Footer2() {
           <div className="footer-bottom">
             <p>
               © All Copyright {new Date().getFullYear()} by{" "}
-              <Link href="/">JDM Group</Link>
+              <Link href="/" className="fst-italic">JDM Group</Link>
             </p>
           </div>
         </div>

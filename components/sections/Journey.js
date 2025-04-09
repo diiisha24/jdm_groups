@@ -38,7 +38,7 @@ const Journey = () => {
   }, [isVisible]);
 
   return (
-    <>
+    <div className="journey-section fix" id="journey">
       <div className="section-title text-center">
         <h6 className="wow fadeInUp">
           <i className="fa-regular fa-arrow-left-long" />
@@ -51,7 +51,7 @@ const Journey = () => {
       </div>
       <video
         ref={videoRef}
-        className="w-full p-3"
+        className="w-full"
         loop
         muted
         playsInline
@@ -59,7 +59,7 @@ const Journey = () => {
         <source src="/assets/img/journey/JDM_Timeline.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-    </>
+    </div >
   );
 };
 

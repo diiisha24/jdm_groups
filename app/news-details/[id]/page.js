@@ -17,7 +17,7 @@ export default async function NewsDetails({ params }) {
 
   return (
     <>
-      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Blog Details">
+      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Blog Details" backgroundImage={"/assets/img/banner/blogs.jpg"}>
         <NewsDetailsSection blogData={blogData} />
       </Layout>
     </>
