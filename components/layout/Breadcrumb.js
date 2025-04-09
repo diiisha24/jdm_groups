@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Breadcrumb({ 
   breadcrumbTitle, 
-  backgroundImage = "/assets/img/Breadcrumb-bg.png" 
+  backgroundImage = "/assets/img/banner/breadcrumb-bg.png" 
   // backgroundImage
 }) {
   return (

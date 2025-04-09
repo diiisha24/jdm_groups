@@ -41,12 +41,12 @@ export default function ContactInfo() {
                 <img src="assets/img/icon/19.svg" alt="img" />
               </div>
               <div className="content">
-                <h3>Email Address</h3>
+                <h3>Contact Info</h3>
                 <p>
-                  Mobile :<Link href="tel:+9149707070">+91-49707070-100 Lines
-                  </Link>{" "}
+                  Mobile:{" "}<Link href="tel:+9149707070">+91-49707070-100 Lines
+                  </Link>
                   <br />
-                  Email :
+                  Email:{" "}
                   <Link href="mailto:info@jdmgroups.com">info@jdmgroups.com</Link>
                 </p>
               </div>

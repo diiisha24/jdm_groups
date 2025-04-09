@@ -86,7 +86,7 @@ export default async function Home2() {
       <About2 />
       {/* <GroupofCompanies /> */}
       <Service3 />
-      <Brand1 images={customersImages} know_more="Meet Our Clients" to="clientele" />
+      <Brand1 images={customersImages} know_more="Our Clientelle" to="clientele" />
       <Journey />
       {/* <Team2 /> */}
       <Brand1 heading="Our Affiliations & Accreditations" />
