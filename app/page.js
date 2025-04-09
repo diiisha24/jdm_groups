@@ -2,6 +2,7 @@
 import Layout from "@/components/layout/Layout";
 import About2 from "@/components/sections/About2";
 import Achivements from "@/components/sections/Achivements";
+import IndianBranches from "@/components/sections/branches";
 import Brand1 from "@/components/sections/Brand1";
 import CtaBanner2 from "@/components/sections/CtaBanner2";
 import Hero2 from "@/components/sections/Hero2";
@@ -92,6 +93,7 @@ export default async function Home2() {
       <Brand1 heading="Our Affiliations & Accreditations" />
       <Brand1 images={careerPartnerLogos} heading="Our Carrier Partner" />
       <Network />
+      <IndianBranches/>
       {/* <Project2 /> */}
       <Achivements />
       <CtaBanner2 />
