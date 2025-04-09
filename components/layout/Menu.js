@@ -26,7 +26,8 @@ const defaultMenuItems = [
       { "title": "Custom Clearance", "href": "/service-details/custom-clearance" },
       { "title": "Courier Services", "href": "/service-details/courier-services" },
       { "title": "Project Cargo", "href": "/service-details/project-cargo" },
-      { "title": "Warehousing", "href": "/service-details/warehousing" }
+      { "title": "Warehousing", "href": "/service-details/warehousing" },
+      { "title": "Other Services", "href": "/other-services"},
     ]
   },{
     title: "Gallery",

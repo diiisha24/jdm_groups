@@ -26,7 +26,7 @@ const defaultServices = [
     id: "train-freight",
     title: "Train Freight",
     image: "/assets/img/service/Rail.jpg",
-    description1: "Efficient train freight services for regional transport.",
+    description1: "Train freight offers a highly efficient and reliable solution for regional transport, especially when moving large volumes of goods over medium to long distances. With the ability to carry substantial loads in a single trip, rail transport reduces the number of journeys required, lowering overall logistics costs and environmental impact. It is less affected by traffic congestion and weather conditions compared to road freight, ensuring more consistent delivery schedules. Ideal for industries like manufacturing, agriculture, and mining, train freight supports smooth, scalable logistics operations while contributing to greener supply chains..",
     benefits: ["Cost-effective for regional routes", "Reliable schedules", "Reduced carbon footprint"],
   },
   {
