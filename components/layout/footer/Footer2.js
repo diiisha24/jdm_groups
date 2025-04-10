@@ -167,10 +167,10 @@ export default function Footer2() {
                   </div>
                   <ul className="list-area">
                     <li>
-                      <a>
+                      <Link target="_blank" href="https://www.google.com/maps?ll=28.545654,77.084271&z=12&t=m&hl=en&gl=JP&mapclient=embed&cid=13113964979499734147">
                         <i className="fa-sharp fa-solid fa-location-dot" />
                         A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <Link href="mailto:info@jdmgroups.com">
