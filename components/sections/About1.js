@@ -133,7 +133,7 @@ import ModalVideo from "react-modal-video";
 const defaultData = {
   title: "Our Story",
   description:
-    `JDM Group was conceptualized by <b>Late Mr. Pahlad Singh</b> in 1978, starting with transportation in the logistics field. Renowned for his steadfast commitments, he built a legacy that JDM proudly continues under the leadership of Group Chairman & Managing Director Mr. Sahil Sehrawat and our dedicated team. JDM has evolved into one of the fastest-growing integrated supply chain logistics enterprises with the following verticals:`,
+    `JDM Group was conceptualized by Late Mr. Pahlad Singh in 1978, starting with transportation in the logistics field. Renowned for his steadfast commitments, he built a legacy that JDM proudly continues under the leadership of Group Chairman & Managing Director Mr. Sahil Sehrawat and our dedicated team. JDM has evolved into one of the fastest-growing integrated supply chain logistics enterprises with the following verticals:`,
   image1: "assets/img/about/03.jpg",
   image2: "assets/img/about/04.jpg",
   videoId: "JXMWOmuR1hU",
@@ -141,7 +141,8 @@ const defaultData = {
     "JDM Worldwide Freight Solutions Pvt. Ltd. – International Freight Forwarding",
     "JDM Cargo Planners Pvt. Ltd. – Customs Brokerage, Warehousing, Consultancy",
     "JDM Express Pvt. Ltd. – Courier Service",
-    "JDM Transport Service – Transportation",
+    "Arrow Transport Service – Transportation",
+    "AS Transport Service – Transportation",
   ],
 };
 
