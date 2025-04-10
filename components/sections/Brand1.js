@@ -10,7 +10,6 @@ const swiperOptions = {
   loop: true,
   autoplay: {
     delay: 500,
-    disableOnInteraction: false,
   },
   breakpoints: {
     1199: { slidesPerView: 6 },

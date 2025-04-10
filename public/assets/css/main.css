@@ -112,6 +112,9 @@ section{
   max-width: 200px;
   max-height: 150px;
 }
+#clientele .brand-image img{
+  max-height: 90px;
+}
 
 .link-btn {
   display: inline-block;
