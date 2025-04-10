@@ -99,11 +99,11 @@ export default function Testimonial2() {
       <section className="testimonial-section-2 fix section-padding">
         <div className="container">
           <div className="section-title text-center">
-            <h6 className="wow fadeInUp">
+            {/* <h6 className="wow fadeInUp">
               <i className="fa-regular fa-arrow-left-long" />
               testimonial
               <i className="fa-regular fa-arrow-right-long" />
-            </h6>
+            </h6> */}
             <h2 className="wow fadeInUp" data-wow-delay=".2s">
               What our client say
             </h2>

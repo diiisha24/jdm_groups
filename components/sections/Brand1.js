@@ -22,16 +22,16 @@ const swiperOptions = {
 };
 
 const defaultImages = [
-  "assets/img/brand/JDM-png-1.png",
-  "assets/img/brand/JDM-png-2.png",
-  "assets/img/brand/JDM-png-3.png",
-  "assets/img/brand/JDM-png-4.png",
-  "assets/img/brand/JDM-png-5.png",
-  "assets/img/brand/JDM-png-6.png",
-  "assets/img/brand/JDM-png-7.png",
-  "assets/img/brand/JDM-png-8.png",
-  "assets/img/brand/JDM-png-9.png",
-  "assets/img/brand/JDM-png-10.png",
+  "/assets/img/brand/Association Logos/1.png",
+  "/assets/img/brand/Association Logos/2.png",
+  "/assets/img/brand/Association Logos/3.png",
+  "/assets/img/brand/Association Logos/4.png",
+  "/assets/img/brand/Association Logos/5.png",
+  "/assets/img/brand/Association Logos/6.png",
+  "/assets/img/brand/Association Logos/7.png",
+  "/assets/img/brand/Association Logos/8.png",
+  "/assets/img/brand/Association Logos/9.png",
+  "/assets/img/brand/Association Logos/10.png",
 ];
 
 export default function Brand1({ alt, heading, images = defaultImages, know_more, to }) {

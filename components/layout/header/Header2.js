@@ -1,5 +1,9 @@
 import Link from "next/link"
 import Menu from "../Menu"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons"
+// import { faXTwitter } from "@fortawesome/free-brands-svg-icons"
+
 
 export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffCanvas, handleOffCanvas, isSearch, handleSearch }) {
 	return (
@@ -57,7 +61,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 												src="assets/img/logo/black-logo.svg"
 												alt="logo-img"
 											/> */}
-											<img src="assets/img/logo/black-logo.jpg" alt="logo-img" />
+											<img src="/assets/img/logo/black-logo.jpg" alt="logo-img" />
 										</Link>
 									</div>
 								</div>
@@ -79,8 +83,8 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isOffC
 										<Link href="https://www.facebook.com/profile.php?id=100090951694492">
 											<i className="fab fa-facebook-f" />
 										</Link>
-										<Link href="https://x.com/home?lang=en">
-											<i className="fab fa-twitter" />
+										<Link href="https://x.com/JDMGroup" target="_blank" rel="noopener noreferrer">
+											<FontAwesomeIcon icon={faXTwitter} />
 										</Link>
 										<Link href="https://www.instagram.com/we_jdm/">
 											<i className="fab fa-instagram" />

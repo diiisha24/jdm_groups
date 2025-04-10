@@ -40,11 +40,11 @@ const Journey = () => {
   return (
     <div className="journey-section fix" id="journey">
       <div className="section-title text-center">
-        <h6 className="wow fadeInUp">
+        {/* <h6 className="wow fadeInUp">
           <i className="fa-regular fa-arrow-left-long" />
           Milestones & Achievements
           <i className="fa-regular fa-arrow-right-long" />
-        </h6>
+        </h6> */}
         <h2 className="wow fadeInUp" data-wow-delay=".2s">
           Our Journey
         </h2>

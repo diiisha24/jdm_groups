@@ -27,16 +27,16 @@ const swiperOptions = {
 			slidesPerView: 4,
 		},
 		1199: {
-			slidesPerView: 3,
+			slidesPerView: 4,
 		},
 		991: {
-			slidesPerView: 2,
+			slidesPerView: 3,
 		},
 		767: {
 			slidesPerView: 2,
 		},
 		575: {
-			slidesPerView: 1,
+			slidesPerView: 2,
 		},
 		0: {
 			slidesPerView: 1,
@@ -111,7 +111,7 @@ export default function Service1() {
 				className="service-section fix section-padding bg-cover"
 				// style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")' }}
 			>
-				<div className="container">
+				{/* <div className="container">
 					<div className="section-title text-center">
 						<h6 className="wow fadeInUp">
 							<i className="fa-regular fa-arrow-left-long" />
@@ -142,7 +142,7 @@ export default function Service1() {
 							<i className="fa-light fa-download" /> Download Our Profile (PDF)
 						</a>
 					</div> */}
-				</div>
+				{/* </div> */} 
 				<div className="container-fluid">
 					<div className="swiper service-slider">
 						<Swiper {...swiperOptions} className="swiper-wrapper">

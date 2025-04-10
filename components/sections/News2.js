@@ -90,11 +90,11 @@ export default function News2() {
         <div className="container">
           <div className="section-title-area">
             <div className="section-title">
-              <h6 className="wow fadeInUp">
+              {/* <h6 className="wow fadeInUp">
                 <i className="fa-regular fa-arrow-left-long" />
                 Blog & News
                 <i className="fa-regular fa-arrow-right-long" />
-              </h6>
+              </h6> */}
               <h2 className="wow fadeInUp" data-wow-delay=".3s">
                 Latest News & Blog
               </h2>

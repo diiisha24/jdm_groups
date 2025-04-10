@@ -54,11 +54,11 @@ const Network = () => {
       <div>
         <div className="flex flex-column items-center justify-content-center align-items-center max-h-[700px] h-[700px] rounded-lg overflow-hidden">
         <div className="section-title text-center">
-          <h6 className="wow fadeInUp">
+          {/* <h6 className="wow fadeInUp">
             <i className="fa-regular fa-arrow-left-long" />
             Milestones & Achievements
             <i className="fa-regular fa-arrow-right-long" />
-          </h6>
+          </h6> */}
           <h2 className="wow fadeInUp" data-wow-delay=".2s">
           Our Global Network
           </h2>
@@ -106,7 +106,7 @@ const Network = () => {
           }
         }
         .world-image-wrapper{
-          padding: 20px 140px 50px;
+          padding: 0px 140px 50px;
         }
         .branch-item {
           border-bottom: 1px solid rgba(255, 255, 255, 0.2);

@@ -11,7 +11,7 @@ export default function CtaBanner2() {
           <div className="cta-banner-wrapper-2">
             <div className="cta-content">
               <h2 className="wow fadeInUp" data-wow-delay=".2s">
-                Do You Have Any Questions <br /> About the Project Plan?
+                Do You Have Any Questions About the Project Plan?
               </h2>
               <Link
                 href="contact"

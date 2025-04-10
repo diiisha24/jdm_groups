@@ -86,16 +86,16 @@ export default function GlobalServices() {
 
   return (
     <section className="global-services-section service-section fix section-padding" id="services">
-      <div className="bg-shape">
+      {/* <div className="bg-shape">
         <img src="assets/img/service/bg-shape.png" alt="img" />
-      </div>
+      </div> */}
       <div className="container">
         <div className="section-title text-center">
-          <h6 className="wow fadeInUp">
+          {/* <h6 className="wow fadeInUp">
             <i className="fa-regular fa-arrow-left-long" />
             quality Services
             <i className="fa-regular fa-arrow-right-long" />
-          </h6>
+          </h6> */}
           <h2 className="wow fadeInUp" data-wow-delay=".2s">
             Our Services
           </h2>
@@ -129,7 +129,7 @@ export default function GlobalServices() {
 
       <style jsx>{`
         .global-services-section {
-          padding: 50px 0 120px;
+          padding: 50px 0 0px;
         }
 
         .section-title {

@@ -1,11 +1,11 @@
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 export default function Footer2() {
   return (
     <>
-      <footer
-        className="footer-section bg-cover bg-cover"
-      >
+      <footer className="footer-section bg-cover">
         <div className="container">
           <div className="footer-widgets-wrapper">
             <div className="row">
@@ -19,38 +19,44 @@ export default function Footer2() {
                   </div>
                   <ul className="list-area">
                     <li>
-                      <Link href="about">
+                      <Link href="/about">
                         <i className="fa-solid fa-chevrons-right" />
                         About Us
                       </Link>
                     </li>
                     <li>
-                      <Link href="service">
+                      <Link href="/service">
                         <i className="fa-solid fa-chevrons-right" />
                         Services
                       </Link>
                     </li>
                     <li>
-                      <Link href="contact">
+                      <Link href="/contact">
                         <i className="fa-solid fa-chevrons-right" />
                         Contact Us
                       </Link>
                     </li>
                     <li>
-                      <Link href="news">
+                      <Link href="/news">
                         <i className="fa-solid fa-chevrons-right" />
                         Blog & News
                       </Link>
                     </li>
                     <li>
-                      <Link href="faq">
+                      <Link href="/faq">
                         <i className="fa-solid fa-chevrons-right" />
                         FAQ’S
                       </Link>
                     </li>
                     {/* <li> */}
-                    {/* <div class="brochures-download-items theme-btn"><div class="brochures-items"><div class="icon"><i class="fal fa-file-pdf"></i></div><div class="content"><p>Download Profile</p></div></div><a href="/assets/doc/JDM Profile_2025.pdf" download="JDM Profile_2025.pdf" class="download-btn active"><i class="fa-light fa-download"></i></a></div> */}
-                    <a class="theme-btn w-100" href="/contact">Download Profile<i class="fa-regular fa-arrow-right"></i></a>
+                      <a
+                        className="theme-btn w-100"
+                        href="/assets/doc/JDM Profile_2025.pdf"
+                        download="JDM Profile_2025.pdf"
+                      >
+                        Download Profile
+                        <i className="fa-regular fa-arrow-right"></i>
+                      </a>
                     {/* </li> */}
                   </ul>
                 </div>
@@ -65,45 +71,45 @@ export default function Footer2() {
                   </div>
                   <ul className="list-area">
                     <li>
-                      <Link href="/service-details">
+                      <Link href="/service-details/air-freight">
                         <i className="fa-solid fa-chevrons-right" />
                         Air Freight Forwarding
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service-details">
+                      <Link href="/service-details/ocean-freight">
                         <i className="fa-solid fa-chevrons-right" />
                         Ocean Freight Forwarding
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service-details">
+                      <Link href="/service-details/train-freight">
                         <i className="fa-solid fa-chevrons-right" />
                         Rail Freight
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service-details">
+                      <Link href="/service-details/road-transportation">
                         <i className="fa-solid fa-chevrons-right" />
                         Road Transportation
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service-details">
+                      <Link href="/service-details/custom-clearance">
                         <i className="fa-solid fa-chevrons-right" />
                         Customs Brokerage
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service-details">
+                      <Link href="/service-details/courier-services">
                         <i className="fa-solid fa-chevrons-right" />
                         Courier Services
                       </Link>
                     </li>
                     <li>
-                      <Link href="/service-details">
+                      <Link href="/service-details/warehousing">
                         <i className="fa-solid fa-chevrons-right" />
-                        Warehouse
+                        Warehousing
                       </Link>
                     </li>
                   </ul>
@@ -119,34 +125,34 @@ export default function Footer2() {
                   </div>
                   <ul className="list-area">
                     <li>
-                      <Link href="/company-details">
+                      <a>
                         <i className="fa-solid fa-chevrons-right" />
                         JDM Worldwide Freight Solutions Pvt. Ltd.
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link href="/company-details">
+                      <a>
                         <i className="fa-solid fa-chevrons-right" />
                         JDM Cargo Planners Pvt. Ltd.
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link href="/company-details">
+                      <a>
                         <i className="fa-solid fa-chevrons-right" />
                         JDM Express Pvt. Ltd.
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link href="/company-details">
+                      <a>
                         <i className="fa-solid fa-chevrons-right" />
                         Arrow Transport Service
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link href="/company-details">
+                      <a>
                         <i className="fa-solid fa-chevrons-right" />
                         AS Transport Service
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -180,18 +186,21 @@ export default function Footer2() {
                     </li>
                   </ul>
                   <div className="social-icon d-flex align-items-center">
-                      <Link href="https://www.facebook.com/profile.php?id=100090951694492">
-                        <i className="fab fa-facebook-f" />
-                      </Link>
-                      <Link href="https://x.com/home?lang=en">
-                        <i className="fab fa-twitter" />
-                      </Link>
-                      <Link href="https://www.instagram.com/we_jdm/">
-                        <i className="fab fa-instagram" />
-                      </Link>
-                      <Link href="https://www.linkedin.com/company/27983246" target="_blank">
-                        <i className="fab fa-linkedin-in" />
-                      </Link>
+                    <Link href="https://www.facebook.com/profile.php?id=100090951694492">
+                      <i className="fab fa-facebook-f" />
+                    </Link>
+                    <Link href="https://x.com/home?lang=en">
+                      <FontAwesomeIcon icon={faXTwitter}/>
+                    </Link>
+                    <Link href="https://www.instagram.com/we_jdm/">
+                      <i className="fab fa-instagram" />
+                    </Link>
+                    <Link
+                      href="https://www.linkedin.com/company/27983246"
+                      target="_blank"
+                    >
+                      <i className="fab fa-linkedin-in" />
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -200,7 +209,9 @@ export default function Footer2() {
           <div className="footer-bottom">
             <p>
               © All Copyright {new Date().getFullYear()} by{" "}
-              <Link href="/" className="fst-italic">JDM Group</Link>
+              <Link href="/" className="fst-italic">
+                JDM Group
+              </Link>
             </p>
           </div>
         </div>

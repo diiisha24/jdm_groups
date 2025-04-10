@@ -37,7 +37,7 @@ section{
 } */
 .theme-btn {
   background-color: var(--theme);
-  color: var(--white);
+  color: var(--white) !important;
   /* color: var(--theme2); */
   display: inline-block;
   font-size: 16px;
@@ -105,12 +105,12 @@ section{
 }
 .header-logo img,
 .contact-info-area .logo-img img {
-  width: 170px;
+  width: 140px;
 }
 
 .brand-image img{
   max-width: 200px;
-  max-height: 90px;
+  max-height: 150px;
 }
 
 .link-btn {
@@ -192,7 +192,7 @@ h1 {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 36px;
   line-height: 115%;
   font-weight: 800;
 }
@@ -238,6 +238,8 @@ a {
 p {
   margin: 0px;
   transition: all 0.4s ease-in-out;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 span {
@@ -295,7 +297,7 @@ span {
 .about-wrapper .about-image ,
 .hero#career .about-image {
   position: relative;
-  max-width: 485px;
+  max-width: 390px;
 }
 
 .about-wrapper .about-image.founder{
@@ -372,6 +374,9 @@ span {
 .about-wrapper .about-content {
   position: relative;
   z-index: 9;
+  .section-title{
+    margin-bottom: 20px;
+  }
 }
 .about-wrapper .about-content .list-items {
   margin-top: 30px;
@@ -380,7 +385,7 @@ span {
   margin-bottom: 30px;
 }
 .about-wrapper .about-content .list-items li {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--header);
 }
@@ -578,7 +583,7 @@ span {
     margin-top: 40px;
   }
   .list-items li {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--header);
   }
@@ -1997,17 +2002,17 @@ span {
   transition: all 0.4s ease-in-out;
 }
 .footer-widgets-wrapper .single-footer-widget .list-area li:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 7px;
 }
 .footer-widgets-wrapper .single-footer-widget .list-area li a {
   color: #b5271fbd;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 14px;
   padding: inherit;
 }
 .footer-widgets-wrapper .single-footer-widget .list-area a.theme-btn{
   padding: 20px 12px;
-  font-size: 14px;
+  font-size: 11px;
   width: fit-content !important;
 }
 .footer-widgets-wrapper .single-footer-widget .list-area li a i {
@@ -2016,9 +2021,9 @@ span {
 .footer-widgets-wrapper .single-footer-widget .list-area li:hover {
   margin-left: 5px;
 }
-.footer-widgets-wrapper .single-footer-widget .list-area li:hover a {
+/* .footer-widgets-wrapper .single-footer-widget .list-area li:hover a {
   color: var(--header);
-}
+} */
 .footer-widgets-wrapper .single-footer-widget .footer-gallery .gallery-wrap .gallery-item {
   display: flex;
   align-items: center;
@@ -2688,7 +2693,7 @@ span {
     margin-inline-end: 25px;
   }
   .header-2 .mega-menu-wrapper .header-main .main-menu ul li a {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media (max-width: 1899px) {
@@ -2783,10 +2788,10 @@ span {
 }
 .header-main .main-menu ul li a {
   display: inline-block;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--header);
-  padding: 16px 0;
+  padding: 10px 0;
   text-align: left;
   position: relative;
   text-transform: capitalize;
@@ -3170,7 +3175,7 @@ span {
   overflow: hidden;
   z-index: 9;
   padding-top: 120px;
-  padding-bottom: 120px
+  padding-bottom: 40px
 }
 @media (max-width: 1199px) {
   .breadcrumb-wrapper {
@@ -3210,7 +3215,7 @@ span {
 }
 .breadcrumb-wrapper .page-heading h1 {
   color: var(--white);
-  font-size: 74px;
+  font-size: 55px;
   position: relative;
   z-index: 9;
   text-transform: uppercase;
@@ -5963,7 +5968,7 @@ input.main-search-input::placeholder {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 60px 0;
 }
 @media (max-width: 1199px) {
   .section-padding {
@@ -6268,25 +6273,23 @@ input.main-search-input::placeholder {
   height: 100%;
   max-height: fit-content;
 }
-.service-details-wrapper .service-details-content {
-  margin-top: 30px;
-}
 .service-details-wrapper .service-details-content h2 {
   margin-bottom: 20px;
 }
 .service-details-wrapper .service-details-content p {
   font-weight: 400;
+  text-align: justify;
 }
 .service-details-wrapper .service-details-content .details-list {
   margin-top: 25px;
 }
 .service-details-wrapper .service-details-content .details-list li {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   color: var(--header);
 }
 .service-details-wrapper .service-details-content .details-list li:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 .service-details-wrapper .service-details-content .details-list li i {
   color: var(--theme);
