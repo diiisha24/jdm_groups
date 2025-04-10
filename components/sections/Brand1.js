@@ -22,16 +22,23 @@ const swiperOptions = {
 };
 
 const defaultImages = [
-  "/assets/img/brand/Association Logos/1.png",
-  "/assets/img/brand/Association Logos/2.png",
-  "/assets/img/brand/Association Logos/3.png",
-  "/assets/img/brand/Association Logos/4.png",
-  "/assets/img/brand/Association Logos/5.png",
-  "/assets/img/brand/Association Logos/6.png",
-  "/assets/img/brand/Association Logos/7.png",
-  "/assets/img/brand/Association Logos/8.png",
-  "/assets/img/brand/Association Logos/9.png",
-  "/assets/img/brand/Association Logos/10.png",
+  "/assets/img/brand/Associations/1.png",
+  "/assets/img/brand/Associations/2.png",
+  "/assets/img/brand/Associations/3.png",
+  "/assets/img/brand/Associations/4.png",
+  "/assets/img/brand/Associations/5.png",
+  "/assets/img/brand/Associations/6.png",
+  "/assets/img/brand/Associations/7.png",
+  "/assets/img/brand/Associations/8.png",
+  "/assets/img/brand/Associations/9.png",
+  "/assets/img/brand/Associations/10.png",
+  "/assets/img/brand/Associations/11.png",
+  "/assets/img/brand/Associations/12.png",
+  "/assets/img/brand/Associations/13.png",
+  "/assets/img/brand/Associations/14.png",
+  "/assets/img/brand/Associations/15.png",
+  "/assets/img/brand/Associations/16.png",
+  "/assets/img/brand/Associations/17.png",
 ];
 
 export default function Brand1({ alt, heading, images = defaultImages, know_more, to }) {
