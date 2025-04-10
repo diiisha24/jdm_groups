@@ -27,7 +27,7 @@ export default function ContactInfo() {
               <div className="content">
                 <h3>Our Address</h3>
                 <p>
-                  A-75, New Delhi - 1100037, India
+                  A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037
                 </p>
               </div>
             </div>

@@ -169,7 +169,7 @@ export default function Footer2() {
                     <li>
                       <Link href="#">
                         <i className="fa-sharp fa-solid fa-location-dot" />
-                        A-75, New Delhi - 1100037, India
+                        A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037
                       </Link>
                     </li>
                     <li>
@@ -189,7 +189,7 @@ export default function Footer2() {
                     <Link href="https://www.facebook.com/profile.php?id=100090951694492">
                       <i className="fab fa-facebook-f" />
                     </Link>
-                    <Link href="https://x.com/home?lang=en">
+                    <Link href="https://x.com/JDMGroup">
                       <FontAwesomeIcon icon={faXTwitter}/>
                     </Link>
                     <Link href="https://www.instagram.com/we_jdm/">

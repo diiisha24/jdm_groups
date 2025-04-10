@@ -6011,12 +6011,15 @@ input.main-search-input::placeholder {
     display: none;
   }
 }
+.service-slider{
+  padding: 90px 0px;
+}
 .service-section .array-button .array-prev {
   background-color: var(--white);
   color: var(--header);
   position: absolute;
   left: 18%;
-  top: 20%;
+  top: 10%;
   transform: translate(-50%, -50%);
   z-index: 99;
 }
@@ -6025,17 +6028,17 @@ input.main-search-input::placeholder {
   color: var(--white);
 }
 .service-section .array-button .array-next {
-  background-color: transparent;
+  background-color: var(--theme);
   color: var(--white);
   border: 1px solid var(--white);
   position: absolute;
   right: 18%;
-  top: 20%;
+  top: 10%;
   transform: translate(-50%, -50%);
   z-index: 99;
 }
 .service-section .array-button .array-next:hover {
-  background-color: var(--theme);
+  background-color: var(--theme2);
 }
 .service-section .array-button.style-2 .array-prev {
   background-color: var(--white);

@@ -843,178 +843,249 @@
 // };
 // import Image from 'next/image';
 
-import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+"use client";
+import React from "react";
+import Link from "next/link";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css"; // Uncomment if using Swiper CSS
 
-// Add this CSS in your global stylesheet (e.g., styles/global.css) or in a <style> tag
+// Custom styles combining Team2 and Service section styles
 const customStyles = `
   .card-hover {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
-  }
-
-  .card-hover:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  }
-
-  .card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
-
-  .card-hover:hover .card-overlay {
-    opacity: 1;
-  }
-
   .social-icon {
     transition: color 0.3s ease;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
   }
 
   .social-icon:hover {
-    color: #0dcaf0 !important; /* Bootstrap's info color, you can change this */
+    color: #0dcaf0 !important; /* Bootstrap's info color */
+  }
+
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .swiper-slide .card-hover {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Service section-inspired card styling */
+  .team-box-items {
+    margin-top: 30px;
+    background-color: var(--white);
+    text-align: center;
+  }
+
+  .team-box-items .service-thumb {
+    padding: 18px 18px 65px 18px;
+    position: relative;
+  }
+
+  .team-box-items .service-thumb img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .team-box-items .service-thumb .icon {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    width: 68px;
+    height: 68px;
+    text-align: center;
+    background-color: var(--white);
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
+    padding: 14px;
+    font-size: 30px;
+    color: var(--theme);
+  }
+
+  .team-box-items .service-content {
+    padding: 0 30px 30px 30px;
+    position: relative;
+  }
+
+  .team-box-items .service-content .number {
+    text-align: right;
+    -webkit-text-stroke: 1px rgba(102, 102, 102, 0.5);
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+    font-size: 50px;
+    font-weight: 700;
+    position: absolute;
+    right: 30px;
+    top: -50px;
+  }
+
+  .team-box-items .service-content .number:hover {
+    -webkit-text-stroke: 1px rgba(245, 91, 31, 0.5);
+  }
+
+  .team-box-items .service-content h3 {
+    margin-bottom: 15px;
+  }
+
+  .team-box-items .service-content h3 a:hover {
+    color: var(--theme);
+  }
+
+  .team-box-items .service-content p {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .team-box-items:hover .service-content .number {
+    -webkit-text-stroke: 1px rgba(245, 91, 31, 0.5);
+  }
+
+  .team-box-items .card-overlay {
+    z-index: 10; /* Ensure overlay is above other elements */
   }
 `;
 
-export default function Team2() {
+const swiperOptions = {
+  modules: [Autoplay, Pagination, Navigation],
+  spaceBetween: 30,
+  speed: 2000,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".dot",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".array-next",
+    prevEl: ".array-prev",
+  },
+  breakpoints: {
+    1399: {
+      slidesPerView: 4,
+    },
+    1199: {
+      slidesPerView: 4,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+    767: {
+      slidesPerView: 2,
+    },
+    575: {
+      slidesPerView: 1,
+    },
+    0: {
+      slidesPerView: 1,
+    },
+  },
+};
+
+// Team data
+const teamMembers = [
+  {
+    id: 1,
+    name: "Oliver Aguilerra",
+    role: "Product Manager",
+    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    bio: "Vincent Van Gogh’s most popular painting, The Starry Night.",
+  },
+  {
+    id: 2,
+    name: "Marta Clermont",
+    role: "Design Team Lead",
+    image: "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    bio: "Amet I love liquorice jujubes pudding croissant I love pudding.",
+  },
+  {
+    id: 3,
+    name: "Anthony Geek",
+    role: "CTO, Lorem Inc.",
+    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    bio: "Apple pie macaroon toffee jujubes pie tart cookie caramels.",
+  },
+  {
+    id: 4,
+    name: "Alice Melbourne",
+    role: "Human Resources",
+    image: "https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    bio: "Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing elit.",
+  },
+  {
+    id: 5,
+    name: "Alice Melbourne",
+    role: "Human Resources",
+    image: "https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    bio: "Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing elit.",
+  },
+];
+
+export default function TeamSlider() {
   return (
     <>
       <style>{customStyles}</style>
-      <div className="container py-5">
-        {/* Header Section */}
-        <div className="row justify-content-center mb-5">
-          <div className="col-md-8 text-center">
-            <span className="badge bg-primary mb-3">Core Team</span>
-            <h2 className="display-4 fw-bold mb-3">
-              Welcome our talented team of professionals
+      <section className="service-section fix section-padding bg-cover">
+        <div className="container">
+          <div className="section-title text-center">
+            <h2 className="wow fadeInUp" data-wow-delay=".2s">
+              Our Team
             </h2>
-            <p className="lead text-muted">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
-            </p>
           </div>
         </div>
-
-        {/* Team Members */}
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-          {/* Team Member 1 */}
-          <div className="col">
-            <div className="card h-100 shadow-sm card-hover">
-              <img
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-                className="card-img-top"
-                alt="Oliver Aguilerra"
-              />
-              <div className="card-overlay text-white text-center p-4">
-                <h5 className="fw-bold mb-1">Oliver Aguilerra</h5>
-                <p className="text-muted small mb-2">Product Manager</p>
-                <p className="small mb-3">
-                  Vincent Van Gogh’s most popular painting, The Starry Night.
-                </p>
-                <div className="d-flex justify-content-center gap-3">
-                  <a href="#" className="text-white social-icon">
-                    <i className="bi bi-twitter"></i>
-                  </a>
-                  <a href="#" className="text-white social-icon">
-                    <i className="bi bi-facebook"></i>
-                  </a>
-                </div>
-              </div>
+        <div className="container-fluid">
+          <div className="swiper team-slider">
+            <Swiper {...swiperOptions} className="swiper-wrapper">
+              {teamMembers.map((member, index) => (
+                <SwiperSlide key={member.id} className="swiper-slide">
+                  <Link href={`/team-details/${member.id}`} className="card-hover">
+                    <div className="team-box-items">
+                      <div className="service-thumb">
+                        <img
+                          src={member.image}
+                          className="card-img-top"
+                          alt={member.name}
+                        />
+                        <div className="icon">
+                          <i className="fa-solid fa-user" /> {/* Generic user icon; replace with specific icons if needed */}
+                        </div>
+                      </div>
+                      <div className="service-content">
+                        <h2 className="number">{String(index + 1).padStart(2, "0")}</h2>
+                        <h3>
+                          <span>{member.name}</span>
+                        </h3>
+                        <p>{member.bio}</p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            {/* Navigation Buttons */}
+            <div className="array-button d-flex justify-content-center mt-4">
+              <button className="array-prev h1p me-3">
+                <i className="fa-regular fa-arrow-left-long" />
+              </button>
+              <button className="array-next h1n">
+                <i className="fa-regular fa-arrow-right-long" />
+              </button>
             </div>
           </div>
-
-          {/* Team Member 2 */}
-          <div className="col">
-            <div className="card h-100 shadow-sm card-hover">
-              <img
-                src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                className="card-img-top"
-                alt="Marta Clermont"
-              />
-              <div className="card-overlay text-white text-center p-4">
-                <h5 className="fw-bold mb-1">Marta Clermont</h5>
-                <p className="text-muted small mb-2">Design Team Lead</p>
-                <p className="small mb-3">
-                  Amet I love liquorice jujubes pudding croissant I love pudding.
-                </p>
-                <div className="d-flex justify-content-center gap-3">
-                  <a href="#" className="text-white social-icon">
-                    <i className="bi bi-twitter"></i>
-                  </a>
-                  <a href="#" className="text-white social-icon">
-                    <i className="bi bi-facebook"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Team Member 3 */}
-          <div className="col">
-            <div className="card h-100 shadow-sm card-hover">
-              <img
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                className="card-img-top"
-                alt="Anthony Geek"
-              />
-              <div className="card-overlay text-white text-center p-4">
-                <h5 className="fw-bold mb-1">Anthony Geek</h5>
-                <p className="text-muted small mb-2">CTO, Lorem Inc.</p>
-                <p className="small mb-3">
-                  Apple pie macaroon toffee jujubes pie tart cookie caramels.
-                </p>
-                <div className="d-flex justify-content-center gap-3">
-                  <a href="#" className="text-white social-icon">
-                    <i className="bi bi-twitter"></i>
-                  </a>
-                  <a href="#" className="text-white social-icon">
-                    <i className="bi bi-facebook"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Team Member 4 */}
-          <div className="col">
-            <div className="card h-100 shadow-sm card-hover">
-              <img
-                src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                className="card-img-top"
-                alt="Alice Melbourne"
-              />
-              <div className="card-overlay text-white text-center p-4">
-                <h5 className="fw-bold mb-1">Alice Melbourne</h5>
-                <p className="text-muted small mb-2">Human Resources</p>
-                <p className="small mb-3">
-                  Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing elit.
-                </p>
-                <div className="d-flex justify-content-center gap-3">
-                  <a href="#" className="text-white social-icon">
-                    <i className="bi bi-twitter"></i>
-                  </a>
-                  <a href="#" className="text-white social-icon">
-                    <i className="bi bi-facebook"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Add more team members as needed */}
         </div>
-      </div>
+      </section>
     </>
   );
 }
