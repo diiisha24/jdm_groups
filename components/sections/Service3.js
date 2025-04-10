@@ -104,7 +104,7 @@ export default function GlobalServices() {
       <div className="">
         <div className="services-grid cursor-pointer">
           {services.map((service, index) => (
-            <div key={index} className="service-item cursor-pointer">
+            <Link href={service.link} key={index} className="service-item cursor-pointer">
               <div
                 className="service-image cursor-pointer"
                 style={{
@@ -122,7 +122,7 @@ export default function GlobalServices() {
                   </div>
                 </div>
               </Link>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

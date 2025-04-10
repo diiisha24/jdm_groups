@@ -114,7 +114,7 @@ export default function Service1() {
             <Swiper {...swiperOptions} className="swiper-wrapper">
               {services.map((service, index) => (
                 <SwiperSlide key={service.id} className="swiper-slide">
-                  <div className="service-box-items">
+                  <Link  href={`/service-details/${service.id}`} className="service-box-items">
                     <div className="service-thumb">
                       <img src={service.image} alt={service.title} />
                       <div className="icon">
@@ -133,7 +133,7 @@ export default function Service1() {
                         Explore More <i className="fa-solid fa-arrow-right" />
                       </Link>
                     </div>
-                  </div>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
