@@ -71,9 +71,6 @@ export default function Brand1({ alt, heading, images = defaultImages, know_more
         </div>
       </div>
       <style jsx>{`
-        .brand-section {
-          padding-bottom: 50px;
-        }
         .brand-image {
           padding: 15px;
         }
