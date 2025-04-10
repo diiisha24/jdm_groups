@@ -353,6 +353,16 @@ const Gallery = () => {
           alt: "Office Space",
           caption: "New Office In Pune - Workspace",
         },
+        {
+          src: "assets/img/service/Warehouse.jpg",
+          alt: "Office Space",
+          caption: "New Office In Pune - Workspace",
+        },
+        {
+          src: "assets/img/service/Warehouse.jpg",
+          alt: "Office Space",
+          caption: "New Office In Pune - Workspace",
+        },
       ],
     },
     {
@@ -378,7 +388,7 @@ const Gallery = () => {
           caption: "Christmas Celebration - Team",
         },
         {
-          src: "https://via.placeholder.com/800x600?text=Christmas+2",
+          src: "https://media.licdn.com/dms/image/v2/D5622AQFC4XkRgwesWQ/feedshare-shrink_800/B56ZQCTIZAHQAg-/0/1735205358038?e=1747267200&v=beta&t=9wZ-n41BjSOmdpsaoWR59qn0KskXtikcUnRRJVvQHBo",
           alt: "Celebrating Christmas 2",
           caption: "Christmas Celebration - Decor",
         },
@@ -393,7 +403,7 @@ const Gallery = () => {
           caption: "Diwali Celebration 2024 - Lights",
         },
         {
-          src: "https://via.placeholder.com/800x600?text=Diwali+2",
+          src: "https://media.licdn.com/dms/image/v2/D5622AQGlZSm6-z7aWA/feedshare-shrink_800/feedshare-shrink_800/0/1731326296205?e=1747267200&v=beta&t=2bnQewQ4PrwDbYFnQ4u-M09kQPT0bouYHa0Hn0IZBFs",
           alt: "Diwali Celebration 2",
           caption: "Diwali Celebration 2024 - Festivities",
         },
@@ -505,7 +515,7 @@ const Gallery = () => {
                                   src={image.src}
                                   alt={image.alt}
                                   className="img-fluid"
-                                  style={{  maxHeight: "270px",width: "100%", objectFit: "cover", }}
+                                  style={{  maxHeight: "270px",width: "100%", objectFit: "cover", height: "100%"}}
                                   loading="lazy"
                                   onError={(e) => {
                                     e.target.src = "/fallback-image.png";
