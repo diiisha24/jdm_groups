@@ -132,7 +132,7 @@ import Footer2 from "./footer/Footer2";
 import Header2 from "./header/Header2";
 import Offcanvas from "./Offcanvas";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faComment, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Layout({
   headerStyle,
@@ -233,7 +233,7 @@ export default function Layout({
         <div className="floating-contact wow fadeInRight" data-wow-delay=".5s">
           <Link href="/contact">
             <button className="contact-btn">
-			  <FontAwesomeIcon icon={faEnvelope}/>
+			  <FontAwesomeIcon icon={faComment}/>
             </button>
           </Link>
         </div>
