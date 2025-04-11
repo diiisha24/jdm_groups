@@ -56,14 +56,7 @@ const defaultSubsections = [
 	{
 		subheading: "International",
 		logos: [
-			{ src: "assets/img/brand/Associations/International/1.png", alt: "International Brand 1" },
-			{ src: "assets/img/brand/Associations/International/2.png", alt: "International Brand 2" },
-			{ src: "assets/img/brand/Associations/International/3.png", alt: "International Brand 3" },
-			{ src: "assets/img/brand/Associations/International/4.png", alt: "International Brand 4" },
-			{ src: "assets/img/brand/Associations/International/5.png", alt: "International Brand 5" },
-			{ src: "assets/img/brand/Associations/International/6.png", alt: "International Brand 5" },
-			{ src: "assets/img/brand/Associations/International/7.png", alt: "International Brand 5" },
-			{ src: "assets/img/brand/Associations/International/8.png", alt: "International Brand 5" },
+			{ src: "assets/img/brand/Associations/1.png",, alt: "International Brand 5" },
 		],
 	},
   {
