@@ -4,6 +4,7 @@ import About2 from "@/components/sections/About2";
 import Achivements from "@/components/sections/Achivements";
 import IndianBranches from "@/components/sections/branches";
 import Brand1 from "@/components/sections/Brand1";
+import Brand2 from "@/components/sections/Brand2";
 import CtaBanner2 from "@/components/sections/CtaBanner2";
 import Hero2 from "@/components/sections/Hero2";
 import Journey from "@/components/sections/Journey";
@@ -25,20 +26,47 @@ const customers_image_data = [
   "assets/img/customer_logo/CSL-7.png",
 ];
 
-const career_partner_logo_data = [
-  "assets/img/career_partner_logos/1.png",
-  "assets/img/career_partner_logos/2.png",
-  "assets/img/career_partner_logos/3.png",
-  "assets/img/career_partner_logos/4.png",
-  "assets/img/career_partner_logos/5.png",
-  "assets/img/career_partner_logos/6.png",
-  "assets/img/career_partner_logos/7.png",
-  "assets/img/career_partner_logos/8.png",
-  "assets/img/career_partner_logos/9.png",
-  "assets/img/career_partner_logos/10.png",
-  "assets/img/career_partner_logos/11.png",
-  "assets/img/career_partner_logos/12.png",
-  "assets/img/career_partner_logos/13.png",
+// const career_partner_logo_data = [
+//   "assets/img/career_partner_logos/1.png",
+//   "assets/img/career_partner_logos/2.png",
+//   "assets/img/career_partner_logos/3.png",
+//   "assets/img/career_partner_logos/4.png",
+//   "assets/img/career_partner_logos/5.png",
+//   "assets/img/career_partner_logos/6.png",
+//   "assets/img/career_partner_logos/7.png",
+//   "assets/img/career_partner_logos/8.png",
+//   "assets/img/career_partner_logos/9.png",
+//   "assets/img/career_partner_logos/10.png",
+//   "assets/img/career_partner_logos/11.png",
+//   "assets/img/career_partner_logos/12.png",
+//   "assets/img/career_partner_logos/13.png",
+// ];
+const defaultCarrierPartner = [
+  {
+    subheading: "Air",
+    logos: [
+		
+      { src: "assets/img/brand/Associations/1.png", alt: "Domestic Brand 1" },
+      { src: "assets/img/brand/Associations/2.png", alt: "Domestic Brand 2" },
+      { src: "assets/img/brand/Associations/3.png", alt: "Domestic Brand 3" },
+      { src: "assets/img/brand/Associations/4.png", alt: "Domestic Brand 4" },
+      { src: "assets/img/brand/Associations/5.png", alt: "Domestic Brand 5" },
+      { src: "assets/img/brand/Associations/6.png", alt: "Domestic Brand 5" },
+      { src: "assets/img/brand/Associations/7.png", alt: "Domestic Brand 5" },
+    ],
+  },
+  {
+    subheading: "Sea",
+    logos: [
+		{ src: "assets/img/brand/Associations/8.png", alt: "International Brand 1" },
+		{ src: "assets/img/brand/Associations/9.png", alt: "International Brand 2" },
+		{ src: "assets/img/brand/Associations/10.png", alt: "International Brand 3" },
+		{ src: "assets/img/brand/Associations/11.png", alt: "International Brand 4" },
+		{ src: "assets/img/brand/Associations/12.png", alt: "International Brand 5" },
+		{ src: "assets/img/brand/Associations/13.png", alt: "International Brand 5" },
+		{ src: "assets/img/brand/Associations/14.png", alt: "International Brand 5" },
+    ],
+  },
 ];
 
 export default async function Home2() {
@@ -65,7 +93,7 @@ export default async function Home2() {
   }
 
   // Fetch career partner logos (uncommented and improved)
-  let careerPartnerLogos = career_partner_logo_data;
+  let careerPartnerLogos = defaultCarrierPartner;
   try {
     const careerRes = await fetch(`${apiUrl}/career/api/carrier-partner`, {
       cache: "no-store",
@@ -77,7 +105,7 @@ export default async function Home2() {
     }
   } catch (error) {
     console.error("Error fetching career partner logos:", error);
-    careerPartnerLogos = career_partner_logo_data; // Fallback
+    careerPartnerLogos = defaultCarrierPartner; // Fallback
   }
 
   return (
@@ -90,8 +118,8 @@ export default async function Home2() {
       <Brand1 images={customersImages} know_more="Our Clientelle" to="clientele" />
       <Journey />
       {/* <Team2 /> */}
-      <Brand1 heading="Our Affiliations & Accreditations" />
-      <Brand1 images={careerPartnerLogos} heading="Our Carrier Partner" />
+      <Brand2/>
+      <Brand2 heading="Our Carrier Partners" subsections={defaultCarrierPartner}/>
       <Network />
       <IndianBranches/>
       {/* <Project2 /> */}

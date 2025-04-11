@@ -330,23 +330,23 @@ export default function NewsDetailsSection({ blogData }) {
                 <div className="news-widget-categories">
                   <ul>
                     <li>
-                      <Link href="/news-details">Air Freight </Link>{" "}
+                      <Link href="/news-details">Air Freight <i className="fa-solid fa-arrow-right"></i></Link>{" "}
                       {/* <span>5</span> */}
                     </li>
                     <li>
-                      <Link href="/news-details">Ocean Freight</Link>{" "}
+                      <Link href="/news-details">Ocean Freight <i className="fa-solid fa-arrow-right"></i></Link>{" "}
                       {/* <span>3</span> */}
                     </li>
-                    <li className="active">
-                      <Link href="/news-details">Warehousing </Link>
+                    <li>
+                      <Link href="/news-details">Warehousing <i className="fa-solid fa-arrow-right"></i></Link>
                       {/* <span>4</span> */}
                     </li>
                     <li>
-                      <Link href="/news-details">Shipment Solutions </Link>{" "}
+                      <Link href="/news-details">Road Transportation <i className="fa-solid fa-arrow-right"></i></Link>{" "}
                       {/* <span>2</span> */}
                     </li>
                     <li>
-                      <Link href="/news-details">Security System</Link>{" "}
+                      <Link href="/news-details">Custom Clearance <i className="fa-solid fa-arrow-right"></i></Link>{" "}
                       {/* <span>3</span> */}
                     </li>
                   </ul>

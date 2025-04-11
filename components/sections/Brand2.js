@@ -1,150 +1,152 @@
-"use client"
-// import "swiper/css"
+"use client";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; // Uncommented to ensure Swiper styles are applied
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
-
+// Swiper configuration
 const swiperOptions = {
-	modules: [Autoplay, Pagination, Navigation],
-	slidesPerView: 4,
-	spaceBetween: 30,
-	autoplay: {
-		delay: 2500,
-		disableOnInteraction: false,
-	},
-	loop: true,
+  modules: [Autoplay, Pagination, Navigation],
+  slidesPerView: 4,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    // disableOnInteraction: false,
+  },
+  loop: true,
+  navigation: {
+    nextEl: ".h1n",
+    prevEl: ".h1p",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    575: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    767: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    991: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+    1199: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+    1350: {
+      slidesPerView: 6,
+      spaceBetween: 30,
+    },
+  },
+};
 
-	// Navigation
-	navigation: {
-		nextEl: ".h1n",
-		prevEl: ".h1p",
+// Default subsections data
+const defaultSubsections = [
+	{
+		subheading: "International",
+		logos: [
+			{ src: "assets/img/brand/Associations/International/1.png", alt: "International Brand 1" },
+			{ src: "assets/img/brand/Associations/International/2.png", alt: "International Brand 2" },
+			{ src: "assets/img/brand/Associations/International/3.png", alt: "International Brand 3" },
+			{ src: "assets/img/brand/Associations/International/4.png", alt: "International Brand 4" },
+			{ src: "assets/img/brand/Associations/International/5.png", alt: "International Brand 5" },
+			{ src: "assets/img/brand/Associations/International/6.png", alt: "International Brand 5" },
+			{ src: "assets/img/brand/Associations/International/7.png", alt: "International Brand 5" },
+			{ src: "assets/img/brand/Associations/International/8.png", alt: "International Brand 5" },
+		],
 	},
+  {
+    subheading: "Domestic",
+    logos: [
+		
+      { src: "assets/img/brand/Associations/Domestic/1.png", alt: "Domestic Brand 1" },
+      { src: "assets/img/brand/Associations/Domestic/2.png", alt: "Domestic Brand 2" },
+      { src: "assets/img/brand/Associations/Domestic/3.png", alt: "Domestic Brand 3" },
+      { src: "assets/img/brand/Associations/Domestic/4.png", alt: "Domestic Brand 4" },
+      { src: "assets/img/brand/Associations/Domestic/5.png", alt: "Domestic Brand 5" },
+      { src: "assets/img/brand/Associations/Domestic/6.png", alt: "Domestic Brand 5" },
+      { src: "assets/img/brand/Associations/Domestic/7.png", alt: "Domestic Brand 5" },
+    ],
+  },
+];
 
-	// Pagination
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	},
-
-	breakpoints: {
-		320: {
-			slidesPerView: 3,
-			spaceBetween: 30,
-		},
-		575: {
-			slidesPerView: 3,
-			spaceBetween: 30,
-		},
-		767: {
-			slidesPerView: 3,
-			spaceBetween: 30,
-		},
-		991: {
-			slidesPerView: 4,
-			spaceBetween: 30,
-		},
-		1199: {
-			slidesPerView: 4,
-			spaceBetween: 30,
-		},
-		1350: {
-			slidesPerView: 4,
-			spaceBetween: 30,
-		},
-	},
-}
-
-export default function Brand2() {
-	return (
-		<>
-			<div className="brand-section fix section-padding">
-				<div className="container">
-					<div className="swiper brand-slider">
-						<Swiper {...swiperOptions} className="swiper-wrapper">
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-1.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-2.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-3.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-4.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-5.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-6.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-7.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-8.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-9.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									{/* <img src="assets/img/brand/brand-logo.png" alt="img" /> */}
-									<img src="assets/img/brand/JDM-png-10.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							{/* <SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo-2.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo-3.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo-4.png" alt="img" />
-								</div>
-							</SwiperSlide>
-							<SwiperSlide className="swiper-slide">
-								<div className="brand-image center">
-									<img src="assets/img/brand/brand-logo-5.png" alt="img" />
-								</div>
-							</SwiperSlide> */}
-						</Swiper>
-					</div>
-				</div>
-			</div>
-		</>
-	)
+export default function Brand2({
+  heading = "Affiliations & Accreditations",
+  subsections = defaultSubsections,
+}) {
+  return (
+    <div className="brand-section fix">
+      <div>
+        <div className="section-title text-center">
+          <h2 className="wow fadeInUp" data-wow-delay=".2s">
+            {heading}
+          </h2>
+        </div>
+        {subsections.map((subsection, index) => (
+          <div key={index} className="subsection">
+            <h3 className="subsection-title wow fadeInUp" data-wow-delay=".3s">
+              {subsection.subheading}
+            </h3>
+            <div className="swiper brand-slider">
+              <Swiper {...swiperOptions} className="swiper-wrapper">
+                {subsection.logos.map((logo, logoIndex) => (
+                  <SwiperSlide key={logoIndex} className="swiper-slide">
+                    <div className="brand-image center">
+                      <img src={logo.src} alt={logo.alt} />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              {/* Navigation and Pagination */}
+              {/* <div className="swiper-navigation">
+                <div className="h1p"></div>
+                <div className="h1n"></div>
+              </div>
+              <div className="swiper-pagination"></div> */}
+            </div>
+          </div>
+        ))}
+      </div>
+      <style jsx>{`
+	  		.brand-section{
+				margin: 20px 0;
+			}
+			.subsection{
+				margin-bottom: 10px;
+			}
+        .subsection-title {
+          font-size: 1.5rem;
+          text-align: center;
+          color: var(--theme);
+        }
+        .brand-image {
+          padding: 15px;
+        }
+        .swiper-navigation {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin-top: 10px;
+        }
+        .h1p,
+        .h1n {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          background-size: contain;
+        }
+      `}</style>
+    </div>
+  );
 }

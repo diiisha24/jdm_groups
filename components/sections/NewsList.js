@@ -226,7 +226,7 @@ export default function NewsList() {
                     </form>
                   </div>
                 </div>
-                <div className="single-sidebar-widget">
+                {/* <div className="single-sidebar-widget">
                   <div className="wid-title">
                     <h3>Categories</h3>
                   </div>
@@ -254,7 +254,7 @@ export default function NewsList() {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 <div className="single-sidebar-widget">
                   <div className="wid-title">
                     <h3>Recent Post</h3>

@@ -85,11 +85,11 @@ export default function Faq() {
               <div className="col-lg-6">
                 <div className="faq-content">
                   <div className="section-title">
-                    <h6 className="wow fadeInUp">
+                    {/* <h6 className="wow fadeInUp">
                       <i className="fa-regular fa-arrow-left-long" />
                       faq
                       <i className="fa-regular fa-arrow-right-long" />
-                    </h6>
+                    </h6> */}
                     <h2 className="wow fadeInUp" data-wow-delay=".2s">
                       your frequently ask & questions
                     </h2>

@@ -21,7 +21,7 @@ const defaultServices = [
   },
   {
     title: "Road Transportation",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/truck1.jpg",
+    image: "/assets/img/service/truck.jpg",
     link: "/services/logistics/road-transport",
   },
   {

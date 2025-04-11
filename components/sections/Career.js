@@ -83,11 +83,11 @@ const CareerSection = ({ jobs }) => {
         <div className="container">
           <div className="section-title-area">
             <div className="section-title flex flex-column text-left">
-              <h6 className="wow fadeInUp">
+              {/* <h6 className="wow fadeInUp">
                 <i className="fa-regular fa-arrow-left-long" />
                 Find Your Career With Us
                 <i className="fa-regular fa-arrow-right-long" />
-              </h6>
+              </h6> */}
               <h2 className="wow fadeInUp" data-wow-delay=".3s">
                 Join Our Logistics Family
               </h2>
