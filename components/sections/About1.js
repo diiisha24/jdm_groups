@@ -6,7 +6,7 @@ import "react-modal-video/css/modal-video.min.css"; // Import styles if needed
 const defaultData = {
   title: "Our Story",
   description:
-    "**JDM Group** was conceptualized by **Late Mr. Pahlad Singh** in 1978, starting with transportation in the logistics field. Renowned for his steadfast commitments, he built a legacy that **JDM** proudly continues under the leadership of **Group Chairman & Managing Director Mr. Sahil Sehrawat** and our dedicated team. *JDM* has evolved into one of the fastest-growing integrated supply chain logistics enterprises with the following verticals:",
+    "**JDM Group** was conceptualized by **Late Mr. Pahlad Singh** in 1978, starting with transportation in the logistics field. Renowned for his steadfast commitments, he built a legacy that **JDM** proudly continues under the leadership of **Group Chairman & Managing Director Mr. Sahil Sehrawat** and our dedicated team. **JDM** has evolved into one of the fastest-growing integrated supply chain logistics enterprises with the following verticals:",
   image1: "assets/img/about/03.jpg",
   image2: "assets/img/about/04.jpg",
   features: [
@@ -94,7 +94,7 @@ const About1 = () => {
                       __html: renderDescription(aboutData.description),
                     }}
                   />
-                  <ul className="list-items wow fadeInUp" data-wow-delay=".2s">
+                  <ul className="list-items wow fadeInUp fst-italic" data-wow-delay=".2s">
                     {aboutData.features.map((feature, index) => (
                       <li key={index}>
                         <i
