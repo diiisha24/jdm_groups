@@ -56,7 +56,7 @@ const defaultSubsections = [
 	{
 		subheading: "International",
 		logos: [
-			{ src: "assets/img/brand/Associations/1.png",, alt: "International Brand 5" },
+			{ src: "assets/img/brand/Associations/1.png", alt: "International Brand 5" },
 		],
 	},
   {
