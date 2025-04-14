@@ -2787,6 +2787,12 @@ span {
   display: inline-block;
   margin-inline-end: 50px;
 }
+.header-main .main-menu ul li.theme-highlight > a {
+  color: var(--theme);
+  font-weight: 600;
+  /* border-bottom: 2px solid var(--theme); */
+}
+
 .header-main .main-menu ul li:last-child {
   margin-inline-end: 0;
 }

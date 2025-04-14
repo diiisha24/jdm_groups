@@ -1,13 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // Default menu data as fallback
 const defaultMenuItems = [
   {
     title: "Home",
     href: "/",
-    submenu: null, // No submenu in current structure, but preserved for commented-out section
+    submenu: null,
   },
   {
     title: "About Us",
@@ -15,21 +16,22 @@ const defaultMenuItems = [
     submenu: null,
   },
   {
-    "title": "Services",
-    "href": "/service",
-    "submenu": [
-      { "title": "All Services", "href": "/service" },
-      { "title": "Air Freight", "href": "/service-details/air-freight" },
-      { "title": "Ocean Freight", "href": "/service-details/ocean-freight" },
-      { "title": "Train Freight", "href": "/service-details/train-freight" },
-      { "title": "Road Transportation", "href": "/service-details/road-transportation" },
-      { "title": "Custom Clearance", "href": "/service-details/custom-clearance" },
-      { "title": "Courier Services", "href": "/service-details/courier-services" },
-      { "title": "Project Cargo", "href": "/service-details/project-cargo" },
-      { "title": "Warehousing", "href": "/service-details/warehousing" },
-      { "title": "Other Services", "href": "/other-services"},
+    title: "Services",
+    href: "/service",
+    submenu: [
+      { title: "All Services", href: "/service" },
+      { title: "Air Freight", href: "/service-details/air-freight" },
+      { title: "Ocean Freight", href: "/service-details/ocean-freight" },
+      { title: "Train Freight", href: "/service-details/train-freight" },
+      { title: "Road Transportation", href: "/service-details/road-transportation" },
+      { title: "Custom Clearance", href: "/service-details/custom-clearance" },
+      { title: "Courier Services", href: "/service-details/courier-services" },
+      { title: "Project Cargo", href: "/service-details/project-cargo" },
+      { title: "Warehousing", href: "/service-details/warehousing" },
+      { title: "Other Services", href: "/other-services" },
     ]
-  },{
+  },
+  {
     title: "Gallery",
     href: "/gallery",
     submenu: null,
@@ -54,7 +56,8 @@ const defaultMenuItems = [
 ];
 
 export default function Menu() {
-  const [menuItems, setMenuItems] = useState(defaultMenuItems); // Initialize with default menu items
+  const [menuItems, setMenuItems] = useState(defaultMenuItems);
+  const pathname = usePathname();
 
   // Fetch menu data from API on mount
   useEffect(() => {
@@ -62,9 +65,8 @@ export default function Menu() {
 
     const fetchMenuData = async () => {
       try {
-        const response = await fetch(`${apiUrl}/home/api/menu/`); // Hypothetical endpoint
+        const response = await fetch(`${apiUrl}/home/api/menu/`);
         const data = await response.json();
-        // Assuming the API returns an array of objects with title, href, and optional submenu
         if (data && Array.isArray(data) && data.length > 0) {
           const fetchedMenuItems = data.map((item) => ({
             title: item.title || "Untitled",
@@ -80,27 +82,32 @@ export default function Menu() {
         }
       } catch (error) {
         console.error("Error fetching menu data:", error);
-        // Fallback to defaultMenuItems (already set)
       }
     };
 
     fetchMenuData();
-  }, []); // Runs once on mount
+  }, []);
+
+  // Helper to check if a menu item or its submenu is active
+  const isActive = (href, submenu) => {
+    if (pathname === href) return true;
+    if (submenu) {
+      return submenu.some((sub) => pathname.startsWith(sub.href));
+    }
+    return false;
+  };
 
   return (
-    <>
-      <nav id="mobile-menu" className="d-none d-xl-block">
-        <ul>
-          {menuItems.map((item, index) => (
+    <nav id="mobile-menu" className="d-none d-xl-block">
+      <ul>
+        {menuItems.map((item, index) => {
+          const active = isActive(item.href, item.submenu);
+          return (
             <li
               key={index}
-            //   className={item.submenu ? "has-dropdown" : ""}
-              // Add 'active' class to Home as in original, assuming first item is Home
-              className={
-                item.submenu
-                  ? "has-dropdown"
-                  : "" + (index === 0 ? " active menu-thumb" : "")
-              }
+              className={`${
+                item.submenu ? "has-dropdown" : ""
+              }${active ? " active theme-highlight" : ""}`}
             >
               <Link href={item.href}>
                 {item.title}
@@ -116,9 +123,9 @@ export default function Menu() {
                 </ul>
               )}
             </li>
-          ))}
-        </ul>
-      </nav>
-    </>
+          );
+        })}
+      </ul>
+    </nav>
   );
 }

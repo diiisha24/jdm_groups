@@ -78,7 +78,7 @@ const OtherServices = () => {
     },
     {
       id: "sez-stpi",
-      title: "SEZ/STPI",
+      title: "SEZ/STPI/FTWZ",
       content: (
         <>
           <p>
