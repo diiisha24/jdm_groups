@@ -2676,7 +2676,7 @@ span {
   right: 0;
   bottom: 0;
   height: 100%;
-  width: 168px;
+  width: 155px;
   content: "";
   background-color: var(--theme);
   z-index: -1;

@@ -155,7 +155,7 @@ const CareerSection = ({ jobs }) => {
                 Interested in joining us? Click "Apply Now" on any job listing or send
                 your resume and cover letter to{" "}
                 <a href="mailto:careers@jdmlogistics.com">
-                  careers@jdmlogistics.com
+                  hr.del1@jdmgroups.com
                 </a>.
               </p>
             </div>

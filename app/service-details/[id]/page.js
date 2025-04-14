@@ -29,7 +29,7 @@ const defaultServices = [
   {
     id: "road-transportation",
     title: "Road Transportation",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/truck1.jpg",
+    image: "/assets/img/service/truck.jpg",
     description1: "JDM GROUP was conceptualized by Late Mr. Pahlad Singh in the year 1978, with an initial start in Transportation & Logistics. His deep understanding of logistics and dedication to value-added services strengthened the foundations of the organization.Transportation is a crucial part of the modern logistics sector, covering cargo pick-up, port handling, customs clearance, and warehousing. JDM Group has become a leading logistics partner for India's top corporate houses.",
     description2: "We firmly believe in the “Just in Time” concept, ensuring seamless logistics support through well-trained and experienced staff. Our company is also committed to a sustainable future, adopting electric vehicles (EVs) and reducing emissions under the Mission 2050 initiative.",
   },

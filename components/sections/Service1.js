@@ -66,7 +66,7 @@ const services = [
   {
     id: "road-transportation",
     title: "Road Transportation",
-    image: "https://www.jdmgroups.com/wp-content/uploads/2014/11/truck1.jpg",
+    image: "/assets/img/service/truck.jpg",
     description: "Flexible road transportation for local and regional deliveries.",
     icon: "fa-regular fa-truck-fast",
   },
