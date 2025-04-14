@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout"
 import About2 from "@/components/sections/About2"
 import Achivements from "@/components/sections/Achivements"
-import Brand2 from "@/components/sections/Brand2"
+// import Brand2 from "@/components/sections/Brand2"
 import CtaBanner2 from "@/components/sections/CtaBanner2"
 import Hero2 from "@/components/sections/Hero2"
 import News2 from "@/components/sections/News2"
