@@ -24,7 +24,7 @@ const Clientele = () => {
         { name: "Mobile Spare Parts", logos: Array.from({ length: 8 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Mobile and Spare Parts/${i + 1}.png`, alt: `Mobile Spare Parts Logo ${i + 1}` })) },
         { name: "Paper and Packaging", logos: Array.from({ length: 11 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Paper and Packaging/${i + 1}.png`, alt: `Paper and Packaging Logo ${i + 1}` })) },
         { name: "RMG and Fashion", logos: Array.from({ length: 8 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/RMG and Fassion/${i + 1}.png`, alt: `RMG and Fashion Logo ${i + 1}` })) },
-        { name: "Safety and Security", logos: Array.from({ length: 6 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Saftey and Security/${i + 1}.png`, alt: `Safety and Security Logo ${i + 1}` })) },
+        { name: "Safety and Security", logos: Array.from({ length: 6 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Safety and Security/${i + 1}.png`, alt: `Safety and Security Logo ${i + 1}` })) },
         { name: "Steel and Iron", logos: Array.from({ length: 22 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Steel and Iron/${i + 1}.png`, alt: `Steel and Iron Logo ${i + 1}` })) },
       ];
       setSectorLogos(sectors);
@@ -196,12 +196,13 @@ const Clientele = () => {
         }
         .sector-container {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           gap: 20px;
           height: 100%;
         }
         .sector-nav {
-          width: 250px;
+          display: flex;
+          flex-wrap: wrap;
           list-style: none;
           padding: 0;
           margin: 0;
@@ -210,7 +211,8 @@ const Clientele = () => {
         }
         .sector-nav li {
           display: block;
-          width: 100%;
+          border-left:  1px solid var(--bs-gray-200);
+          border-right:  1px solid var(--bs-gray-200);
         }
         .sector-nav li button {
           width: 100%;
