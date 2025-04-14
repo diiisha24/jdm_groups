@@ -251,6 +251,9 @@ const swiperOptions = {
 //     availability: "Contractor",
 //   },
 // ];
+const renderDescription = (text) => {
+  return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+};
 
 export default function TeamSlider() {
   return (

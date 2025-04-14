@@ -27,7 +27,9 @@ export default function TeamDetails1({ member }) {
                 <h3>{member?.name}</h3>
                 <span>{member?.role}</span>
               </div>
-              <p className="cont">{member?.bio}</p>
+              <p className="cont" dangerouslySetInnerHTML={{
+                      __html: renderDescription(member?.bio),
+                    }}/>
               {member?.phone && (
                 <h6 className="team-details-info">
                   <span className="text-title">Phone Number:</span>

@@ -4,15 +4,12 @@ import About2 from "@/components/sections/About2";
 import Achivements from "@/components/sections/Achivements";
 import IndianBranches from "@/components/sections/branches";
 import Brand1 from "@/components/sections/Brand1";
-// import Brand2 from "@/components/sections/Brand2";
 import CtaBanner2 from "@/components/sections/CtaBanner2";
 import Hero2 from "@/components/sections/Hero2";
 import Journey from "@/components/sections/Journey";
 import Network from "@/components/sections/network";
 import News2 from "@/components/sections/News2";
-// import Project2 from "@/components/sections/Project2";
 import Service3 from "@/components/sections/Service3";
-// import Team2 from "@/components/sections/Team2";
 import Testimonial2 from "@/components/sections/Testimonial2";
 
 // Default data as fallback
