@@ -1,8 +1,7 @@
-"use client"
-import Link from "next/link"
-import { useState, useEffect } from 'react'
+"use client";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
-// Default services array as fallback
 const defaultServices = [
   {
     title: "Air Freight",
@@ -47,9 +46,8 @@ const defaultServices = [
 ];
 
 export default function GlobalServices() {
-  const [services, setServices] = useState(defaultServices); // Initialize with default services
+  const [services, setServices] = useState(defaultServices);
 
-  // Fetch services data from API on mount
   useEffect(() => {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
@@ -57,71 +55,64 @@ export default function GlobalServices() {
       try {
         const response = await fetch(`${apiUrl}/our_services/api/service/`);
         const data = await response.json();
-        // Assuming the API returns an array of objects with title, image, and link
         if (data && Array.isArray(data) && data.length > 0) {
-          const fetchedServices = data.map(service => ({
+          const fetchedServices = data.map((service) => ({
             title: service.title || "Unnamed Service",
-            image: service.image || "assets/img/service/default.jpg", // Provide a fallback image if needed
-            link: service.link || "#", // Default link if not provided
+            image: service.image || "assets/img/service/default.jpg",
+            link: service.link || "#",
           }));
           setServices(fetchedServices);
         }
       } catch (error) {
         console.error("Error fetching services data:", error);
-        // Fallback to defaultServices (already set)
       }
     };
 
     fetchServicesData();
-  }, []); // Runs once on mount
+  }, []);
 
   const totalSlides = services.length;
-  let columnsPerRow;
-  
-  if (totalSlides <= 8) {
-    columnsPerRow = totalSlides / 2; // Up to 8 slides, show 4 per row
-  } else {
-    columnsPerRow = 5; // 9 or more slides, show 5 per row
-  }
+  const columnsPerRow = totalSlides <= 8 ? totalSlides / 2 : 5;
 
   return (
-    <section className="global-services-section service-section fix section-padding" id="services">
-      {/* <div className="bg-shape">
-        <img src="assets/img/service/bg-shape.png" alt="img" />
-      </div> */}
+    <section
+      className="global-services-section service-section fix section-padding"
+      id="services"
+    >
       <div className="container">
         <div className="section-title text-center">
-          {/* <h6 className="wow fadeInUp">
-            <i className="fa-regular fa-arrow-left-long" />
-            quality Services
-            <i className="fa-regular fa-arrow-right-long" />
-          </h6> */}
           <h2 className="wow fadeInUp" data-wow-delay=".2s">
             Our Services
           </h2>
         </div>
       </div>
-      <div className="">
-        <div className="services-grid cursor-pointer">
+
+      <div>
+        <div
+          className="services-grid"
+          style={{ display: "grid", gridTemplateColumns: `repeat(${columnsPerRow}, 1fr)`, gap: 0 }}
+        >
           {services.map((service, index) => (
-            <Link href={service.link} key={index} className="service-item cursor-pointer">
-              <div
-                className="service-image cursor-pointer"
-                style={{
-                  backgroundImage: `url(${service.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  height: "200px",
-                }}
-              />
-              <Link href={service.link}>
-                <div className="overlay cursor-pointer">
-                  <div className="overlay-content cursor-pointer">
+            <Link href={service.link} key={index}>
+              <div className="service-item cursor-pointer">
+                <div
+                  className="service-image"
+                  role="img"
+                  aria-label={service.title}
+                  style={{
+                    backgroundImage: `url(${service.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    height: "200px",
+                  }}
+                />
+                <div className="overlay">
+                  <div className="overlay-content">
                     <p>{service.title}</p>
                     <span>more →</span>
                   </div>
                 </div>
-              </Link>
+              </div>
             </Link>
           ))}
         </div>
@@ -138,12 +129,6 @@ export default function GlobalServices() {
           color: #4a2c2a;
           margin-bottom: 40px;
           text-transform: uppercase;
-        }
-
-        .services-grid {
-          display: grid;
-          grid-template-columns: repeat(${columnsPerRow}, 1fr);
-          gap: 0;
         }
 
         .service-item {
@@ -192,11 +177,11 @@ export default function GlobalServices() {
           font-size: 24px;
           margin-top: 5px;
         }
-        .overlay-content p:hover ,
-        .overlay-content span:hover{
+
+        .overlay-content p:hover,
+        .overlay-content span:hover {
           color: var(--theme2);
         }
-
 
         .service-item:hover .overlay {
           opacity: 85%;
