@@ -17,7 +17,7 @@ export default function Home2() {
 				<Hero2 />
 				<About2 />
 				<Service2 />
-				<Brand2 />
+				{/* <Brand2 /> */}
 				<Project2 />
 				<Team2 />
 				<Pricing />
