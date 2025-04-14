@@ -6018,31 +6018,29 @@ input.main-search-input::placeholder {
 .service-slider{
   padding: 90px 0px;
 }
+.service-section .array-button .array-next,
 .service-section .array-button .array-prev {
-  background-color: var(--white);
-  color: var(--header);
-  position: absolute;
-  left: 18%;
-  top: 10%;
-  transform: translate(-50%, -50%);
-  z-index: 99;
-}
-.service-section .array-button .array-prev:hover {
-  background-color: var(--header);
-  color: var(--white);
-}
-.service-section .array-button .array-next {
   background-color: var(--theme);
   color: var(--white);
   border: 1px solid var(--white);
   position: absolute;
-  right: 18%;
+  right: 0%;
   top: 10%;
   transform: translate(-50%, -50%);
   z-index: 99;
 }
-.service-section .array-button .array-next:hover {
+.service-section .array-button .array-next:hover,
+.service-section .array-button .array-prev:hover {
   background-color: var(--theme2);
+}
+.service-section .array-button .array-prev {
+  /* background-color: var(--white);
+  color: var(--header); */
+  position: absolute;
+  left: 4%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
 }
 .service-section .array-button.style-2 .array-prev {
   background-color: var(--white);

@@ -20,7 +20,7 @@ const Clientele = () => {
         { name: "Foods", logos: Array.from({ length: 8 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Foods/${i + 1}.png`, alt: `Foods Logo ${i + 1}` })) },
         { name: "Home Appliance", logos: Array.from({ length: 10 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Home Appliances/${i + 1}.png`, alt: `Home Appliance Logo ${i + 1}` })) },
         { name: "Luxury", logos: Array.from({ length: 8 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Luxury/${i + 1}.png`, alt: `Luxury Logo ${i + 1}` })) },
-        { name: "Medical", logos: Array.from({ length: 17 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Medical/${i + 1}.png`, alt: `Medical Logo ${i + 1}` })) },
+        { name: "Pharmaceutical", logos: Array.from({ length: 17 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Medical/${i + 1}.png`, alt: `Medical Logo ${i + 1}` })) },
         { name: "Mobile Spare Parts", logos: Array.from({ length: 8 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Mobile and Spare Parts/${i + 1}.png`, alt: `Mobile Spare Parts Logo ${i + 1}` })) },
         { name: "Paper and Packaging", logos: Array.from({ length: 11 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/Paper and Packaging/${i + 1}.png`, alt: `Paper and Packaging Logo ${i + 1}` })) },
         { name: "RMG and Fashion", logos: Array.from({ length: 8 }, (_, i) => ({ id: i, src: `/assets/img/customer_logo/Sector_Wise/RMG and Fassion/${i + 1}.png`, alt: `RMG and Fashion Logo ${i + 1}` })) },
