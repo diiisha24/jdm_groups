@@ -22,7 +22,7 @@ export default function Breadcrumb({
                   {breadcrumbTitle}
                 </h1>
               </div>
-              <ul
+              {/* <ul
                 className="breadcrumb-items wow fadeInUp"
                 data-wow-delay=".5s"
               >
@@ -33,7 +33,7 @@ export default function Breadcrumb({
                   <i className="fa-sharp fa-solid fa-slash-forward" />
                 </li>
                 <li>{breadcrumbTitle}</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>

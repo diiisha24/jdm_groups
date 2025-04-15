@@ -1026,6 +1026,154 @@ span {
     }
   }
 } */
+/* Gallery Page */
+
+/* <style jsx>{` */
+#gallery{
+  .nav-tabs {
+    border-bottom: none;
+  }
+  .nav-link {
+    width: 200px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    background: #f8f9fa;
+    border: none;
+    border-radius: 25px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  .nav-link:hover {
+    background: #e9ecef;
+    color: #000;
+  }
+  .nav-link.active {
+    background: var(--theme, #f59e0b);
+    color: #fff;
+  }
+  .gallery-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100%;
+  }
+  .gallery-nav {
+    width: 250px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .gallery-nav li {
+    display: block;
+    width: 100%;
+  }
+  .gallery-nav li button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .gallery-nav li:last-child button {
+    border-bottom: none;
+  }
+  .gallery-nav li:hover button,
+  .gallery-nav li.active button {
+    background: var(--theme, #f59e0b);
+    color: #fff;
+  }
+  .gallery-content {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    min-height: 400px;
+  }
+  .gallery-content h3 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .gallery-image.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery-image img {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .gallery-image p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+  }
+  .loading-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--theme, #f59e0b);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @media (max-width: 767px) {
+    .gallery-container {
+      flex-direction: column;
+    }
+    .gallery-nav {
+      width: 100%;
+    }
+    .image-grid {
+      max-height: 300px;
+    }
+    .gallery-image img {
+      width: 100%;
+      height: 150px;
+    }
+}
+}
+  /* .gallery-box {
+    /* Removed min-height as it's not needed anymore */
+  /* } */ 
+  
 
 /* Career Page */
 /* styles/Careers.module.css */
@@ -1275,7 +1423,7 @@ span {
 
 .contact-form-items {
   background-color: var(--white);
-  padding: 120px 40px;
+  padding: 40px;
   /* margin-bottom: -350px; */
   margin-bottom: 50px;
   /* position: relative;
@@ -1293,7 +1441,7 @@ span {
   }
 }
 .contact-form-items .title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .contact-form-items .title h2 {
   margin-bottom: 5px;
@@ -1336,7 +1484,7 @@ span {
 
 .office-google-map-wrapper iframe {
   width: 100%;
-  height: 700px;
+  height: 450px;
 }
 
 .cta-banner-wrapper {
@@ -1919,7 +2067,7 @@ span {
 }
 
 .footer-widgets-wrapper {
-  padding: 25px 0 55px;
+  padding: 0px 0 25px;
   position: relative;
   z-index: 9;
 }
@@ -1927,11 +2075,11 @@ span {
   margin-top: 30px;
 }
 .footer-widgets-wrapper .single-footer-widget .widget-head {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 @media (max-width: 575px) {
   .footer-widgets-wrapper .single-footer-widget .widget-head {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 }
 .footer-widgets-wrapper .single-footer-widget .widget-head h5 {
@@ -1940,7 +2088,7 @@ span {
   font-size: 24px;
   display: inline-block;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 .footer-widgets-wrapper .single-footer-widget .widget-head h5::before {
   position: absolute;
@@ -6922,4 +7070,5 @@ input.main-search-input::placeholder {
 }
 .testimonial-section-2 .array-button .array-next:hover {
   background-color: var(--header);
-}/*# sourceMappingURL=main.css.map */
+}
+/* # sourceMappingURL=main.css.map */

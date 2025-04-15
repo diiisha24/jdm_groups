@@ -28,16 +28,16 @@ const defaultServices = [
     image: "assets/img/service/Customs_Brokrage.jpg",
     link: "/custom-brokerage",
   },
-  {
-    title: "Courier Services",
-    image: "assets/img/service/Courier.jpg",
-    link: "/courier-services",
-  },
-  {
-    title: "Project Cargo",
-    image: "assets/img/service/Project_Cargo.jpg",
-    link: "/services/project-cargo",
-  },
+  // {
+  //   title: "Courier Services",
+  //   image: "assets/img/service/Courier.jpg",
+  //   link: "/courier-services",
+  // },
+  // {
+  //   title: "Project Cargo",
+  //   image: "assets/img/service/Project_Cargo.jpg",
+  //   link: "/services/project-cargo",
+  // },
   {
     title: "Warehousing",
     image: "assets/img/service/Warehouse.jpg",

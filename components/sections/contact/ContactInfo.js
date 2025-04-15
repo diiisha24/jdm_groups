@@ -25,7 +25,7 @@ export default function ContactInfo() {
                 <img src="assets/img/icon/18.svg" alt="img" />
               </div>
               <div className="content">
-                <h3>Our Address</h3>
+                <h3>Corporate and Registered Office</h3>
                 <p>
                   A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037
                 </p>

@@ -77,7 +77,7 @@ const VisionMissionFounder = () => {
   };
 
   return (
-    <div className="container mb-5">
+    <div className="container">
       <div className="about-wrapper">
         {isLoading ? (
           <p>Loading...</p>
@@ -168,13 +168,13 @@ const VisionMissionFounder = () => {
                     {aboutData.values.map((value, index) => (
                       <li
                         key={index}
-                        className="value-item mb-3 d-flex align-items-center"
+                        className="value-item d-flex align-items-center"
                       >
                         <i
                           className="fas fa-check-circle me-2"
                           aria-hidden="true"
                         />
-                        <span className="fw-bold text-dark">{value}</span>
+                        <span className="text-dark">{value}</span>
                       </li>
                     ))}
                   </ul>
@@ -205,7 +205,7 @@ const VisionMissionFounder = () => {
                           className="fas fa-star me-2 text-warning"
                           aria-hidden="true"
                         />
-                        <span className="fw-bold text-dark">{strength}</span>
+                        <span className="text-dark">{strength}</span>
                       </li>
                     ))}
                   </ul>
@@ -237,6 +237,12 @@ const VisionMissionFounder = () => {
           list-style-type: none;
           padding-left: 0;
         }
+        .value-item,
+        .strength-item  {
+          margin-bottom:10px;
+          font-size:14px;
+        }
+
         .value-item:hover,
         .strength-item:hover {
           color: #333;
@@ -244,9 +250,6 @@ const VisionMissionFounder = () => {
         .value-item .fas.fa-check-circle,
         .strength-item .fas.fa-star {
           font-size: 1rem;
-        }
-        .fw-bold {
-          font-weight: 600;
         }
         @media (max-width: 767px) {
           .row.align-items-center {

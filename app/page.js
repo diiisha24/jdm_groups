@@ -109,11 +109,11 @@ export default async function Home2() {
       <About2 />
       {/* <GroupofCompanies /> */}
       <Service3 />
-      <Brand1 images={customersImages} know_more="Our Clientelle" to="clientele" />
+      <Brand1 images={customersImages} know_more="Our Clientele" to="clientele" />
       <Journey />
       {/* <Team2 /> */}
-      <Brand1 images={internationalPartner} heading="Our International Affiliation & Accrediation" />
-      <Brand1 images={domesticPartner} heading="Our Domestic Affiliation & Accrediation" />
+      <Brand1 images={internationalPartner} heading="Global Accreditations & Certifications" />
+      <Brand1 images={domesticPartner} heading="Regional Alliances with Customs Authorities" />
       <Brand1 images={seaCarrierPartner} heading="Our Sea Carrier Partners" />
       <Brand1 images={airCarrierPartner} heading="Our Air Carrier Partners" />
       {/* <Brand2/>
