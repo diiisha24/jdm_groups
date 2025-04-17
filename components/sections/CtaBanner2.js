@@ -5,13 +5,13 @@ export default function CtaBanner2() {
     <>
       <section
         className="cta-section-2 bg-cover fix"
-        style={{ backgroundImage: 'url("assets/img/cta-bg-2.jpg")' }}
+        style={{ backgroundImage: 'url("/assets/img/cta-bg-2.jpg")' }}
       >
         <div className="container">
           <div className="cta-banner-wrapper-2">
             <div className="cta-content">
               <h2 className="wow fadeInUp" data-wow-delay=".2s">
-                Do You Have Any Questions <br /> About the Project Plan?
+                Do You Have Any Questions About the Project Plan?
               </h2>
               <Link
                 href="contact"

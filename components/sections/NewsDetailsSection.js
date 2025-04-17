@@ -1,7 +1,27 @@
 import Link from "next/link";
 import React from "react";
 
-export default function NewsDetailsSection() {
+export default function NewsDetailsSection({ blogData }) {
+  // Default data if blogData is null
+  const defaultData = {
+    image: "assets/img/news/post-4.jpg",
+    author: "Admin",
+    date: "18 Mar, 2025",
+    category: "Technology",
+    title: "Guidelines for Construction Site Security",
+    description: [
+      "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore of magna aliqua. Ut enim ad minim veniam, made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat. Duis aute irure and dolor in reprehenderit.",
+      "The is ipsum dolor sit amet consectetur adipiscing elit. Fusce eleifend porta arcu In hac habitasse the is platea augue thelorem turpoi dictumst. In lacus libero faucibus at malesuada sagittis placerat eros sed istincidunt augue ac ante rutrum sed the is sodales augue consequat.",
+      "Nulla facilisi. Vestibulum tristique sem in eros eleifend imperdiet. Donec quis convallis neque. In id lacus pulvinar lacus, eget vulputate lectus. Ut viverra bibendum lorem, at tempus nibh mattis in. Sed a massa eget lacus consequat auctor.",
+    ],
+    quote:
+      "Pellentesque sollicitudin congue dolor non aliquam. Morbi volutpat, nisi vel ultricies urnacondimentum, sapien neque lobortis tortor, quis efficitur mi ipsum eu metus. Praesent eleifend orci sit amet est vehicula.",
+    images: ["assets/img/news/post-5.jpg", "assets/img/news/post-6.jpg"],
+    tags: ["Travel", "Services", "Agency"],
+  };
+
+  const apiUrl = "https://jdm-backend.onrender.com"; // Base URL for images
+
   return (
     <section className="news-standard fix section-padding">
       <div className="container">
@@ -12,53 +32,37 @@ export default function NewsDetailsSection() {
                 <div
                   className="post-featured-thumb bg-cover"
                   style={{
-                    backgroundImage: 'url("assets/img/news/post-4.jpg")',
+                    backgroundImage: `url(${
+                      blogData?.image_1 ? `${apiUrl}${blogData.image_1}` : defaultData.image
+                    })`,
                   }}
                 />
                 <div className="post-content">
                   <ul className="post-list d-flex align-items-center">
                     <li>
                       <i className="fa-regular fa-user" />
-                      By Admin
+                      {blogData?.author || defaultData.author}
                     </li>
                     <li>
                       <i className="fa-solid fa-calendar-days" />
-                      18 Dec, 2024
+                      {blogData?.date || defaultData.date}
                     </li>
                     <li>
                       <i className="fa-solid fa-tag" />
-                      Technology
+                      {blogData?.tags?.[0] || defaultData.category}
                     </li>
                   </ul>
-                  <h3>Guidelines for Construction Site Security</h3>
-                  <p className="mb-3">
-                    Consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore of magna aliqua. Ut enim ad
-                    minim veniam, made of owl the quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea dolor commodo
-                    consequat. Duis aute irure and dolor in reprehenderit.
-                  </p>
-                  <p className="mb-3">
-                    The is ipsum dolor sit amet consectetur adipiscing elit.
-                    Fusce eleifend porta arcu In hac habitasse the is platea
-                    augue thelorem turpoi dictumst. In lacus libero faucibus at
-                    malesuada sagittis placerat eros sed istincidunt augue ac
-                    ante rutrum sed the is sodales augue consequat.
-                  </p>
-                  <p>
-                    Nulla facilisi. Vestibulum tristique sem in eros eleifend
-                    imperdiet. Donec quis convallis neque. In id lacus pulvinar
-                    lacus, eget vulputate lectus. Ut viverra bibendum lorem, at
-                    tempus nibh mattis in. Sed a massa eget lacus consequat
-                    auctor.
-                  </p>
-                  <div className="hilight-text mt-4 mb-4">
-                    <p>
-                      Pellentesque sollicitudin congue dolor non aliquam. Morbi
-                      volutpat, nisi vel ultricies urnacondimentum, sapien neque
-                      lobortis tortor, quis efficitur mi ipsum eu metus.
-                      Praesent eleifend orci sit amet est vehicula.
+                  <h3>{blogData?.title || defaultData.title}</h3>
+                  {(blogData?.description
+                    ? [blogData.description] // If API provides one paragraph
+                    : defaultData.description
+                  ).map((paragraph, index) => (
+                    <p key={index} className={index < 2 ? "mb-3" : ""}>
+                      {paragraph}
                     </p>
+                  ))}
+                  <div className="hilight-text mt-4 mb-4">
+                    <p>{blogData?.Quote || defaultData.quote}</p>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={36}
@@ -77,40 +81,32 @@ export default function NewsDetailsSection() {
                     </svg>
                   </div>
                   <p className="mt-4 mb-5">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
-                    massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
-                    sapien fringilla, mattis ligula consectetur, ultrices
-                    mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet
-                    augue. Vestibulum auctor ornare leo, non suscipit magna
-                    interdum eu. Curabitur pellentesque nibh nibh, at maximus
-                    ante fermentum sit amet. Pellentesque commodo lacus at
-                    sodales sodales. Quisque sagittis orci ut diam condimentum,
-                    vel euismod erat placerat. In iaculis arcu eros.
+                    {blogData?.summarize ||
+                      defaultData.description[0]} {/* Use summarize or repeat first default */}
                   </p>
                   <div className="row g-4">
                     <div className="col-lg-6">
                       <div className="details-image">
-                        <img src="assets/img/news/post-5.jpg" alt="img" />
+                        <img
+                          src={
+                            blogData?.image_2
+                              ? `${apiUrl}${blogData.image_2}`
+                              : defaultData.images[0]
+                          }
+                          alt="img"
+                        />
                       </div>
                     </div>
-                    <div className="col-lg-6">
+                    {/* <div className="col-lg-6">
                       <div className="details-image">
-                        <img src="assets/img/news/post-6.jpg" alt="img" />
-                      </div>
-                    </div>
+                        <img src={defaultData.images[1]} alt="img" />{" "}
+                        {/* No third image in API */}
+                      {/* </div>
+                    </div> */} 
                   </div>
                   <p className="pt-5">
-                    Consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore of magna aliqua. Ut enim ad
-                    minim veniam, made of owl the quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea dolor commodo
-                    consequat. Duis aute irure and dolor in
-                    reprehenderit.Consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore of magna aliqua. Ut
-                    enim ad minim veniam, made of owl the quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea dolor
-                    commodo consequat. Duis aute irure and dolor in
-                    reprehenderit.
+                    {blogData?.description || defaultData.description[1]}{" "}
+                    {/* Repeat description or use second default */}
                   </p>
                 </div>
               </div>
@@ -118,9 +114,11 @@ export default function NewsDetailsSection() {
                 <div className="col-lg-8 col-12">
                   <div className="tagcloud">
                     <span>Tags:</span>
-                    <Link href="/news-details">Travel</Link>
-                    <Link href="/news-details">Services</Link>
-                    <Link href="/news-details">Agency</Link>
+                    {(blogData?.tags || defaultData.tags).map((tag, index) => (
+                      <Link key={index} href="/news-details">
+                        {tag}
+                      </Link>
+                    ))}
                   </div>
                 </div>
                 <div className="col-lg-4 col-12 mt-3 mt-lg-0 text-lg-end">
@@ -141,75 +139,112 @@ export default function NewsDetailsSection() {
                   </div>
                 </div>
               </div>
-              <div className="comments-area">
+              {/* Comments and form remain static for now */}
+              {/* <div className="comments-area">
                 <div className="comments-heading">
-                  <h3>02 Comments</h3>
+                  <h3>{blogData?.comments?.length || "02"} Comments</h3>
                 </div>
-                <div className="blog-single-comment d-flex gap-4 pt-4 pb-5">
-                  <div className="image">
-                    <img src="assets/img/news/comment-1.png" alt="image" />
-                  </div>
-                  <div className="content">
-                    <div className="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
-                      <div className="con">
-                        <h5>
-                          <Link href="/news-details">Albert Flores</Link>
-                        </h5>
-                        <span>February 10, 2024 at 2:37 pm</span>
+                {(blogData?.comments || []).length > 0 ? (
+                  blogData.comments.map((comment, index) => (
+                    <div
+                      key={index}
+                      className="blog-single-comment d-flex gap-4 pt-4 pb-5"
+                    >
+                      <div className="image">
+                        <img src="assets/img/news/comment-1.png" alt="image" />
                       </div>
-                      <div className="star">
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
+                      <div className="content">
+                        <div className="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
+                          <div className="con">
+                            <h5>
+                              <Link href="/news-details">{comment.author || "Unknown"}</Link>
+                            </h5>
+                            <span>{comment.date || "Unknown Date"}</span>
+                          </div>
+                          <div className="star">
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                          </div>
+                        </div>
+                        <p className="mt-30 mb-4">{comment.text || "No comment text"}</p>
+                        <Link href="/news-details" className="reply">
+                          Reply
+                        </Link>
                       </div>
                     </div>
-                    <p className="mt-30 mb-4">
-                      Neque porro est qui dolorem ipsum quia quaed inventor
-                      veritatis et quasi architecto var sed efficitur turpis
-                      gilla sed sit amet finibus eros. Lorem Ipsum is simply
-                      dummy
-                    </p>
-                    <Link href="/news-details" className="reply">
-                      Reply
-                    </Link>
-                  </div>
-                </div>
-                <div className="blog-single-comment d-flex gap-4 pt-5 pb-5">
-                  <div className="image">
-                    <img src="assets/img/news/comment-2.png" alt="image" />
-                  </div>
-                  <div className="content">
-                    <div className="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
-                      <div className="con">
-                        <h5>
-                          <Link href="/news-details">Alex Flores</Link>
-                        </h5>
-                        <span>February 10, 2024 at 2:37 pm</span>
+                  ))
+                ) : (
+                  <>
+                    <div className="blog-single-comment d-flex gap-4 pt-4 pb-5">
+                      <div className="image">
+                        <img src="assets/img/news/comment-1.png" alt="image" />
                       </div>
-                      <div className="star">
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
-                        <i className="fa-solid fa-star" />
+                      <div className="content">
+                        <div className="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
+                          <div className="con">
+                            <h5>
+                              <Link href="/news-details">Albert Flores</Link>
+                            </h5>
+                            <span>February 10, 2024 at 2:37 pm</span>
+                          </div>
+                          <div className="star">
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                          </div>
+                        </div>
+                        <p className="mt-30 mb-4">
+                          Neque porro est qui dolorem ipsum quia quaed inventor
+                          veritatis et quasi architecto var sed efficitur turpis
+                          gilla sed sit amet finibus eros. Lorem Ipsum is simply
+                          dummy
+                        </p>
+                        <Link href="/news-details" className="reply">
+                          Reply
+                        </Link>
                       </div>
                     </div>
-                    <p className="mt-30 mb-4">
-                      Neque porro est qui dolorem ipsum quia quaed inventor
-                      veritatis et quasi architecto var sed efficitur turpis
-                      gilla sed sit amet finibus eros. Lorem Ipsum is simply
-                      dummy
-                    </p>
-                    <Link href="/news-details" className="reply color-2">
-                      Reply
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="comment-form-wrap pt-5">
-                <h3>Leave a comments</h3>
+                    <div className="blog-single-comment d-flex gap-4 pt-5 pb-5">
+                      <div className="image">
+                        <img src="assets/img/news/comment-2.png" alt="image" />
+                      </div>
+                      <div className="content">
+                        <div className="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
+                          <div className="con">
+                            <h5>
+                              <Link href="/news-details">Alex Flores</Link>
+                            </h5>
+                            <span>February 10, 2024 at 2:37 pm</span>
+                          </div>
+                          <div className="star">
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                            <i className="fa-solid fa-star" />
+                          </div>
+                        </div>
+                        <p className="mt-30 mb-4">
+                          Neque porro est qui dolorem ipsum quia quaed inventor
+                          veritatis et quasi architecto var sed efficitur turpis
+                          gilla sed sit amet finibus eros. Lorem Ipsum is simply
+                          dummy
+                        </p>
+                        <Link href="/news-details" className="reply color-2">
+                          Reply
+                        </Link>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div> */}
+              {/* <div className="comment-form-wrap pt-5">
+                <h3>Leave a comment</h3>
                 <form action="#" id="contact-form" method="POST">
                   <div className="row g-4">
                     <div className="col-lg-6">
@@ -246,19 +281,20 @@ export default function NewsDetailsSection() {
                       </div>
                     </div>
                     <div className="col-lg-6">
-                      <button type="submit" className="theme-btn ">
-                        post comment
+                      <button type="submit" className="theme-btn">
+                        Post Comment
                         <i className="fa-solid fa-arrow-right-long" />
                       </button>
                     </div>
                   </div>
                 </form>
-              </div>
+              </div> */}
             </div>
           </div>
+          {/* Sidebar remains static */}
           <div className="col-12 col-lg-4">
             <div className="main-sidebar">
-              <div className="single-sidebar-widget">
+              {/* <div className="single-sidebar-widget">
                 <div className="wid-title">
                   <h3>Search</h3>
                 </div>
@@ -270,32 +306,48 @@ export default function NewsDetailsSection() {
                     </button>
                   </form>
                 </div>
+              </div> */}
+              <div className="single-sidebar-widget">
+                <div className="wid-title">
+                  <h3>Popular Tag</h3>
+                </div>
+                <div className="news-widget-categories">
+                  <div className="tagcloud">
+                    {(blogData?.tags || ["transport", "cargo", "engineering"]).map(
+                      (tag, index) => (
+                        <Link key={index} href="/news-details">
+                          {tag}
+                        </Link>
+                      )
+                    )}
+                  </div>
+                </div>
               </div>
               <div className="single-sidebar-widget">
                 <div className="wid-title">
-                  <h3>Categories</h3>
+                  <h3>Our Services</h3>
                 </div>
                 <div className="news-widget-categories">
                   <ul>
                     <li>
-                      <Link href="/news-details">Cargo Insurance </Link>{" "}
-                      <span>5</span>
+                      <Link href="/news-details">Air Freight <i className="fa-solid fa-arrow-right"></i></Link>{" "}
+                      {/* <span>5</span> */}
                     </li>
                     <li>
-                      <Link href="/news-details">Logistic Strategy</Link>{" "}
-                      <span>3</span>
-                    </li>
-                    <li className="active">
-                      <Link href="/news-details">Our Delivery </Link>
-                      <span>4</span>
+                      <Link href="/news-details">Ocean Freight <i className="fa-solid fa-arrow-right"></i></Link>{" "}
+                      {/* <span>3</span> */}
                     </li>
                     <li>
-                      <Link href="/news-details">Shipment Solutions </Link>{" "}
-                      <span>2</span>
+                      <Link href="/news-details">Warehousing <i className="fa-solid fa-arrow-right"></i></Link>
+                      {/* <span>4</span> */}
                     </li>
                     <li>
-                      <Link href="/news-details">Security System</Link>{" "}
-                      <span>3</span>
+                      <Link href="/news-details">Road Transportation <i className="fa-solid fa-arrow-right"></i></Link>{" "}
+                      {/* <span>2</span> */}
+                    </li>
+                    <li>
+                      <Link href="/news-details">Custom Clearance <i className="fa-solid fa-arrow-right"></i></Link>{" "}
+                      {/* <span>3</span> */}
                     </li>
                   </ul>
                 </div>
@@ -358,21 +410,6 @@ export default function NewsDetailsSection() {
                         </Link>
                       </h6>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="single-sidebar-widget">
-                <div className="wid-title">
-                  <h3>Popular Tag</h3>
-                </div>
-                <div className="news-widget-categories">
-                  <div className="tagcloud">
-                    <Link href="/news-details">transport</Link>
-                    <Link href="/news-details">cargo</Link>
-                    <Link href="/news-details">engineering</Link>
-                    <Link href="/news-details">Design</Link>
-                    <Link href="/news-details">engineering</Link>
-                    <Link href="/news-details">delivery</Link>
                   </div>
                 </div>
               </div>

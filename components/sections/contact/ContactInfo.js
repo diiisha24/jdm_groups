@@ -17,7 +17,7 @@ export default function ContactInfo() {
         </div>
         <div className="row">
           <div
-            className="col-xxl-4 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
+            className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
             data-wow-delay=".2s"
           >
             <div className="contact-box-items">
@@ -25,15 +25,15 @@ export default function ContactInfo() {
                 <img src="assets/img/icon/18.svg" alt="img" />
               </div>
               <div className="content">
-                <h3>Our Address</h3>
+                <h3>Corporate and Registered Office</h3>
                 <p>
-                  A-75, New Delhi - 1100037, India
+                  A-75, Road No. 4, Street No. 6, Mahipalpur Extn., New Delhi 110037
                 </p>
               </div>
             </div>
           </div>
           <div
-            className="col-xxl-4 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
+            className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
             data-wow-delay=".4s"
           >
             <div className="contact-box-items">
@@ -41,18 +41,18 @@ export default function ContactInfo() {
                 <img src="assets/img/icon/19.svg" alt="img" />
               </div>
               <div className="content">
-                <h3>Email Address</h3>
+                <h3>Contact Info</h3>
                 <p>
-                  Mobile :<Link href="tel:+9149707070">+91-49707070-100 Lines
-                  </Link>{" "}
+                  Mobile:{" "}<Link href="tel:+9149707070">+91-49707070-100 Lines
+                  </Link>
                   <br />
-                  Email :
+                  Email:{" "}
                   <Link href="mailto:info@jdmgroups.com">info@jdmgroups.com</Link>
                 </p>
               </div>
             </div>
           </div>
-          <div
+          {/* <div
             className="col-xxl-4 col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
             data-wow-delay=".6s"
           >
@@ -67,7 +67,7 @@ export default function ContactInfo() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

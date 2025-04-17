@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout"
 import About2 from "@/components/sections/About2"
 import Achivements from "@/components/sections/Achivements"
-import Brand2 from "@/components/sections/Brand2"
+// import Brand2 from "@/components/sections/Brand2"
 import CtaBanner2 from "@/components/sections/CtaBanner2"
 import Hero2 from "@/components/sections/Hero2"
 import News2 from "@/components/sections/News2"
@@ -17,7 +17,7 @@ export default function Home2() {
 				<Hero2 />
 				<About2 />
 				<Service2 />
-				<Brand2 />
+				{/* <Brand2 /> */}
 				<Project2 />
 				<Team2 />
 				<Pricing />

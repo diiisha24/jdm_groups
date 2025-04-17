@@ -1,11 +1,15 @@
 import Link from "next/link";
 
-export default function Breadcrumb({ breadcrumbTitle }) {
+export default function Breadcrumb({ 
+  breadcrumbTitle, 
+  backgroundImage = "/assets/img/banner/breadcrumb-bg.png" 
+  // backgroundImage
+}) {
   return (
     <>
       <div
         className="breadcrumb-wrapper bg-cover"
-        style={{ backgroundImage: 'url("assets/img/breadcrumb-bg.jpg")' }}
+        style={{ backgroundImage: `url(/assets/img/banner/breadcrumb-bg.png)` }}
       >
         <div className="shape-image float-bob-y">
           <img src="assets/img/vector.png" alt="img" />
@@ -18,7 +22,7 @@ export default function Breadcrumb({ breadcrumbTitle }) {
                   {breadcrumbTitle}
                 </h1>
               </div>
-              <ul
+              {/* <ul
                 className="breadcrumb-items wow fadeInUp"
                 data-wow-delay=".5s"
               >
@@ -29,7 +33,7 @@ export default function Breadcrumb({ breadcrumbTitle }) {
                   <i className="fa-sharp fa-solid fa-slash-forward" />
                 </li>
                 <li>{breadcrumbTitle}</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>

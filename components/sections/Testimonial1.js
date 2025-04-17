@@ -73,11 +73,11 @@ export default function Testimonial1() {
 							<div className="col-lg-7">
 								<div className="testimonial-content">
 									<div className="section-title">
-										<h6 className="wow fadeInUp">
+										{/* <h6 className="wow fadeInUp">
 											<i className="fa-regular fa-arrow-left-long" />
 											testimonials
 											<i className="fa-regular fa-arrow-right-long" />
-										</h6>
+										</h6> */}
 										<h2
 											className="text-white wow fadeInUp"
 											data-wow-delay=".2s"

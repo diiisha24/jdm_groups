@@ -8,8 +8,9 @@ export default function ServicesDetails() {
         headerStyle={1}
         footerStyle={1}
         breadcrumbTitle="Services details"
+        backgroundImage="/assets/img/banner/services.jpg"
       >
-        <ServiceDetails1 />
+        {/* <ServiceDetails1 /> */}
         <Brand1 />
       </Layout>
     </>
