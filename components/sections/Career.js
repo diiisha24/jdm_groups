@@ -264,6 +264,11 @@ const CareerSection = ({ jobs }) => {
           font-size: 16px;
           cursor: pointer;
         }
+        @media (max-width: 768px) {
+          .apply-btn{
+            font-size:10px;
+          }
+        }
         .modal-overlay {
           position: fixed;
           top: 0;

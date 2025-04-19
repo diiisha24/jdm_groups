@@ -6,27 +6,27 @@ const defaultServices = [
   {
     title: "Air Freight",
     image: "assets/img/service/Air_Freight.jpeg",
-    link: "/services/logistics/air-freight",
+    link: "/service-details/air-freight",
   },
   {
     title: "Ocean Freight",
     image: "assets/img/service/Ocean.jpg",
-    link: "/services/logistics/sea-freight",
+    link: "/service-details/ocean-freight",
   },
   {
     title: "Train Freight",
     image: "/assets/img/service/Rail.jpg",
-    link: "/services/logistics/train-freight",
+    link: "/service-details/train-freight",
   },
   {
     title: "Road Transportation",
     image: "/assets/img/service/truck.jpg",
-    link: "/services/logistics/road-transport",
+    link: "/service-details/road-transportation",
   },
   {
-    title: "Custom Clearance",
+    title: "Custom Brokerage",
     image: "assets/img/service/Customs_Brokrage.jpg",
-    link: "/custom-brokerage",
+    link: "/service-details/custom-clearance",
   },
   // {
   //   title: "Courier Services",
@@ -41,7 +41,7 @@ const defaultServices = [
   {
     title: "Warehousing",
     image: "assets/img/service/Warehouse.jpg",
-    link: "/warehousing",
+    link: "/service-details/warehousing",
   },
 ];
 
@@ -127,7 +127,6 @@ export default function GlobalServices() {
           text-align: center;
           font-size: 36px;
           color: #4a2c2a;
-          margin-bottom: 40px;
           text-transform: uppercase;
         }
 

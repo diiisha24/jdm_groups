@@ -42,7 +42,7 @@ export default function Brand1({
       991: { slidesPerView: Math.min(4, images.length-1) },
       767: { slidesPerView: Math.min(3, images.length-1) },
       575: { slidesPerView: Math.min(2, images.length-1) },
-      0: { slidesPerView: 1 },
+      0: { slidesPerView: 3 },
     },
   };
 
@@ -98,6 +98,11 @@ export default function Brand1({
           display: flex;
           justify-content: center;
           align-items: center;
+        }
+        @media (max-width:475px){
+          .brand-image {
+            padding: 5px;
+          }
         }
         .swiper-button-next,
         .swiper-button-prev {

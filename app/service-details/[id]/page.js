@@ -35,7 +35,7 @@ const defaultServices = [
   },
   {
     id: "custom-clearance",
-    title: "Custom Clearance",
+    title: "Custom Brokerage",
     image: "/assets/img/service/Customs_Brokrage.jpg",
     description1:
     "We have an adept team of Customs Brokerage professionals with years of experience, who are proficient not only with Customs procedures and regulations but also with the allied laws. We assist in effectively and efficiently filing all customs-related compliances across multiple regulatory agencies, including additional facilitations for:",

@@ -79,7 +79,7 @@ export default function MobileMenu() {
 								<i className="far fa-plus" /></a>
 						</li> */}
 						<li>
-							<Link href="/service-details">
+							<Link href="/service">
 								Services
 								<i className="fa-regular fa-plus" />
 							</Link>
@@ -98,6 +98,9 @@ export default function MobileMenu() {
 							</ul>
 							<a className="mean-expand" onClick={() => handleAccordion(4)} style={{ fontSize: 18 }}>
 								<i className="far fa-plus" /></a>
+						</li>
+						<li>
+							<Link href="/careers">Career</Link>
 						</li>
 						{/* <li>
 							<Link href="/project">

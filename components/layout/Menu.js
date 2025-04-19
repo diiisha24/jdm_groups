@@ -24,7 +24,7 @@ const defaultMenuItems = [
       { title: "Ocean Freight", href: "/service-details/ocean-freight" },
       { title: "Train Freight", href: "/service-details/train-freight" },
       { title: "Road Transportation", href: "/service-details/road-transportation" },
-      { title: "Custom Clearance", href: "/service-details/custom-clearance" },
+      { title: "Custom Brokerage", href: "/service-details/custom-clearance" },
       { title: "Courier Services", href: "/service-details/courier-services" },
       { title: "Project Cargo", href: "/service-details/project-cargo" },
       { title: "Warehousing", href: "/service-details/warehousing" },

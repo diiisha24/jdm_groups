@@ -126,7 +126,9 @@ const Network = () => {
             height: auto;
             max-height: none;
           }
-
+          .world-image-wrapper{
+            padding: 0px 10px 20px;
+          }
           .p-8 {
             padding: 2rem;
           }

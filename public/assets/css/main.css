@@ -99,8 +99,11 @@ section{
 }
 @media (max-width: 575px) {
   .theme-btn {
-    padding: 18px 30px;
+    padding: 14px;
     font-size: 14px;
+  }
+  .hero#career .about-image{
+    display: none;
   }
 }
 .header-logo img,
@@ -114,6 +117,11 @@ section{
 }
 #clientele .brand-image img{
   max-height: 90px;
+}
+@media (max-width:475px) {
+  .brand-image img{
+    max-height: 60px;
+  }
 }
 
 .link-btn {
@@ -201,7 +209,7 @@ h2 {
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 36px;
+    font-size: 18px;
   }
 }
 
@@ -1273,10 +1281,22 @@ span {
   background-color: var(--bs-gray-400);
 }
 
-.application-info h2 {
-  font-family: "DM Sans", sans-serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+@media (max-width:425px) {
+  .job-listings{
+    padding: 0px 0px 20px;
+  }
+  .application-info h2{
+    margin-bottom: 10px;
+  }
+  .application-info p,
+  .job-card p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .job-card h3 {
+    font-size: 20px;
+  }
+
 }
 
 /* Journey Section */
@@ -1287,6 +1307,11 @@ span {
 .journey-section{
   video{
     padding: 20px 140px 50px;
+  }
+  @media (max-width: 768px){
+    video{
+      padding: 10px 0px 20px;
+    }
   }
 }
 /* Contact Section */
@@ -4106,6 +4131,12 @@ span {
   }
 }
 
+@media (max-width: 475px) {
+  .hero-section.hero-2 {
+    height: 80vh; /* Adjust height for smaller screens */
+  }
+}
+
 .video-container {
   position: relative;
   width: 100%;
@@ -6072,7 +6103,7 @@ input.main-search-input::placeholder {
 }
 @media (max-width: 767px) {
   .section-title {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 .section-title h6 {
@@ -6094,6 +6125,11 @@ input.main-search-input::placeholder {
 .section-title p{
   width: 65%;
 }
+@media (max-width: 425px){
+  .section-title p{
+    width: 100%;
+  }
+}
 .section-title-area {
   display: flex;
   align-items: center;
@@ -6104,7 +6140,8 @@ input.main-search-input::placeholder {
 @media (max-width: 991px) {
   .section-title-area {
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -6130,12 +6167,12 @@ input.main-search-input::placeholder {
 }
 @media (max-width: 1199px) {
   .section-padding {
-    padding: 100px 0;
+    padding: 40px 0;
   }
 }
 @media (max-width: 991px) {
   .section-padding {
-    padding: 80px 0;
+    padding: 20px 0;
   }
 }
 
@@ -6180,7 +6217,7 @@ input.main-search-input::placeholder {
   position: absolute;
   right: 0%;
   top: 10%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   z-index: 99;
 }
 .service-section .array-button .array-next:hover,
@@ -6191,9 +6228,9 @@ input.main-search-input::placeholder {
   /* background-color: var(--white);
   color: var(--header); */
   position: absolute;
-  left: 4%;
+  left: 0%;
   top: 10%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   z-index: 99;
 }
 .service-section .array-button.style-2 .array-prev {

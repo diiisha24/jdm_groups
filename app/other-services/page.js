@@ -101,35 +101,36 @@ const OtherServices = () => {
 
       {/* Hero Section */}
       <section className="hero" id="other-services">
-
-        {/* Tab Section with Vertical Menu */}
+        {/* Tab Section with Horizontal Menu at Top of Content */}
         <div className="services-section">
           <div className="container">
             <div className="tab-container">
-              <ul className="tab-menu wow fadeInUp" data-wow-delay=".2s">
-                {tabs.map((tab) => (
-                  <li
-                    key={tab.id}
-                    className={activeTab === tab.id ? "active" : ""}
-                  >
-                    <button
-                      onClick={() => setActiveTab(tab.id)}
-                      className="tab-button"
+              <div className="content-box">
+                <ul className="sector-nav wow fadeInUp" data-wow-delay=".2s">
+                  {tabs.map((tab) => (
+                    <li
+                      key={tab.id}
+                      className={activeTab === tab.id ? "active" : ""}
                     >
-                      {tab.title}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-              <div className="tab-content wow fadeInUp" data-wow-delay=".4s">
-                {tabs.find((tab) => tab.id === activeTab)?.content}
+                      <button
+                        onClick={() => setActiveTab(tab.id)}
+                        className="tab-button"
+                      >
+                        {tab.title}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+                <div className="tab-content wow fadeInUp" data-wow-delay=".4s">
+                  {tabs.find((tab) => tab.id === activeTab)?.content}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Inline Styles Inspired by Submenu */}
+      {/* Inline Styles Inspired by Clientele */}
       <style jsx>{`
         .hero {
           padding: 60px 0;
@@ -141,53 +142,51 @@ const OtherServices = () => {
         }
         .tab-container {
           display: flex;
-          flex-direction: row;
-          gap: 30px;
-          align-items: stretch;
+          flex-direction: column;
+          gap: 20px;
         }
-        .tab-menu {
-          width: 240px; /* Matches submenu min-width */
-          background: var(--white);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Simplified from submenu */
+        .content-box {
+          background: #fff;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          overflow: hidden; /* Ensure rounded corners apply to children */
+        }
+        .sector-nav {
+          display: flex;
+          flex-direction: row; /* Horizontal layout */
+          flex-wrap: wrap;
           list-style: none;
           padding: 0;
           margin: 0;
+          background: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .tab-menu li {
+        .sector-nav li {
           display: block;
-          width: 100%;
-          margin: 0;
-          padding: 0;
+          border-left: 1px solid var(--bs-gray-200);
+          border-right: 1px solid var(--bs-gray-200);
         }
-        .tab-menu li button {
-          position: relative;
-          z-index: 11;
+        .sector-nav li button {
+          padding: 12px 20px;
           font-size: 15px;
-          font-weight: 600;
-          color: var(--header);
-          padding: 11px 25px;
-          width: 100%;
-          border-bottom: 1px solid #eeeeee;
+          font-weight: 500;
+          color: #333;
           background: none;
           border: none;
-          text-align: left;
+          border-bottom: 1px solid #eee;
           cursor: pointer;
-          transition: all 0.4s ease-in-out; /* From submenu */
+          transition: all 0.3s ease;
         }
-        .tab-menu li:last-child button {
-          border-bottom: none; /* Matches submenu last-child */
+        .sector-nav li:last-child button {
+          border-bottom: none;
         }
-        .tab-menu li:hover button,
-        .tab-menu li.active button {
-          background: var(--theme);
-          color: var(--white); /* Matches submenu hover */
+        .sector-nav li:hover button,
+        .sector-nav li.active button {
+          background: var(--theme, #f59e0b);
+          color: #fff;
         }
         .tab-content {
-          flex: 1; /* Takes remaining space */
-          background: #fff;
           padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          min-height:220px;
         }
         .tab-content p {
           margin: 0 0 15px;
@@ -195,15 +194,14 @@ const OtherServices = () => {
           color: #666;
           line-height: 1.6;
         }
-        @media (max-width: 768px) {
-          .tab-container {
-            flex-direction: column;
+        @media (max-width: 767px) {
+          .sector-nav {
+            flex-direction: row; /* Keep horizontal on mobile */
+            justify-content: center; /* Center tabs on mobile */
           }
-          .tab-menu {
-            width: 100%;
-          }
-          .tab-content {
-            width: 100%;
+          .sector-nav li button {
+            font-size: 14px;
+            padding: 10px 15px;
           }
         }
       `}</style>
